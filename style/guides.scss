@@ -1,0 +1,139 @@
+@import "reset";
+
+.products-wrap {
+    background: linear-gradient(to top right, #E4D9B8, #FFFAED);
+
+    .banner {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .banner-text {
+        span {
+            font-size: 70px;
+            position: absolute;
+            top: 40%;
+            right: 5%;
+            color: #0c0c0c;
+        }
+    }
+
+    .bread-crumbs {
+
+        .bread {
+            list-style: none;
+            margin: auto;
+            display: flex;
+            padding-top: 30px;
+            padding-left: 80px;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: black;
+
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+
+
+            li+li:before {
+                content: '>';
+                color: black;
+                padding: 0 10px;
+
+            }
+        }
+    }
+
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 50px 80px;
+
+        .items-img {
+            padding: 20px 15px;
+            width: 420px;
+        }
+
+        img {
+            width: 100%;
+
+        }
+    }
+
+    .pagination {
+        text-align: center;
+        margin: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .pages {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 100%;
+            width: 200px;
+        }
+
+        .page-number {
+            cursor: pointer;
+            color: #0f0e0e;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 120px;
+            padding: 0 16px;
+            background-color: #ffffff00;
+            color: #0f0f10;
+            border: none;
+
+        }
+
+        button:hover,
+        .page-number:hover {
+            font-size: 1.5em;
+            background-color: #0057b3;
+            color: white;
+        }
+
+
+
+        #prevPage {
+            margin-right: 20px;
+        }
+
+        #nextPage {
+            margin-left: 20px;
+        }
+
+        .arrow {
+            font-size: 1.2em;
+
+            i {
+                padding-right: 10px;
+            }
+        }
+
+        .nav-text {
+            font-size: 0.7em;
+            letter-spacing: 0.3em;
+        }
+    }
+}

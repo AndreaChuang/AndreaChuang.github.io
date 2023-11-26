@@ -1,0 +1,65 @@
+body {
+  background-color: #FFFAED;
+}
+
+.wrap .index-banner {
+  display: flex;
+  padding-bottom: 100px;
+}
+.wrap .index-banner img {
+  width: 100%;
+}
+.wrap .index-banner .banner-text {
+  background-color: #DED2B2;
+}
+.wrap .index-banner .banner-text span {
+  font-size: 48px;
+}
+.wrap .customers h1 {
+  text-align: center;
+  color: rgb(138, 110, 54);
+}
+.wrap .customers .customersContent {
+  display: flex;
+  justify-content: center;
+}
+.wrap .customers .customersContent .wear {
+  margin-right: -50px;
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+}
+.wrap .customers .customersContent .wear img {
+  height: 400px;
+}
+.wrap .customers .customersContent .feedback {
+  background-color: rgb(222, 210, 178);
+  width: 525px;
+  height: 400px;
+  z-index: 0;
+  padding: 80px 20px 60px 80px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.wrap .customers .customersContent .feedback i {
+  color: rgb(248, 164, 1);
+  margin-bottom: 10px;
+}
+.wrap .customers .customersContent .feedback p {
+  color: whitesmoke;
+  line-height: 2;
+  size: 18px;
+}
+.wrap .customers .customersContent .feedback .link {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+.wrap .customers .customersContent .feedback .link a {
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  padding: 15px 30px;
+  color: whitesmoke;
+  text-decoration: none;
+}/*# sourceMappingURL=homepage.css.map */
