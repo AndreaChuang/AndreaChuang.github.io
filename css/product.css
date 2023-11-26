@@ -380,16 +380,15 @@ template {
   justify-content: center;
 }
 .products-wrap .pagination button {
-  width: 120px;
-  padding: 8px 16px;
-  background-color: rgba(255, 255, 255, 0);
-  color: #0f0f10;
-  border: none;
   cursor: pointer;
-  margin: 0 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 120px;
+  padding: 0 16px;
+  background-color: rgba(255, 255, 255, 0);
+  color: #0f0f10;
+  border: none;
 }
 .products-wrap .pagination button:hover,
 .products-wrap .pagination .page-number:hover {
@@ -405,6 +404,9 @@ template {
 }
 .products-wrap .pagination .arrow {
   font-size: 1.2em;
+}
+.products-wrap .pagination .arrow i {
+  padding-right: 10px;
 }
 .products-wrap .pagination .nav-text {
   font-size: 0.7em;

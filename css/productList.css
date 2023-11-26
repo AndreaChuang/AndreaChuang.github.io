@@ -1,0 +1,12 @@
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 80px;
+}
+.items .items-img {
+  padding: 20px 15px;
+  width: 420px;
+}
+.items img {
+  width: 100%;
+}/*# sourceMappingURL=productList.css.map */
