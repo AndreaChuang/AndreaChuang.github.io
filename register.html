@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <script async src="js/header.js"></script>
 </head>
 
@@ -29,7 +28,6 @@
                 <li><a href="product.html">PRODUCTS</a></li>
                 <li><a href="guides.html">GUIDES</a></li>
                 <li><a href="notices.html">NOTICES</a></li>
-
             </ul>
             <ul class="nav-icon">
                 <li><a href="
@@ -39,64 +37,28 @@
             </ul>
         </div>
     </header>
-    <div id="wrapper" class="about-wrap">
-        <div class="banner">
-            <div><img src="img/about-banner(2).png" alt="About-banner圖">
-            </div>
-            <div class="banner-text">
-                <span>CRYSTAL</span>
-            </div>
-        </div>
-        <div class="about-container">
-            <div class="about-img">
-                <img src="img/about-img.png" alt="關於我們的圖片">
-            </div>
-            <div class="about-text">
-                <p>
-                    Souhait是法文願望的意思
-                    <br>
-                    我們期待與每位客人相遇
-                    <br>
-                    有緣來這裡找到自己專屬的水晶
-                    <br>
-                    與衪共同實現心中的願望
-                    <br>
-                    邁向更好的自己
-                </p>
-            </div>
-        </div>
-        <div class="about-form">
-            <h2>Contact Us</h2>
+    <div id="wrapper" class="container register">
+        <form class="new-register">
             <div>
-                <label for="name">Name</label>
-                <br>
-                <input type="text" id="name">
+                <span>立即註冊</span>
             </div>
             <div>
-                <label for="phone">Phone</label>
-                <br>
-                <input type="text" id="phone">
+                <span>已經有帳號了嗎?立即登入</span>
+            </div>
+            <div><input type="input" id="user_id" placeholder="請輸入密碼">
+                <label for="user_id">請輸入信箱帳號</label>
+            </div>
+            <div><input type="input" id="user_password" placeholder="請輸入密碼">
+                <label for="user_password">請輸入密碼(6~16位英數混合)</label>
+            </div>
+            <div><input type="input" id="correct_possword" placeholder="請輸入密碼">
+                <label for="correct_possword">確認密碼</label>
             </div>
             <div>
-                <label for="email">Email</label>
-                <br>
-                <input type="text" id="email">
+                <button>Register</button>
             </div>
-            <div>
-                <label for="content">Content</label>
-                <br>
-                <input type="text" id="content">
-            </div>
-            <div>
-                <input type="checkbox" id="agree">
-                <label for="content">我同意網站服務條款及隱私權政策</label>
-            </div>
-            <div>
-                <button>Submit</button>
-            </div>
-        </div>
+        </form>
     </div>
-
     <footer>
         <div class="container">
             <div class="footer-logo">

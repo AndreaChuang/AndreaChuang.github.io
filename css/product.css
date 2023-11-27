@@ -308,9 +308,6 @@ template {
   display: none;
 }
 
-.products-wrap {
-  background: linear-gradient(to top right, #E4D9B8, #FFFAED);
-}
 .products-wrap .banner {
   position: relative;
 }
@@ -320,9 +317,10 @@ template {
 .products-wrap .banner-text span {
   font-size: 70px;
   position: absolute;
-  top: 40%;
+  top: 70%;
   right: 5%;
   color: #FFFAED;
+  letter-spacing: 2px;
 }
 .products-wrap .bread-crumbs .bread {
   list-style: none;
@@ -345,6 +343,7 @@ template {
 }
 .products-wrap .items {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 50px 80px;
 }
@@ -393,7 +392,7 @@ template {
 .products-wrap .pagination button:hover,
 .products-wrap .pagination .page-number:hover {
   font-size: 1.5em;
-  background-color: #0057b3;
+  background-color: #8A6E36;
   color: white;
 }
 .products-wrap .pagination #prevPage {

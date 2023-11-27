@@ -1,6 +1,6 @@
 header {
   background-color: rgb(155, 129, 112);
-  z-index: 999;
+  z-index: 99;
   position: fixed;
   top: 0;
   width: 100%;
@@ -33,10 +33,14 @@ header .nav-container .nav-logo img {
 header .nav-container .nav-list {
   display: flex;
   margin: auto;
+  padding-left: 8%;
   list-style: none;
 }
-header .nav-container .nav-list li:nth-child(4) {
-  margin-left: 300px;
+header .nav-container .nav-list li:hover {
+  box-shadow: 5px 5px 10px 0px rgb(255, 255, 255);
+}
+header .nav-container .nav-list li:nth-child(3) {
+  margin-left: 250px;
 }
 header .nav-container .nav-list a {
   color: whitesmoke;

@@ -308,9 +308,6 @@ template {
   display: none;
 }
 
-.about-wrap {
-  background: linear-gradient(to top right, #E4D9B8, #FFFAED);
-}
 .about-wrap .banner {
   position: relative;
 }
@@ -320,7 +317,7 @@ template {
 .about-wrap .banner-text span {
   font-size: 70px;
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 5%;
 }
 .about-wrap .about-container {
@@ -339,7 +336,7 @@ template {
 }
 .about-wrap .about-container .about-text {
   margin-left: 5%;
-  margin-top: -20%;
+  margin-top: -25%;
   z-index: 1;
 }
 .about-wrap .about-container .about-text p {

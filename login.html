@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <script async src="js/header.js"></script>
 </head>
 
@@ -29,7 +28,7 @@
                 <li><a href="product.html">PRODUCTS</a></li>
                 <li><a href="guides.html">GUIDES</a></li>
                 <li><a href="notices.html">NOTICES</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+
             </ul>
             <ul class="nav-icon">
                 <li><a href="
@@ -39,10 +38,44 @@
             </ul>
         </div>
     </header>
-    <div id="wrapper">
-        <div class="new-members"></div>
-        <div></div>
-        <div></div>
+    <div id="wrapper" class="container login">
+        <div class="new-members">
+            <div>
+                <span>新會員</span>
+            </div>
+            <div class="register">
+                <button>註冊</button>
+            </div>
+        </div>
+        <div class="login">
+            <div>
+                <span>會員登入</span>
+            </div>
+            <div class="input-container">
+                <input type="input" id="input" placeholder="請輸入Email">
+                <label for="input">請輸入Email</label>
+                <div class="bottom-line"></div>
+            </div>
+            <div class="input-container">
+                <input type="input" id="input" placeholder="請輸入密碼">
+                <label for="input">請輸入密碼</label>
+                <div class="bottom-line"></div>
+            </div>
+            <div>
+                <button>登入</button>
+            </div>
+            <div>
+                <p><small>Forgot your password?</small></p>
+            </div>
+            <div>
+                <span><small>---使用以下帳號快速登入---</small></span>
+            </div>
+            <div class="login logo">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-google" aria-hidden="true"></i>
+                <i class="fa fa-apple" aria-hidden="true"></i>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="container">

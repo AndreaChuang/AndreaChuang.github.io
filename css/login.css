@@ -1,3 +1,120 @@
-body {
-  background: linear-gradient(to top right, #E4D9B8, #FFFAED);
+.container.login {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  max-width: 1680px;
+  height: 50vh;
+  margin: auto;
+  padding-top: 10%;
+  padding-bottom: 3%;
+}
+.container.login .new-members span,
+.container.login .login span {
+  letter-spacing: 0.5em;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.container.login .new-members button,
+.container.login .login button {
+  cursor: pointer;
+  width: 200px;
+  border: none;
+  background-color: #FFFAED;
+  margin-top: 30px;
+  border-radius: 5%;
+}
+.container.login .new-members button:hover,
+.container.login .login button:hover {
+  background-color: #8A6E36;
+}
+.container.login .new-members {
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  line-height: 40px;
+}
+.container.login .login {
+  min-width: 50%;
+  border-left: 1.5px solid black;
+}
+.container.login .login .input-container {
+  width: 500px;
+  position: relative;
+  display: flex;
+  flex-flow: column-reverse;
+  align-items: flex-start;
+  margin: auto;
+}
+.container.login .login .input-container input {
+  order: 10;
+  -ms-flex-order: 10;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 20px;
+  border-bottom: 1px solid #DED2B2;
+  text-indent: 10px;
+}
+.container.login .login .input-container input::-moz-placeholder {
+  opacity: 0;
+}
+.container.login .login .input-container input::-webkit-input-placeholder {
+  opacity: 0;
+}
+.container.login .login .input-container input:-ms-input-placeholder {
+  opacity: 0;
+}
+.container.login .login .input-container input,
+.container.login .login .input-container label {
+  transition: all 0.3s;
+}
+.container.login .login .input-container label {
+  order: 100;
+  color: #3f4f5b;
+  transform-origin: left bottom;
+  transform: translate(0px, 40px);
+}
+.container.login .login .input-container .bottom-line {
+  order: 2;
+  width: 0;
+  height: 2px;
+  background: #8A6E36;
+  transition: all 0.3s;
+}
+.container.login .login .input-container input:focus {
+  border-bottom-color: #fff;
+}
+.container.login .login .input-container input:not(:-moz-placeholder-shown) ~ div {
+  width: 100%;
+}
+.container.login .login .input-container input:focus ~ div,
+.container.login .login .input-container input:not(:placeholder-shown) ~ div {
+  width: 100%;
+}
+.container.login .login .input-container input:not(:-moz-placeholder-shown) + label {
+  color: #52616c;
+  transform: translate(10px) scale(0.9);
+}
+.container.login .login .input-container input:focus + label,
+.container.login .login .input-container input:not(:placeholder-shown) + label {
+  color: #52616c;
+  transform: translate(10px) scale(0.9);
+}
+.container.login .login p:hover {
+  transform: scale(1.2);
+  color: #8A6E36;
+}
+.container.login .login .logo {
+  border-left: 0;
+}
+.container.login .login .logo i {
+  font-size: 24px;
+  margin: 3%;
+}
+.container.login .login .logo i:hover {
+  transform: scale(1.2);
+  color: #8A6E36;
 }/*# sourceMappingURL=login.css.map */

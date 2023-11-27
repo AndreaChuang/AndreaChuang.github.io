@@ -1,7 +1,6 @@
 @import "reset";
 
 .products-wrap {
-    background: linear-gradient(to top right, #E4D9B8, #FFFAED);
 
     .banner {
         position: relative;
@@ -15,9 +14,10 @@
         span {
             font-size: 70px;
             position: absolute;
-            top: 40%;
+            top: 70%;
             right: 5%;
             color: #0c0c0c;
+            letter-spacing: 2px;
         }
     }
 
