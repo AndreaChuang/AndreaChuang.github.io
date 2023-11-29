@@ -1,3 +1,5 @@
+// 動畫
+
 const showLandingLogo = function () {
 
     gsap.registerPlugin(MotionPathPlugin, DrawSVGPlugin);
@@ -84,11 +86,9 @@ const showLandingLogo = function () {
     masterT.play();
 }
 
-
 showLandingLogo();
 
-// document.getElementById("animation").style.display = "none";
-
+document.getElementById("animation").style.display = "none";
 
 
 

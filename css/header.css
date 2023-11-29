@@ -46,7 +46,6 @@ header .nav-container .nav-list a {
   color: whitesmoke;
   text-decoration: none;
   padding: 5px 2.5em;
-  letter-spacing: 2px;
 }
 header .nav-container .nav-icon {
   display: flex;

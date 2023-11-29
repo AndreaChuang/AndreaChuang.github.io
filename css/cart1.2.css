@@ -1,5 +1,4 @@
 #wrapper {
-  max-width: 1680px;
   padding: 0 8%;
 }
 #wrapper .progressbar ul {
@@ -45,61 +44,69 @@
 #wrapper .progressbar ul li:nth-child(3) {
   background-color: #D9D9D9;
 }
-#wrapper .order {
+#wrapper .order-shipping {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  justify-content: space-between;
+  margin-bottom: 5%;
 }
-#wrapper .order .order-list {
-  display: flex;
-  flex-direction: column;
-  margin-right: 50px;
+#wrapper .order-shipping .order-information {
+  background-color: #fff;
+  border: 1px solid #889397;
+  width: 49.2%;
+  margin-left: 8.2%;
+  margin-right: 20px;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 2em;
 }
-#wrapper .order .order-list .order-items {
-  background-color: aliceblue;
-  display: flex;
-  width: 400px;
-  justify-content: space-evenly;
-  padding: 20px 0;
-  margin-bottom: 10px;
-  border: 1px solid black;
+#wrapper .order-shipping .order-information div:nth-child(n+4):nth-child(-n+7) {
+  line-height: 2.5em;
 }
-#wrapper .order .order-list .order-items .order-text .order-description {
-  line-height: 1.8em;
+#wrapper .order-shipping .order-information div input[type=text] {
+  width: 99%;
 }
-#wrapper .order .order-list .order-items .order-text .order-icon i:nth-child(3) {
-  padding-left: 80px;
+#wrapper .order-shipping .order-fee {
+  width: 32.8%;
+  margin-right: 8.2%;
 }
-#wrapper .order .order-list .order-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 35px;
-}
-#wrapper .order .order-fee {
-  width: 200px;
-  height: 190px;
-}
-#wrapper .order .order-fee .order-text {
-  background-color: aliceblue;
+#wrapper .order-shipping .order-fee .order-text {
+  background-color: #fff;
+  border: 1px solid #889397;
   font-size: 18px;
   padding: 15px;
-  border: 1px solid black;
   line-height: 1.8em;
+  width: 100%;
 }
-#wrapper .order .order-fee .order-text span {
-  border-bottom: 1px solid black;
-}
-#wrapper .order .order-fee .order-button {
+#wrapper .order-shipping .order-fee .order-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
 }
-#wrapper .order .order-icon {
-  display: flex;
-  align-items: center;
+#wrapper .order-shipping .order-fee .order-button button {
+  cursor: pointer;
+  background-color: #FFFAED;
+  border: 1px solid #8A6E36;
+  border-radius: 5%;
+  font-size: 18px;
+  margin-top: 20px;
 }
-#wrapper .order .order-icon i {
-  margin-left: 2px;
+#wrapper .order-shipping .order-fee .order-button button:hover {
+  background-color: #8A6E36;
+  color: #fff;
+}
+#wrapper .order-payment {
+  background-color: #fff;
+  width: 87%;
+  margin-left: 8%;
+  border: 1px solid #889397;
+  margin-bottom: 5%;
+}
+#wrapper .order-payment .order-method span {
+  font-size: 18px;
+  padding: 15px;
+  line-height: 1.8em;
+  font-size: 18px;
+}
+#wrapper .order-payment span:nth-child(1) {
+  font-size: 20px;
 }/*# sourceMappingURL=cart1.2.css.map */

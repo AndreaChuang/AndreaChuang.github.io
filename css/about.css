@@ -371,4 +371,7 @@ template {
 .about-wrap .about-form div input,
 .about-wrap .about-form div label {
   vertical-align: middle;
+}
+.about-wrap .about-form div button {
+  cursor: pointer;
 }/*# sourceMappingURL=about.css.map */

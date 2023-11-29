@@ -1,39 +1,26 @@
 .topbar {
   display: flex;
   justify-content: space-between;
-  align-items: last baseline;
+  padding-top: 5%;
 }
-
 .topbar .bread-crumbs .bread {
   list-style: none;
   margin: auto;
   display: flex;
-  padding-top: 30px;
   padding-left: 80px;
 }
-
 .topbar .bread-crumbs .bread li a {
   text-decoration: none;
   color: black;
 }
-
 .topbar .bread-crumbs .bread li a:hover {
   color: red;
 }
-
-.topbar .bread-crumbs .bread li+li:before {
+.topbar .bread-crumbs .bread li + li:before {
   content: ">";
   color: black;
   padding: 0 10px;
 }
-
 .topbar .sorting {
   padding-right: 80px;
-}
-
-.topbar .sorting span {
-  : 2px;
-  : : 2px: 0.5px;
-}
-
-/*# sourceMappingURL=bar.css.map */
+}/*# sourceMappingURL=bar.css.map */

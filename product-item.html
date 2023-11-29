@@ -13,6 +13,7 @@
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script async src="js/header.js"></script>
+    <script async src="js/product.item.js"></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="product.html">PRODUCTS</a></li>
                 <li><a href="guides.html">GUIDES</a></li>
-                <li><a href="notices.html">NOTICES</a></li>
+                <li><a href="Q&A.html">Q&A</a></li>
             </ul>
             <ul class="nav-icon">
                 <li><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
@@ -37,49 +38,98 @@
         </div>
     </header>
     <div id="wrapper">
-        <dvi class="bread-crumbs">
-            <ol class="bread">
-                <li><a href="">CRYSTAL</a></li>
-                <li><a href="">PRODUCTS</a></li>
-                <li><a href="">BRACELET</a></li>
-            </ol>
-        </dvi>
+        <div class="topbar">
+            <div class="bread-crumbs">
+                <ol class="bread">
+                    <li><a href="index.html">CRYSTAL</a></li>
+                    <li><a href="product.html">PRODUCTS</a></li>
+                    <li><a href="">BRACELET</a></li>
+                </ol>
+            </div>
+        </div>
         <div class="product">
             <div class="product-img">
                 <div class="bigimg">
-                    <img src="img/Rectangle 51.png" alt="">
+                    <img src="img/product-item/item1.png" alt="" id="large">
                 </div>
                 <div class="smallimg">
-                    <img src="img/Rectangle 121.png" alt="">
-                    <img src="img/Rectangle 122.png" alt="">
-                    <img src="img/Rectangle 121.png" alt="">
-                    <img src="img/Rectangle 122.png" alt="">
+                    <img src="img/product-item/item1.png" alt="" class="small">
+                    <img src="img/product-item/item2.png" alt="" class="small">
+                    <img src="img/product-item/item1.png" alt="" class="small">
+                    <img src="img/product-item/item2.png" alt="" class="small">
                 </div>
             </div>
             <div class="product-text">
-                <div>
-                    Amethyst
+                <div class="top">
+                    <span>Amethyst</span>
                     <br>
-                    $599
+                    <span>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        (255 reviews)
+                    </span>
                     <br>
-                    $399
+                    <span>$599</span>
                     <br>
-                    硬度 : 7
+                    <span>$399</span>
                     <br>
-                    脈輪 : 海底輪
+                    <span>硬度 : 7</span>
                     <br>
-                    星座 : 雙魚座、巨蠍座、天蠍座
+                    <span>脈輪 : 海底輪</span>
+                    <br>
+                    <span>星座 : 雙魚座、巨蠍座、天蠍座</span>
+                </div>
+                <div class="middle">
+                    尺寸:
+                    <select name="" id="sizeSelect">
+                        <option value="">請選擇</option>
+                        <option value="">12cm</option>
+                        <option value="">14cm</option>
+                        <option value="">16cm</option>
+                        <option value="">18cm</option>
+                        <option value="">20cm</option>
+                    </select>
+                    <div>
+                        <div>
+                            數量:
+                        </div>
+                        <div class="color">
+                            <div class="white">123</div>
+                            <div class="red">123</div>
+                            <div class="yellow"></div>
+                            <div class="green"></div>
+                            <div class="blue"></div>
+                        </div>
+                        <div>
+                            <button>ADD TO BAG</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <span>商品編號:21K3110</span>
+                    <br>
+                    <span>商品數量:999</span>
+                    <br>
+                    <span>更多分享:
+                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <i class="fa fa-weixin" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </span>
                 </div>
             </div>
         </div>
         <div class="description">
             <div class="description-title">商品描述</div>
             <div class="description-text">
-                <div>💎材質：月亮石圓珠(約3.5-4mm)、青金石圓珠(約3-3.5mm)、14K包金裝飾、彈力線
+                <div>💎材質：月亮石圓珠(約3.5-4mm)、青金石圓珠(約3-3.5mm)、14K包金裝飾、彈力線。
                     <br>
                     💎手鍊以彈力線穿成，設計師製作時會在你選擇的手腕尺寸上加上約0.5-1cm以方便穿脫。
                     <br>
-                    📦標準包裝：夾鏈儲存袋、吊飾絨布袋
+                    📦標準包裝：夾鏈儲存袋、吊飾絨布袋。
                 </div>
             </div>
         </div>
@@ -121,10 +171,9 @@
                 <img src="img/maybe u like.png" alt="maybe u like">
                 <img src="img/maybe u like.png" alt="maybe u like">
                 <img src="img/maybe u like.png" alt="maybe u like">
-            </div>
-            <div class="like-icon">
                 <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
             </div>
+
         </div>
     </div>
     <footer>

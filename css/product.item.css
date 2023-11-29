@@ -1,44 +1,64 @@
-#wrapper .bread-crumbs .bread {
+#wrapper .topbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5%;
+}
+#wrapper .topbar .bread-crumbs .bread {
   list-style: none;
   margin: auto;
   display: flex;
-  padding-top: 30px;
   padding-left: 80px;
 }
-
-#wrapper .bread-crumbs .bread li a {
+#wrapper .topbar .bread-crumbs .bread li a {
   text-decoration: none;
   color: black;
 }
-
-#wrapper .bread-crumbs .bread li a:hover {
+#wrapper .topbar .bread-crumbs .bread li a:hover {
   color: red;
 }
-
-#wrapper .bread-crumbs .bread li+li:before {
+#wrapper .topbar .bread-crumbs .bread li + li:before {
   content: ">";
   color: black;
   padding: 0 10px;
 }
-
+#wrapper .topbar .sorting {
+  padding-right: 80px;
+}
 #wrapper .product {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   border-bottom: 1px solid #889397;
   padding: 50px 0;
-  border-radius: 30px;
 }
-
-#wrapper .product .smallimg {
+#wrapper .product .product-img {
+  padding: 0 5% 0 0;
+}
+#wrapper .product .product-img .bigimg {
+  width: 475px;
+  height: 295px;
+}
+#wrapper .product .product-img .bigimg img {
+  width: 100%;
+}
+#wrapper .product .product-img .smallimg {
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 5%;
 }
-
-#wrapper .product .smallimg img {
+#wrapper .product .product-img .smallimg img {
   border-radius: 10px;
+  width: 100px;
+  height: 100px;
 }
-
+#wrapper .product .producr-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#wrapper .product .producr-text .top {
+  line-height: 1.5em;
+}
 #wrapper .shipping,
 #wrapper .description {
   display: flex;
@@ -48,7 +68,6 @@
   border-bottom: 1px solid #889397;
   padding: 50px 0;
 }
-
 #wrapper .shipping .shipping-title,
 #wrapper .shipping .description-title,
 #wrapper .shipping .like-title,
@@ -61,10 +80,7 @@
   font-size: 35px;
   text-align: center;
   line-height: 1.5em;
-  : 2px;
-  : : 2px: 0.2em;
 }
-
 #wrapper .shipping .description-text,
 #wrapper .shipping .shipping-text,
 #wrapper .description .description-text,
@@ -73,33 +89,20 @@
 #wrapper .like .shipping-text {
   font-size: 18px;
   line-height: 1.5em;
-  : 2px;
-  : : 2px: 0.2em;
 }
-
 #wrapper .like {
   margin: 50px 0;
 }
-
 #wrapper .like .like-img {
   display: flex;
   justify-content: space-evenly;
   position: relative;
   margin-top: 30px;
+  align-items: center;
 }
-
 #wrapper .like .like-img img {
   border-radius: 50px;
 }
-
-#wrapper .like .like-icon {
-  position: absolute;
-  right: 1.5%;
-  bottom: -25%;
-}
-
-#wrapper .like .like-icon i {
-  font-size: 25px;
-}
-
-/*# sourceMappingURL=product.item.css.map */
+#wrapper .like .like-img i {
+  font-size: 40px;
+}/*# sourceMappingURL=product.item.css.map */

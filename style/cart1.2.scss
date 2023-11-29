@@ -1,5 +1,4 @@
 #wrapper {
-    max-width: 1680px;
     padding: 0 8%;
 
     .progressbar ul {
@@ -57,79 +56,85 @@
         }
     }
 
-    .order {
+    .order-shipping {
         display: flex;
-        justify-content: center;
-        margin-bottom: 50px;
+        justify-content: space-between;
+        margin-bottom: 5%;
 
-        .order-list {
-            display: flex;
-            flex-direction: column;
-            margin-right: 50px;
+        .order-information {
+            background-color: #fff;
+            border: 1px solid #889397;
+            width: 49.2%;
+            margin-left: 8.2%;
+            margin-right: 20px;
+            padding: 15px;
+            font-size: 18px;
+            line-height: 2em;
 
-            .order-items {
-                background-color: aliceblue;
+            div:nth-child(n+4):nth-child(-n+7) {
+                line-height: 2.5em;
+
+            }
+
+            div input[type="text"] {
+                width: 99%;
+            }
+        }
+
+        .order-fee {
+            width: 32.8%;
+            margin-right: 8.2%;
+
+
+            .order-text {
+                background-color: #fff;
+                border: 1px solid #889397;
+                font-size: 18px;
+                padding: 15px;
+                line-height: 1.8em;
+                width: 100%;
+            }
+
+
+            .order-button {
                 display: flex;
-                width: 400px;
-                justify-content: space-evenly;
-                padding: 20px 0;
-                margin-bottom: 10px;
-                border: 1px solid black;
+                justify-content: center;
+                align-items: center;
 
-                .order-text {
-                    .order-description {
-                        line-height: 1.8em;
-                    }
+                button {
+                    cursor: pointer;
+                    background-color: #FFFAED;
+                    border: 1px solid #8A6E36;
+                    border-radius: 5%;
+                    font-size: 18px;
+                    margin-top: 20px;
 
-                    .order-icon i:nth-child(3) {
-                        padding-left: 80px;
+                    &:hover {
+                        background-color: #8A6E36;
+                        color: #fff;
                     }
                 }
             }
-
-            .order-button {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 35px;
-            }
         }
 
+    }
 
-        .order-fee {
-            width: 200px;
-            height: 190px;
+    .order-payment {
+        background-color: #fff;
+        width: 87%;
+        margin-left: 8%;
+        border: 1px solid #889397;
+        margin-bottom: 5%;
 
-            .order-text {
-                background-color: aliceblue;
-                font-size: 18px;
-                padding: 15px;
-                border: 1px solid black;
-                line-height: 1.8em;
-            }
-
-            .order-text span {
-                border-bottom: 1px solid black;
-            }
-
-            .order-button {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 60px;
-            }
+        .order-method span {
+            font-size: 18px;
+            padding: 15px;
+            line-height: 1.8em;
+            font-size: 18px;
         }
 
-
-        .order-icon {
-            display: flex;
-            align-items: center;
-
-            i {
-                margin-left: 2px;
-            }
+        span:nth-child(1) {
+            font-size: 20px;
         }
-
-        .order-icon i:nth-child(2) {}
     }
 }

@@ -1,5 +1,4 @@
 #wrapper {
-    max-width: 1680px;
     padding: 0 8%;
 
     .progressbar ul {
@@ -65,20 +64,20 @@
         .order-list {
             display: flex;
             flex-direction: column;
-            margin-right: 50px;
+            margin-right: 2%;
+            width: 50%;
 
             .order-items {
                 background-color: aliceblue;
                 display: flex;
-                width: 400px;
                 justify-content: space-evenly;
                 padding: 20px 0;
                 margin-bottom: 10px;
-                border: 1px solid black;
+                border: 1px solid #889397;
 
                 .order-text {
                     .order-description {
-                        line-height: 1.8em;
+                        line-height: 1.5em;
                     }
 
                     .order-icon i:nth-child(3) {
@@ -90,19 +89,19 @@
 
 
         .order-fee {
-            width: 200px;
-            height: 190px;
+            width: 50%;
 
             .order-text {
                 background-color: aliceblue;
                 font-size: 18px;
-                padding: 15px;
-                border: 1px solid black;
-                line-height: 1.8em;
+                padding: 5% 25%;
+                border: 1px solid #889397;
+                line-height: 1.5em;
             }
 
             .order-text span {
                 border-bottom: 1px solid black;
+
             }
 
             .order-button {

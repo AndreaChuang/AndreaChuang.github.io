@@ -1,7 +1,7 @@
 .topbar {
     display: flex;
     justify-content: space-between;
-    align-items: last baseline;
+    padding-top: 5%;
 
     .bread-crumbs {
 
@@ -9,7 +9,6 @@
             list-style: none;
             margin: auto;
             display: flex;
-            padding-top: 30px;
             padding-left: 80px;
 
             li {
@@ -35,10 +34,5 @@
 
     .sorting {
         padding-right: 80px;
-
-        span {
-            : 2px;
-            : : 2px: 0.5px;
-        }
     }
 }
