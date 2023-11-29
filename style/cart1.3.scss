@@ -59,7 +59,7 @@
     .order {
         display: flex;
         justify-content: center;
-        margin-bottom: 50px;
+        margin-bottom: 5%;
 
         .order-list {
             display: flex;
@@ -68,7 +68,7 @@
             width: 50%;
 
             .order-items {
-                background-color: aliceblue;
+                background-color: #fff;
                 display: flex;
                 justify-content: space-evenly;
                 padding: 20px 0;
@@ -80,48 +80,68 @@
                         line-height: 1.5em;
                     }
 
-                    .order-icon i:nth-child(3) {
-                        padding-left: 80px;
+                    .order-icon {
+                        display: flex;
+                        align-items: center;
+
+                        i,
+                        span {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    .order-icon i:nth-child(4) {
+                        padding-left: 38%;
                     }
                 }
-            }
-        }
-
-
-        .order-fee {
-            width: 50%;
-
-            .order-text {
-                background-color: aliceblue;
-                font-size: 18px;
-                padding: 5% 25%;
-                border: 1px solid #889397;
-                line-height: 1.5em;
-            }
-
-            .order-text span {
-                border-bottom: 1px solid black;
-
             }
 
             .order-button {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 60px;
+                height: 35px;
             }
         }
 
 
-        .order-icon {
-            display: flex;
-            align-items: center;
+        .order-fee {
+            width: 32.8%;
+            margin-right: 8.2%;
 
-            i {
-                margin-left: 2px;
+
+            .order-text {
+                background-color: #fff;
+                border: 1px solid #889397;
+                font-size: 18px;
+                padding: 15px;
+                line-height: 1.8em;
+                width: 100%;
+            }
+
+
+            .order-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                button {
+                    cursor: pointer;
+                    background-color: #FFFAED;
+                    border: 1px solid #8A6E36;
+                    border-radius: 5%;
+                    font-size: 18px;
+                    margin-top: 20px;
+
+                    &:hover {
+                        background-color: #8A6E36;
+                        color: #fff;
+                    }
+                }
             }
         }
 
-        .order-icon i:nth-child(2) {}
+
+
     }
 }

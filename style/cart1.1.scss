@@ -59,44 +59,42 @@
 
     .order {
         display: flex;
-        justify-content: center;
-        margin-bottom: 50px;
+        justify-content: space-between;
+        margin-bottom: 5%;
 
         .order-list {
             display: flex;
             flex-direction: column;
             margin-right: 2%;
-            width: 30%;
-            // flex-grow: 1;
+            width: 50%;
 
             .order-items {
-                background-color: aliceblue;
+                background-color: #fff;
                 display: flex;
-                width: 100%;
                 justify-content: space-evenly;
-                border-left: 1px solid #889397;
-                border-right: 1px solid #889397;
-                border-top: 0.5px solid #889397;
-                border-bottom: 0.5px solid #889397;
                 padding: 20px 0;
+                margin-bottom: 10px;
+                border: 1px solid #889397;
 
                 .order-text {
                     .order-description {
-                        line-height: 1.8em;
+                        line-height: 1.5em;
                     }
 
-                    .order-icon i:nth-child(3) {
-                        padding-left: 80px;
+                    .order-icon {
+                        display: flex;
+                        align-items: center;
+
+                        i,
+                        span {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    .order-icon i:nth-child(4) {
+                        padding-left: 38%;
                     }
                 }
-            }
-
-            .order-items:nth-child(1) {
-                border-top: 1px solid #889397;
-            }
-
-            .order-items:last-child {
-                border-bottom: 1px solid #889397;
             }
 
             .order-button {
@@ -109,16 +107,15 @@
 
 
         .order-fee {
-            width: 15%;
-            height: 190px;
-            border: 0.5px solid #889397;
-            // flex-grow: 1;
+            width: 32.8%;
+            margin-right: 8.2%;
+
 
             .order-text {
-                background-color: aliceblue;
+                background-color: #fff;
+                border: 1px solid #889397;
                 font-size: 18px;
                 padding: 15px;
-                border: 0.5px solid #889397;
                 line-height: 1.8em;
                 width: 100%;
             }
@@ -128,17 +125,20 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 60px;
-            }
-        }
 
+                button {
+                    cursor: pointer;
+                    background-color: #FFFAED;
+                    border: 1px solid #8A6E36;
+                    border-radius: 5%;
+                    font-size: 18px;
+                    margin-top: 20px;
 
-        .order-icon {
-            display: flex;
-            align-items: center;
-
-            i {
-                margin-left: 2px;
+                    &:hover {
+                        background-color: #8A6E36;
+                        color: #fff;
+                    }
+                }
             }
         }
     }

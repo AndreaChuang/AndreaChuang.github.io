@@ -2,6 +2,9 @@
   position: relative;
   margin: auto;
 }
+#wrapper .banner img {
+  width: 100%;
+}
 #wrapper .banner .banner-text span {
   font-size: 48px;
   position: absolute;

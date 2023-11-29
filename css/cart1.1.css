@@ -47,37 +47,36 @@
 }
 #wrapper .order {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  justify-content: space-between;
+  margin-bottom: 5%;
 }
 #wrapper .order .order-list {
   display: flex;
   flex-direction: column;
   margin-right: 2%;
-  width: 30%;
+  width: 50%;
 }
 #wrapper .order .order-list .order-items {
-  background-color: aliceblue;
+  background-color: #fff;
   display: flex;
-  width: 100%;
   justify-content: space-evenly;
-  border-left: 1px solid #889397;
-  border-right: 1px solid #889397;
-  border-top: 0.5px solid #889397;
-  border-bottom: 0.5px solid #889397;
   padding: 20px 0;
+  margin-bottom: 10px;
+  border: 1px solid #889397;
 }
 #wrapper .order .order-list .order-items .order-text .order-description {
-  line-height: 1.8em;
+  line-height: 1.5em;
 }
-#wrapper .order .order-list .order-items .order-text .order-icon i:nth-child(3) {
-  padding-left: 80px;
+#wrapper .order .order-list .order-items .order-text .order-icon {
+  display: flex;
+  align-items: center;
 }
-#wrapper .order .order-list .order-items:nth-child(1) {
-  border-top: 1px solid #889397;
+#wrapper .order .order-list .order-items .order-text .order-icon i,
+#wrapper .order .order-list .order-items .order-text .order-icon span {
+  margin-left: 10px;
 }
-#wrapper .order .order-list .order-items:last-child {
-  border-bottom: 1px solid #889397;
+#wrapper .order .order-list .order-items .order-text .order-icon i:nth-child(4) {
+  padding-left: 38%;
 }
 #wrapper .order .order-list .order-button {
   display: flex;
@@ -86,15 +85,14 @@
   height: 35px;
 }
 #wrapper .order .order-fee {
-  width: 15%;
-  height: 190px;
-  border: 0.5px solid #889397;
+  width: 32.8%;
+  margin-right: 8.2%;
 }
 #wrapper .order .order-fee .order-text {
-  background-color: aliceblue;
+  background-color: #fff;
+  border: 1px solid #889397;
   font-size: 18px;
   padding: 15px;
-  border: 0.5px solid #889397;
   line-height: 1.8em;
   width: 100%;
 }
@@ -102,12 +100,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
 }
-#wrapper .order .order-icon {
-  display: flex;
-  align-items: center;
+#wrapper .order .order-fee .order-button button {
+  cursor: pointer;
+  background-color: #FFFAED;
+  border: 1px solid #8A6E36;
+  border-radius: 5%;
+  font-size: 18px;
+  margin-top: 20px;
 }
-#wrapper .order .order-icon i {
-  margin-left: 2px;
+#wrapper .order .order-fee .order-button button:hover {
+  background-color: #8A6E36;
+  color: #fff;
 }/*# sourceMappingURL=cart1.1.css.map */

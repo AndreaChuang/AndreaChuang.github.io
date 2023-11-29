@@ -7,6 +7,43 @@
 
 
 body {
+
+    .cartFly {
+        position: fixed;
+        right: 0;
+        z-index: 5;
+        max-width: 550px;
+        width: 50%;
+        @import "style/cart-orderlist.scss";
+
+        .order-list {
+            width: 100%;
+
+            .order-items {
+                margin: 0 2px 0 0;
+            }
+        }
+
+        &.hide {
+            display: none;
+        }
+
+        .checkout {
+            width: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 30px;
+
+            a {
+                height: 30px;
+                line-height: 30px;
+                width: auto;
+            }
+        }
+    }
+
     overflow-x: hidden;
     background: linear-gradient(to top right, #E4D9B8, #FFFAED);
 

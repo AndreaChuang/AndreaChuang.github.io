@@ -317,6 +317,62 @@ body {
   overflow-x: hidden;
   background: linear-gradient(to top right, #E4D9B8, #FFFAED);
 }
+body .cartFly {
+  position: fixed;
+  right: 0;
+  z-index: 5;
+  max-width: 550px;
+  width: 50%;
+}
+body .cartFly .order-list {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2%;
+  width: 50%;
+}
+body .cartFly .order-list .order-items {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  margin-bottom: 10px;
+  border: 1px solid #889397;
+}
+body .cartFly .order-list .order-items .order-text .order-description {
+  line-height: 1.5em;
+}
+body .cartFly .order-list .order-items .order-text .order-icon {
+  display: flex;
+  align-items: center;
+}
+body .cartFly .order-list .order-items .order-text .order-icon i {
+  margin-left: 2px;
+}
+body .cartFly .order-list .order-items .order-text .order-icon i:nth-child(4) {
+  padding-left: 80px;
+}
+body .cartFly .order-list {
+  width: 100%;
+}
+body .cartFly .order-list .order-items {
+  margin: 0 2px 0 0;
+}
+body .cartFly.hide {
+  display: none;
+}
+body .cartFly .checkout {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 30px;
+}
+body .cartFly .checkout a {
+  height: 30px;
+  line-height: 30px;
+  width: auto;
+}
 body #animation {
   display: flex;
   justify-content: center;
