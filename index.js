@@ -88,7 +88,7 @@ const showLandingLogo = function () {
 
 showLandingLogo();
 
-document.getElementById("animation").style.display = "none";
+// document.getElementById("animation").style.display = "none";
 
 
 
