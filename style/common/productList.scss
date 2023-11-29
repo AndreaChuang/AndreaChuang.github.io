@@ -3,14 +3,10 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 50px 80px;
+    max-width: 1680px;
 
     .items-img {
         padding: 20px 15px;
-        width: 420px;
     }
 
-    img {
-        width: 100%;
-
-    }
 }

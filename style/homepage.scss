@@ -1,6 +1,5 @@
 .wrap {
 
-
     .banner {
         display: flex;
         max-width: 1680px;
@@ -109,7 +108,7 @@
         justify-content: center;
         background-color: rgb(222, 210, 178);
         margin: 0 100px 130px;
-        height: 45vh;
+        height: 500px;
         max-width: 1920px;
 
         .guidesImg {
@@ -176,7 +175,6 @@
     }
 
     .features {
-        height: auto;
 
         h1 {
             text-align: center;
@@ -188,55 +186,55 @@
             display: flex;
             justify-content: space-around;
             position: relative;
+            padding-left: 19%;
 
             img {
                 width: 100%;
             }
 
             .features-text {
-                position: absolute;
                 display: flex;
-                flex-direction: column;
-                // justify-content: space-between;
-                text-align: center;
-                line-height: 1.5em;
-                font-weight: bold;
+
+                &>div {
+                    position: absolute;
+                    text-align: center;
+                    font-weight: bold;
+                    line-height: 1.5em;
+                }
 
                 div:nth-child(1) {
-                    margin-left: -300 px;
+                    left: 23%;
+                    top: 0%;
                 }
 
                 div:nth-child(2) {
-                    // margin-left: -910px;
-                    // margin-top: 178px;
+                    left: 16%;
+                    top: 40%;
                 }
 
                 div:nth-child(3) {
-                    //     margin-left: -580px;
-                    //     margin-top: 440px;
-                    // }
+                    bottom: -13%;
+                    left: 19%;
+                }
 
-                    div:nth-child(4) {
-                        // width: 300px;
-                        // margin-left: 220px;
-                        // margin-top: -60px;
-                    }
+                div:nth-child(4) {
+                    top: -14%;
+                    right: 24%;
+                }
 
-                    div:nth-child(5) {
-                        // width: 480px;
-                        // margin-top: 140px;
-                        // margin-left: 410px;
-                    }
+                div:nth-child(5) {
+                    top: 31%;
+                    right: 16%;
+                }
 
-                    div:nth-child(6) {
-                        // width: 450px;
-                        // margin-top: 380px;
-                        // margin-left: 150px;
-                    }
+                div:nth-child(6) {
+                    bottom: 0%;
+                    right: 20%;
                 }
             }
         }
     }
+
 
     .customers {
         border-radius: 5px;

@@ -7,16 +7,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cart1.2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/index.css">
-    <!-- <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script> -->
-    <!-- <script src="library/gsap.min.js"></script>
-    <script src="library/dsvp.js"></script>
-    <script src="library/mpp.js"></script>
-    <script async src="index.js"></script> -->
-
     <script async src="js/header.js"></script>
 </head>
 
@@ -33,27 +28,56 @@
                 <li><a href="product.html">PRODUCTS</a></li>
                 <li><a href="guides.html">GUIDES</a></li>
                 <li><a href="notices.html">NOTICES</a></li>
-
             </ul>
             <ul class="nav-icon">
-                <li><a href="
-                    favorite.html"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                <li><a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                <li><a href="cart-1.1.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
                 <li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
             </ul>
         </div>
     </header>
     <div id="wrapper">
-        <ul>
-            <li></li>
-        </ul>
-    </div>
-    <div>
-        <div></div>
-        <div></div>
+        <div class="progressbar">
+            <ul>
+                <li><span>Shopping Cart</span></li>
+                <li><span>Fill Information</span></li>
+                <li><span>Order Confirmation</span></li>
+            </ul>
+        </div>
+        <div>
+            <div class="order-shipping">
+                <div class="order-information">
+                    <div>
+                        <span>
+                            Shipping Address
+                        </span>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="sex">
+                            Mrs./Ms.
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="sex">
+                            Mr
+                        </label>
+                    </div>
+                    <div>
+                        <label for="" placeholder="First Name*">name:</label>
+                        <input type="text" readonly>
+                    </div>
+                </div>
+                <div class="order-fee"></div>
+            </div>
+            <div class="order-payment">
+                <div class="order-method"></div>
+            </div>
+        </div>
     </div>
     <footer>
-        <div class="container">
+        <div class="footer-container">
             <div class="footer-logo">
                 <img src="img/LOGO.png" alt="頁尾LOGO">
             </div>

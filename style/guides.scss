@@ -1,6 +1,6 @@
 @import "reset";
 
-.products-wrap {
+.guides-wrap {
 
     .banner {
         position: relative;
@@ -12,18 +12,17 @@
 
     .banner-text {
         span {
-            font-size: 70px;
+            font-size: 48px;
             position: absolute;
             top: 70%;
             right: 5%;
             color: #0c0c0c;
-            letter-spacing: 2px;
         }
     }
 
-    @import "body/bread";
+    @import "common/bar";
 
-    @import "body/productList";
+    @import "common/productList";
 
-    @import "body/pagination";
+    @import "common/pagination";
 }

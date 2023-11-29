@@ -1,0 +1,44 @@
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+
+    .bread-crumbs {
+
+        .bread {
+            list-style: none;
+            margin: auto;
+            display: flex;
+            padding-top: 30px;
+            padding-left: 80px;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: black;
+
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+
+
+            li+li:before {
+                content: '>';
+                color: black;
+                padding: 0 10px;
+
+            }
+        }
+    }
+
+    .sorting {
+        padding-right: 80px;
+
+        span {
+            : 2px;
+            : : 2px: 0.5px;
+        }
+    }
+}

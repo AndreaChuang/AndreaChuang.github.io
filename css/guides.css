@@ -6,8 +6,10 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
 /* Sections
@@ -42,9 +44,12 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
 }
 
 /**
@@ -52,8 +57,10 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /* Text-level semantics
@@ -70,10 +77,13 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
 }
 
 /**
@@ -91,8 +101,10 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /**
@@ -142,10 +154,14 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
 }
 
 /**
@@ -153,7 +169,8 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -162,7 +179,8 @@ input { /* 1 */
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -211,12 +229,18 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
 }
 
 /**
@@ -239,8 +263,10 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
 }
 
 /**
@@ -256,8 +282,10 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
 }
 
 /**
@@ -272,8 +300,10 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
 }
 
 /* Interactive
@@ -308,67 +338,91 @@ template {
   display: none;
 }
 
-.products-wrap .banner {
+.guides-wrap .banner {
   position: relative;
 }
-.products-wrap .banner img {
+
+.guides-wrap .banner img {
   width: 100%;
 }
-.products-wrap .banner-text span {
-  font-size: 70px;
+
+.guides-wrap .banner-text span {
+  font-size: 48px;
   position: absolute;
   top: 70%;
   right: 5%;
   color: #0c0c0c;
-  letter-spacing: 2px;
+  : 2px;
+  : 2px;
 }
-.products-wrap .bread-crumbs .bread {
+
+.guides-wrap .topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;
+}
+
+.guides-wrap .topbar .bread-crumbs .bread {
   list-style: none;
   margin: auto;
   display: flex;
   padding-top: 30px;
   padding-left: 80px;
 }
-.products-wrap .bread-crumbs .bread li a {
+
+.guides-wrap .topbar .bread-crumbs .bread li a {
   text-decoration: none;
   color: black;
 }
-.products-wrap .bread-crumbs .bread li a:hover {
+
+.guides-wrap .topbar .bread-crumbs .bread li a:hover {
   color: red;
 }
-.products-wrap .bread-crumbs .bread li + li:before {
+
+.guides-wrap .topbar .bread-crumbs .bread li+li:before {
   content: ">";
   color: black;
   padding: 0 10px;
 }
-.products-wrap .items {
+
+.guides-wrap .topbar .sorting {
+  padding-right: 80px;
+}
+
+.guides-wrap .topbar .sorting span {
+  : 2px;
+  : : 2px: 0.5px;
+}
+
+.guides-wrap .items {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 50px 80px;
+  max-width: 1680px;
 }
-.products-wrap .items .items-img {
+
+.guides-wrap .items .items-img {
   padding: 20px 15px;
-  width: 420px;
 }
-.products-wrap .items img {
-  width: 100%;
-}
-.products-wrap .pagination {
+
+.guides-wrap .pagination {
   text-align: center;
   margin: 40px 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.products-wrap .pagination .pages {
+
+.guides-wrap .pagination .pages {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 100%;
   width: 200px;
 }
-.products-wrap .pagination .page-number {
+
+.guides-wrap .pagination .page-number {
   cursor: pointer;
   color: #0f0e0e;
   border-radius: 50%;
@@ -378,7 +432,8 @@ template {
   align-items: center;
   justify-content: center;
 }
-.products-wrap .pagination button {
+
+.guides-wrap .pagination button {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -389,25 +444,34 @@ template {
   color: #0f0f10;
   border: none;
 }
-.products-wrap .pagination button:hover,
-.products-wrap .pagination .page-number:hover {
+
+.guides-wrap .pagination button:hover,
+.guides-wrap .pagination .page-number:hover {
   font-size: 1.5em;
   background-color: #8A6E36;
   color: white;
 }
-.products-wrap .pagination #prevPage {
+
+.guides-wrap .pagination #prevPage {
   margin-right: 20px;
 }
-.products-wrap .pagination #nextPage {
+
+.guides-wrap .pagination #nextPage {
   margin-left: 20px;
 }
-.products-wrap .pagination .arrow {
+
+.guides-wrap .pagination .arrow {
   font-size: 1.2em;
 }
-.products-wrap .pagination .arrow i {
+
+.guides-wrap .pagination .arrow i {
   padding-right: 10px;
 }
-.products-wrap .pagination .nav-text {
+
+.guides-wrap .pagination .nav-text {
   font-size: 0.7em;
-  letter-spacing: 0.3em;
-}/*# sourceMappingURL=guides.css.map */
+  : 2px;
+  : : 2px: 0.3em;
+}
+
+/*# sourceMappingURL=guides.css.map */

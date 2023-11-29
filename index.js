@@ -45,90 +45,19 @@ const showLandingLogo = function () {
                 animateLines();
             }
 
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.9;
-            }, "4000");
+            // logo淡出效果
+            gsap.to('#animation', {
+                opacity: 0,
+                duration: 3,
+                delay: 5,
+                display: "none"
+            });
 
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.85;
-            }, "4100");
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.8;
-            }, "4200");
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.75;
-            }, "4300");
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.7;
-            }, "4400");
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.65;
-            }, "4500");
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.6;
-            }, "4600");
-
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.55;
-            }, "4700");
-
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.5;
-            }, "4800");
-
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.45;
-            }, "4900");
-
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.4;
-            }, "5000");
-
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.35;
-            }, "5100");
-
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.3;
-            }, "5200");
-
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.25;
-            }, "5300");
-
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.2;
-            }, "5400");
-
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.15;
-            }, "5500");
-
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.1;
-            }, "5600");
-
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.07;
-            }, "5700");
-
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.05;
-            }, "5800");
-
-            setTimeout(() => {
-                document.getElementById("animation").style.opacity = 0.03;
-            }, "5900");
-
-            setTimeout(() => {
-                document.getElementById("animation").style.display = "none";
-            }, "6000");
             return tw;
         }
     }
 
     function animateLines() {
-        console.log('animateLines')
         var mainTL = new TimelineMax();
         for (let path of paths) {
             var length = path.getTotalLength();
@@ -158,5 +87,8 @@ const showLandingLogo = function () {
 
 showLandingLogo();
 
-
 // document.getElementById("animation").style.display = "none";
+
+
+
+

@@ -315,7 +315,7 @@ template {
   width: 100%;
 }
 .about-wrap .banner-text span {
-  font-size: 70px;
+  font-size: 48px;
   position: absolute;
   top: 45%;
   left: 5%;
@@ -336,12 +336,11 @@ template {
 }
 .about-wrap .about-container .about-text {
   margin-left: 5%;
-  margin-top: -25%;
+  margin-top: -20%;
   z-index: 1;
 }
 .about-wrap .about-container .about-text p {
-  font: bold;
-  font-size: 18px;
+  font-size: 30px;
   line-height: 2em;
   text-align: center;
 }

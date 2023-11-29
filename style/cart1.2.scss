@@ -1,0 +1,135 @@
+#wrapper {
+    max-width: 1680px;
+    padding: 0 8%;
+
+    .progressbar ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        height: 300px;
+        align-items: center;
+        padding: 0;
+
+
+        li {
+            border-radius: 50%;
+            position: relative;
+            white-space: nowrap;
+            width: 50px;
+            height: 50px;
+
+            span {
+                margin-top: 70px;
+                position: absolute;
+                margin-left: -30px;
+            }
+        }
+
+        li+li {
+            margin-left: 100px;
+        }
+
+        li+li::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background-color: rgb(1, 1, 1);
+            top: 0;
+            bottom: 0;
+            left: -100px;
+            margin: auto;
+
+        }
+
+        li:nth-child(1) {
+            background-color: #D9D9D9;
+
+        }
+
+        li:nth-child(2) {
+            background-color: black;
+        }
+
+        li:nth-child(3) {
+            background-color: #D9D9D9;
+
+        }
+    }
+
+    .order {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+
+        .order-list {
+            display: flex;
+            flex-direction: column;
+            margin-right: 50px;
+
+            .order-items {
+                background-color: aliceblue;
+                display: flex;
+                width: 400px;
+                justify-content: space-evenly;
+                padding: 20px 0;
+                margin-bottom: 10px;
+                border: 1px solid black;
+
+                .order-text {
+                    .order-description {
+                        line-height: 1.8em;
+                    }
+
+                    .order-icon i:nth-child(3) {
+                        padding-left: 80px;
+                    }
+                }
+            }
+
+            .order-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
+            }
+        }
+
+
+        .order-fee {
+            width: 200px;
+            height: 190px;
+
+            .order-text {
+                background-color: aliceblue;
+                font-size: 18px;
+                padding: 15px;
+                border: 1px solid black;
+                line-height: 1.8em;
+            }
+
+            .order-text span {
+                border-bottom: 1px solid black;
+            }
+
+            .order-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+            }
+        }
+
+
+        .order-icon {
+            display: flex;
+            align-items: center;
+
+            i {
+                margin-left: 2px;
+            }
+        }
+
+        .order-icon i:nth-child(2) {}
+    }
+}

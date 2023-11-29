@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .pagination .pages {
   display: flex;
   align-items: center;
@@ -12,6 +13,7 @@
   max-width: 100%;
   width: 200px;
 }
+
 .pagination .page-number {
   cursor: pointer;
   color: #0f0e0e;
@@ -22,6 +24,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .pagination button {
   cursor: pointer;
   display: flex;
@@ -33,25 +36,34 @@
   color: #0f0f10;
   border: none;
 }
+
 .pagination button:hover,
 .pagination .page-number:hover {
   font-size: 1.5em;
   background-color: #8A6E36;
   color: white;
 }
+
 .pagination #prevPage {
   margin-right: 20px;
 }
+
 .pagination #nextPage {
   margin-left: 20px;
 }
+
 .pagination .arrow {
   font-size: 1.2em;
 }
+
 .pagination .arrow i {
   padding-right: 10px;
 }
+
 .pagination .nav-text {
   font-size: 0.7em;
-  letter-spacing: 0.3em;
-}/*# sourceMappingURL=pagination.css.map */
+  : 2px;
+  : : 2px: 0.3em;
+}
+
+/*# sourceMappingURL=pagination.css.map */

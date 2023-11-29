@@ -1,0 +1,105 @@
+#wrapper .bread-crumbs .bread {
+  list-style: none;
+  margin: auto;
+  display: flex;
+  padding-top: 30px;
+  padding-left: 80px;
+}
+
+#wrapper .bread-crumbs .bread li a {
+  text-decoration: none;
+  color: black;
+}
+
+#wrapper .bread-crumbs .bread li a:hover {
+  color: red;
+}
+
+#wrapper .bread-crumbs .bread li+li:before {
+  content: ">";
+  color: black;
+  padding: 0 10px;
+}
+
+#wrapper .product {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #889397;
+  padding: 50px 0;
+  border-radius: 30px;
+}
+
+#wrapper .product .smallimg {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+#wrapper .product .smallimg img {
+  border-radius: 10px;
+}
+
+#wrapper .shipping,
+#wrapper .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #889397;
+  padding: 50px 0;
+}
+
+#wrapper .shipping .shipping-title,
+#wrapper .shipping .description-title,
+#wrapper .shipping .like-title,
+#wrapper .description .shipping-title,
+#wrapper .description .description-title,
+#wrapper .description .like-title,
+#wrapper .like .shipping-title,
+#wrapper .like .description-title,
+#wrapper .like .like-title {
+  font-size: 35px;
+  text-align: center;
+  line-height: 1.5em;
+  : 2px;
+  : : 2px: 0.2em;
+}
+
+#wrapper .shipping .description-text,
+#wrapper .shipping .shipping-text,
+#wrapper .description .description-text,
+#wrapper .description .shipping-text,
+#wrapper .like .description-text,
+#wrapper .like .shipping-text {
+  font-size: 18px;
+  line-height: 1.5em;
+  : 2px;
+  : : 2px: 0.2em;
+}
+
+#wrapper .like {
+  margin: 50px 0;
+}
+
+#wrapper .like .like-img {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  margin-top: 30px;
+}
+
+#wrapper .like .like-img img {
+  border-radius: 50px;
+}
+
+#wrapper .like .like-icon {
+  position: absolute;
+  right: 1.5%;
+  bottom: -25%;
+}
+
+#wrapper .like .like-icon i {
+  font-size: 25px;
+}
+
+/*# sourceMappingURL=product.item.css.map */

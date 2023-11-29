@@ -85,7 +85,7 @@
   justify-content: center;
   background-color: rgb(222, 210, 178);
   margin: 0 100px 130px;
-  height: 45vh;
+  height: 500px;
   max-width: 1920px;
 }
 .wrap .guides .guidesImg {
@@ -140,9 +140,6 @@
   color: whitesmoke;
   text-decoration: none;
 }
-.wrap .features {
-  height: auto;
-}
 .wrap .features h1 {
   text-align: center;
   color: rgb(138, 110, 54);
@@ -152,20 +149,43 @@
   display: flex;
   justify-content: space-around;
   position: relative;
+  padding-left: 19%;
 }
 .wrap .features .featuresImg img {
   width: 100%;
 }
 .wrap .features .featuresImg .features-text {
-  position: absolute;
   display: flex;
-  flex-direction: column;
+}
+.wrap .features .featuresImg .features-text > div {
+  position: absolute;
   text-align: center;
-  line-height: 1.5em;
   font-weight: bold;
+  line-height: 1.5em;
 }
 .wrap .features .featuresImg .features-text div:nth-child(1) {
-  margin-left: -300 px;
+  left: 23%;
+  top: 0%;
+}
+.wrap .features .featuresImg .features-text div:nth-child(2) {
+  left: 16%;
+  top: 40%;
+}
+.wrap .features .featuresImg .features-text div:nth-child(3) {
+  bottom: -13%;
+  left: 19%;
+}
+.wrap .features .featuresImg .features-text div:nth-child(4) {
+  top: -14%;
+  right: 24%;
+}
+.wrap .features .featuresImg .features-text div:nth-child(5) {
+  top: 31%;
+  right: 16%;
+}
+.wrap .features .featuresImg .features-text div:nth-child(6) {
+  bottom: 0%;
+  right: 20%;
 }
 .wrap .customers {
   border-radius: 5px;

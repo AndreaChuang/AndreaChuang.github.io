@@ -1,0 +1,84 @@
+#wrapper {
+
+    @import "common/bread";
+
+    .product {
+        display: flex;
+        justify-content: space-evenly;
+        border-bottom: 1px solid #889397;
+        padding: 50px 0;
+        border-radius: 30px;
+
+        .smallimg {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+
+            img {
+                border-radius: 10px;
+            }
+        }
+
+    }
+
+    .shipping,
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #889397;
+        padding: 50px 0;
+    }
+
+    .shipping,
+    .description,
+    .like {
+
+        .shipping-title,
+        .description-title,
+        .like-title {
+            font-size: 35px;
+            text-align: center;
+            line-height: 1.5em;
+            : 2px;
+            : : 2px: 0.2em;
+        }
+
+        .description-text,
+        .shipping-text {
+            font-size: 18px;
+            line-height: 1.5em;
+            : 2px;
+            : : 2px: 0.2em;
+        }
+    }
+
+
+
+    .like {
+        margin: 50px 0;
+
+        .like-img {
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+            margin-top: 30px;
+
+            img {
+                border-radius: 50px;
+            }
+        }
+
+        .like-icon {
+            position: absolute;
+            right: 1.5%;
+            bottom: -99%;
+
+            i {
+                font-size: 25px;
+            }
+        }
+
+    }
+}

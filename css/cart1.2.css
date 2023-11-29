@@ -1,0 +1,105 @@
+#wrapper {
+  max-width: 1680px;
+  padding: 0 8%;
+}
+#wrapper .progressbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  height: 300px;
+  align-items: center;
+  padding: 0;
+}
+#wrapper .progressbar ul li {
+  border-radius: 50%;
+  position: relative;
+  white-space: nowrap;
+  width: 50px;
+  height: 50px;
+}
+#wrapper .progressbar ul li span {
+  margin-top: 70px;
+  position: absolute;
+  margin-left: -30px;
+}
+#wrapper .progressbar ul li + li {
+  margin-left: 100px;
+}
+#wrapper .progressbar ul li + li::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background-color: rgb(1, 1, 1);
+  top: 0;
+  bottom: 0;
+  left: -100px;
+  margin: auto;
+}
+#wrapper .progressbar ul li:nth-child(1) {
+  background-color: #D9D9D9;
+}
+#wrapper .progressbar ul li:nth-child(2) {
+  background-color: black;
+}
+#wrapper .progressbar ul li:nth-child(3) {
+  background-color: #D9D9D9;
+}
+#wrapper .order {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+#wrapper .order .order-list {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+#wrapper .order .order-list .order-items {
+  background-color: aliceblue;
+  display: flex;
+  width: 400px;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+#wrapper .order .order-list .order-items .order-text .order-description {
+  line-height: 1.8em;
+}
+#wrapper .order .order-list .order-items .order-text .order-icon i:nth-child(3) {
+  padding-left: 80px;
+}
+#wrapper .order .order-list .order-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+}
+#wrapper .order .order-fee {
+  width: 200px;
+  height: 190px;
+}
+#wrapper .order .order-fee .order-text {
+  background-color: aliceblue;
+  font-size: 18px;
+  padding: 15px;
+  border: 1px solid black;
+  line-height: 1.8em;
+}
+#wrapper .order .order-fee .order-text span {
+  border-bottom: 1px solid black;
+}
+#wrapper .order .order-fee .order-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+#wrapper .order .order-icon {
+  display: flex;
+  align-items: center;
+}
+#wrapper .order .order-icon i {
+  margin-left: 2px;
+}/*# sourceMappingURL=cart1.2.css.map */
