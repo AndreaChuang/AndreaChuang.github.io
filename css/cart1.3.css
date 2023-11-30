@@ -66,14 +66,6 @@
 #wrapper .order .order-list .order-items .order-text .order-description {
   line-height: 1.5em;
 }
-#wrapper .order .order-list .order-items .order-text .order-icon {
-  display: flex;
-  align-items: center;
-}
-#wrapper .order .order-list .order-items .order-text .order-icon i,
-#wrapper .order .order-list .order-items .order-text .order-icon span {
-  margin-left: 10px;
-}
 #wrapper .order .order-list .order-items .order-text .order-icon i:nth-child(4) {
   padding-left: 38%;
 }
@@ -106,7 +98,7 @@
 }
 #wrapper .order .order-fee .order-button a {
   display: inline-block;
-  padding: 30px 200px;
+  padding: 20px 0;
   font-size: 18px;
   text-align: center;
   text-decoration: none;
