@@ -62,48 +62,54 @@
             span {
                 font-size: 35px;
             }
-        }
 
-        div {
-            width: 50%;
-            padding-bottom: 10px;
-            height: 50px;
-            font-size: 18px;
-
-            input {
-                height: 30px;
-                padding: 0;
-                margin: 0;
-                border: 0;
-                background-color: #fff;
-                color: rgb(138, 110, 54);
-            }
-
-            input:not(#agree) {
+            textarea {
                 width: 100%;
+                min-height: 100px;
             }
-        }
 
-        div:nth-child(5)textarea {
-            resize: none;
-            border: none;
-        }
+            div {
+                width: 50%;
+                padding-bottom: 10px;
+                font-size: 18px;
 
-        div:nth-child(6) {
-            display: flex;
-            align-items: center;
-        }
+                input {
+                    height: 30px;
+                    padding: 0;
+                    margin: 0;
+                    border: 0;
+                    background-color: #fff;
+                    color: rgb(138, 110, 54);
+                }
 
-        div:nth-child(7) {
-            input[type="submit"] {
-                cursor: pointer;
-                background-color: #DED2B2;
+                input:not(#agree) {
+                    width: 100%;
+                }
+            }
 
-                &:hover {
-                    background-color: #8A6E36;
-                    color: #fff;
+            div:nth-child(5)textarea {
+                resize: none;
+                border: none;
+            }
+
+            div:nth-child(6) {
+                display: flex;
+                align-items: center;
+            }
+
+            div:nth-child(7) {
+                input[type="submit"] {
+                    cursor: pointer;
+                    background-color: #DED2B2;
+
+                    &:hover {
+                        background-color: #8A6E36;
+                        color: #fff;
+                    }
                 }
             }
         }
+
+
     }
 }

@@ -355,13 +355,16 @@ template {
 .about-wrap .about-form form span {
   font-size: 35px;
 }
-.about-wrap .about-form div {
+.about-wrap .about-form form textarea {
+  width: 100%;
+  min-height: 100px;
+}
+.about-wrap .about-form form div {
   width: 50%;
   padding-bottom: 10px;
-  height: 50px;
   font-size: 18px;
 }
-.about-wrap .about-form div input {
+.about-wrap .about-form form div input {
   height: 30px;
   padding: 0;
   margin: 0;
@@ -369,22 +372,22 @@ template {
   background-color: #fff;
   color: rgb(138, 110, 54);
 }
-.about-wrap .about-form div input:not(#agree) {
+.about-wrap .about-form form div input:not(#agree) {
   width: 100%;
 }
-.about-wrap .about-form div:nth-child(5) textarea {
+.about-wrap .about-form form div:nth-child(5) textarea {
   resize: none;
   border: none;
 }
-.about-wrap .about-form div:nth-child(6) {
+.about-wrap .about-form form div:nth-child(6) {
   display: flex;
   align-items: center;
 }
-.about-wrap .about-form div:nth-child(7) input[type=submit] {
+.about-wrap .about-form form div:nth-child(7) input[type=submit] {
   cursor: pointer;
   background-color: #DED2B2;
 }
-.about-wrap .about-form div:nth-child(7) input[type=submit]:hover {
+.about-wrap .about-form form div:nth-child(7) input[type=submit]:hover {
   background-color: #8A6E36;
   color: #fff;
 }/*# sourceMappingURL=about.css.map */
