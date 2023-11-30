@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 20px;
 }
 .pagination .pages {
   display: flex;
@@ -49,9 +49,12 @@
 .pagination .arrow {
   font-size: 1.2em;
 }
-.pagination .arrow i {
+.pagination .arrow .fa-long-arrow-left {
   padding-right: 10px;
 }
+.pagination .arrow .fa-long-arrow-right {
+  padding-left: 10px;
+}
 .pagination .nav-text {
-  font-size: 0.7em;
+  font-size: 20px;
 }/*# sourceMappingURL=pagination.css.map */

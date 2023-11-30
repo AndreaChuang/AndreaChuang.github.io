@@ -335,7 +335,7 @@ template {
 .products-wrap .topbar .bread-crumbs .bread li a {
   text-decoration: none;
   color: black;
-  font-size: 30px;
+  font-size: 20px;
 }
 .products-wrap .topbar .bread-crumbs .bread li a:hover {
   color: red;
@@ -344,13 +344,13 @@ template {
   content: ">";
   color: black;
   padding: 0 10px;
-  font-size: 30px;
+  font-size: 20px;
 }
 .products-wrap .topbar .sorting {
   padding-right: 80px;
 }
 .products-wrap .topbar .sorting span {
-  font-size: 30px;
+  font-size: 20px;
 }
 .products-wrap .topbar .sorting .fa {
   font-size: 25px;
@@ -371,7 +371,7 @@ template {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 20px;
 }
 .products-wrap .pagination .pages {
   display: flex;
@@ -416,9 +416,12 @@ template {
 .products-wrap .pagination .arrow {
   font-size: 1.2em;
 }
-.products-wrap .pagination .arrow i {
+.products-wrap .pagination .arrow .fa-long-arrow-left {
   padding-right: 10px;
 }
+.products-wrap .pagination .arrow .fa-long-arrow-right {
+  padding-left: 10px;
+}
 .products-wrap .pagination .nav-text {
-  font-size: 0.7em;
+  font-size: 20px;
 }/*# sourceMappingURL=product.css.map */

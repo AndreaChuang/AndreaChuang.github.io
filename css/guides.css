@@ -335,7 +335,7 @@ template {
 .guides-wrap .topbar .bread-crumbs .bread li a {
   text-decoration: none;
   color: black;
-  font-size: 30px;
+  font-size: 20px;
 }
 .guides-wrap .topbar .bread-crumbs .bread li a:hover {
   color: red;
@@ -344,13 +344,13 @@ template {
   content: ">";
   color: black;
   padding: 0 10px;
-  font-size: 30px;
+  font-size: 20px;
 }
 .guides-wrap .topbar .sorting {
   padding-right: 80px;
 }
 .guides-wrap .topbar .sorting span {
-  font-size: 30px;
+  font-size: 20px;
 }
 .guides-wrap .topbar .sorting .fa {
   font-size: 25px;
@@ -371,7 +371,7 @@ template {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 20px;
 }
 .guides-wrap .pagination .pages {
   display: flex;
@@ -416,9 +416,12 @@ template {
 .guides-wrap .pagination .arrow {
   font-size: 1.2em;
 }
-.guides-wrap .pagination .arrow i {
+.guides-wrap .pagination .arrow .fa-long-arrow-left {
   padding-right: 10px;
 }
+.guides-wrap .pagination .arrow .fa-long-arrow-right {
+  padding-left: 10px;
+}
 .guides-wrap .pagination .nav-text {
-  font-size: 0.7em;
+  font-size: 20px;
 }/*# sourceMappingURL=guides.css.map */
