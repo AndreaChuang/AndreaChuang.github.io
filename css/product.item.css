@@ -9,21 +9,28 @@
   display: flex;
   padding-left: 80px;
 }
-#wrapper .topbar .bread-crumbs .bread lia {
+#wrapper .topbar .bread-crumbs .bread li a {
   text-decoration: none;
   color: black;
   font-size: 30px;
 }
-#wrapper .topbar .bread-crumbs .bread lia:hover {
+#wrapper .topbar .bread-crumbs .bread li a:hover {
   color: red;
 }
 #wrapper .topbar .bread-crumbs .bread li + li:before {
   content: ">";
   color: black;
   padding: 0 10px;
+  font-size: 30px;
 }
 #wrapper .topbar .sorting {
   padding-right: 80px;
+}
+#wrapper .topbar .sorting span {
+  font-size: 30px;
+}
+#wrapper .topbar .sorting .fa {
+  font-size: 25px;
 }
 #wrapper button {
   cursor: pointer;

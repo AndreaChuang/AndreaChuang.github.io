@@ -332,21 +332,28 @@ template {
   display: flex;
   padding-left: 80px;
 }
-.guides-wrap .topbar .bread-crumbs .bread lia {
+.guides-wrap .topbar .bread-crumbs .bread li a {
   text-decoration: none;
   color: black;
   font-size: 30px;
 }
-.guides-wrap .topbar .bread-crumbs .bread lia:hover {
+.guides-wrap .topbar .bread-crumbs .bread li a:hover {
   color: red;
 }
 .guides-wrap .topbar .bread-crumbs .bread li + li:before {
   content: ">";
   color: black;
   padding: 0 10px;
+  font-size: 30px;
 }
 .guides-wrap .topbar .sorting {
   padding-right: 80px;
+}
+.guides-wrap .topbar .sorting span {
+  font-size: 30px;
+}
+.guides-wrap .topbar .sorting .fa {
+  font-size: 25px;
 }
 .guides-wrap .items {
   display: flex;

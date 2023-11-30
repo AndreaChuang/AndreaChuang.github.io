@@ -9,19 +9,26 @@
   display: flex;
   padding-left: 80px;
 }
-.topbar .bread-crumbs .bread lia {
+.topbar .bread-crumbs .bread li a {
   text-decoration: none;
   color: black;
   font-size: 30px;
 }
-.topbar .bread-crumbs .bread lia:hover {
+.topbar .bread-crumbs .bread li a:hover {
   color: red;
 }
 .topbar .bread-crumbs .bread li + li:before {
   content: ">";
   color: black;
   padding: 0 10px;
+  font-size: 30px;
 }
 .topbar .sorting {
   padding-right: 80px;
+}
+.topbar .sorting span {
+  font-size: 30px;
+}
+.topbar .sorting .fa {
+  font-size: 25px;
 }/*# sourceMappingURL=bar.css.map */
