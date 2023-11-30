@@ -41,8 +41,8 @@
             z-index: 1;
 
             p {
-                font-size: 30px;
-                line-height: 2em;
+                font-size: 48px;
+                line-height: 1.5em;
                 text-align: center;
             }
         }
@@ -58,12 +58,17 @@
             width: 100%;
             color: rgb(138, 110, 54);
             padding-bottom: 40px;
+
+            span {
+                font-size: 35px;
+            }
         }
 
         div {
             width: 50%;
             padding-bottom: 10px;
             height: 50px;
+            font-size: 18px;
 
             input {
                 height: 30px;

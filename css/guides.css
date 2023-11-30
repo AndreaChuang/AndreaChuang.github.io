@@ -332,11 +332,12 @@ template {
   display: flex;
   padding-left: 80px;
 }
-.guides-wrap .topbar .bread-crumbs .bread li a {
+.guides-wrap .topbar .bread-crumbs .bread lia {
   text-decoration: none;
   color: black;
+  font-size: 30px;
 }
-.guides-wrap .topbar .bread-crumbs .bread li a:hover {
+.guides-wrap .topbar .bread-crumbs .bread lia:hover {
   color: red;
 }
 .guides-wrap .topbar .bread-crumbs .bread li + li:before {
@@ -363,6 +364,7 @@ template {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 18px;
 }
 .guides-wrap .pagination .pages {
   display: flex;

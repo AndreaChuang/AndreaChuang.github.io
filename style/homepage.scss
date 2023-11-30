@@ -44,12 +44,14 @@
                 margin-top: 5%;
                 margin-right: 7%;
 
+
                 a {
                     border: 1px solid whitesmoke;
                     border-radius: 5px;
                     padding: 15px 30px;
                     color: whitesmoke;
                     text-decoration: none;
+                    font-size: 18px;
                 }
             }
         }
@@ -58,9 +60,14 @@
     .products {
         height: 700px;
 
-        h1 {
+        .products-title {
             text-align: center;
-            color: rgb(138, 110, 54);
+
+            span {
+                font-size: 48px;
+                text-align: center;
+                color: rgb(138, 110, 54);
+            }
         }
 
         .productsList {
@@ -72,6 +79,8 @@
 
                 li {
                     padding: 20px;
+                    font-size: 35px;
+                    color: rgb(138, 110, 54);
                 }
             }
 
@@ -99,6 +108,7 @@
                 padding: 15px 30px;
                 color: rgb(138, 110, 54);
                 text-decoration: none;
+                font-size: 18px;
             }
         }
     }
@@ -148,14 +158,15 @@
             display: flex;
             flex-direction: column;
 
-            h1 {
+            span {
                 color: whitesmoke;
+                font-size: 48px;
             }
 
             p {
                 color: whitesmoke;
                 line-height: 2;
-                size: 18px;
+                font-size: 18px;
             }
 
             .guidestextLink {
@@ -169,17 +180,24 @@
                     padding: 15px 30px;
                     color: whitesmoke;
                     text-decoration: none;
+                    font-size: 18px;
                 }
             }
         }
     }
 
     .features {
+        margin-bottom: 5%;
 
-        h1 {
+        .features-title {
             text-align: center;
-            color: rgb(138, 110, 54);
-            margin-bottom: 100px;
+            margin-bottom: 5%;
+
+            span {
+                color: rgb(138, 110, 54);
+                margin-bottom: 100px;
+                font-size: 48px;
+            }
         }
 
         .featuresImg {
@@ -195,15 +213,20 @@
             .features-text {
                 display: flex;
 
+
                 &>div {
                     position: absolute;
                     text-align: center;
                     font-weight: bold;
                     line-height: 1.5em;
+
+                    span {
+                        font-size: 18px;
+                    }
                 }
 
                 div:nth-child(1) {
-                    left: 22%;
+                    left: 23%;
                     top: 0%;
                 }
 
@@ -213,23 +236,23 @@
                 }
 
                 div:nth-child(3) {
-                    bottom: -13%;
-                    left: 18%;
+                    bottom: -14%;
+                    left: 19%;
                 }
 
                 div:nth-child(4) {
-                    top: -14%;
-                    right: 23%;
+                    top: -16%;
+                    right: 26%;
                 }
 
                 div:nth-child(5) {
                     top: 32%;
-                    right: 15%;
+                    right: 17%;
                 }
 
                 div:nth-child(6) {
-                    bottom: 0%;
-                    right: 19%;
+                    bottom: -1%;
+                    right: 21%;
                 }
             }
         }
@@ -239,12 +262,17 @@
     .customers {
         border-radius: 5px;
         margin-bottom: 50px;
+        margin-bottom: 5%;
 
-
-        h1 {
+        .customers-title {
             text-align: center;
-            color: rgb(138, 110, 54);
-            margin: 100px 0 50px;
+            margin-bottom: 5%;
+
+            span {
+                color: rgb(138, 110, 54);
+                margin: 100px 0 50px;
+                font-size: 48px;
+            }
         }
 
         .customersContent {
@@ -280,8 +308,8 @@
 
                 p {
                     color: whitesmoke;
-                    line-height: 2;
-                    size: 18px;
+                    line-height: 1.5em;
+                    font-size: 18px;
                 }
 
                 .link {
@@ -295,6 +323,7 @@
                         padding: 15px 30px;
                         color: whitesmoke;
                         text-decoration: none;
+                        font-size: 18px;
                     }
                 }
             }

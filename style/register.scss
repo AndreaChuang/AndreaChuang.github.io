@@ -1,36 +1,106 @@
-.new-register {
+#wrapper {
+    align-self: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
-    div:nth-child(3) {
-        position: relative;
+    .new-register {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        border: 0.5px solid black;
+        min-width: 500px;
+        width: 20%;
+        margin: 100px 0 20px 0;
+        padding: 10%;
+        border-radius: 5px;
 
-        input[type="password"] {
-            position: relative;
+        a {
+            text-decoration: none;
+            /* no underline */
+            color: inherit;
+            /* blue colors for links too */
+            text-decoration: inherit;
+            /* no underline */
         }
 
-        i {
-            position: absolute;
+        a:-webkit-any-link {
+            color: -webkit-link;
             cursor: pointer;
-            top: 17%;
-            right: 2px;
+            text-decoration: none;
         }
+
+        div:not(:first-child) {
+            padding: 5px 0;
+            width: 100%;
+
+            border-radius: 15px;
+            border: 1px solid #000;
+            background-color: #fff;
+            align-self: stretch;
+            display: flex;
+            margin-top: 15px;
+            justify-content: space-between;
+            padding: 20px 10px;
+
+            span {
+                font-size: 20px;
+            }
+
+            input[type=submit] {
+                background-color: #ffffff;
+                cursor: pointer;
+            }
+
+            input {
+                -webkit-appearance: none;
+                /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+                -moz-appearance: none;
+                /* FireFox */
+                appearance: none;
+                outline: none;
+                border: aliceblue;
+                height: 20px;
+                min-width: 100px;
+                width: 100%;
+            }
+        }
+
+        // div:nth-child(1) {
+        //     span {
+        //         color: #000;
+        //         max-width: 446px;
+        //         align-self: center;
+        //         font: 400 35px/53px Inter, sans-serif;
+        //     }
+        // }
+
+        // div:nth-child(3) {
+        //     position: relative;
+
+        //     i {
+        //         position: absolute;
+        //         cursor: pointer;
+        //         top: 17%;
+        //         right: 2px;
+        //     }
+        // }
+
+        // div:nth-child(4) {
+        //     position: relative;
+
+        //     input[type="password"] {
+        //         position: relative;
+        //     }
+
+        //     i {
+        //         position: absolute;
+        //         cursor: pointer;
+        //         top: 17%;
+        //         right: 2px;
+        //     }
+        // }
     }
-
-    div:nth-child(4) {
-        position: relative;
-
-        input[type="password"] {
-            position: relative;
-        }
-
-        i {
-            position: absolute;
-            cursor: pointer;
-            top: 17%;
-            right: 2px;
-        }
-    }
-
 }

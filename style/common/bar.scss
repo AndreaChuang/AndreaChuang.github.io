@@ -12,9 +12,11 @@
             padding-left: 80px;
 
             li {
-                a {
+                &a {
                     text-decoration: none;
                     color: black;
+                    font-size: 30px;
+
 
                     &:hover {
                         color: red;

@@ -9,11 +9,12 @@
   display: flex;
   padding-left: 80px;
 }
-.topbar .bread-crumbs .bread li a {
+.topbar .bread-crumbs .bread lia {
   text-decoration: none;
   color: black;
+  font-size: 30px;
 }
-.topbar .bread-crumbs .bread li a:hover {
+.topbar .bread-crumbs .bread lia:hover {
   color: red;
 }
 .topbar .bread-crumbs .bread li + li:before {

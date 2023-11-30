@@ -332,11 +332,12 @@ template {
   display: flex;
   padding-left: 80px;
 }
-.products-wrap .topbar .bread-crumbs .bread li a {
+.products-wrap .topbar .bread-crumbs .bread lia {
   text-decoration: none;
   color: black;
+  font-size: 30px;
 }
-.products-wrap .topbar .bread-crumbs .bread li a:hover {
+.products-wrap .topbar .bread-crumbs .bread lia:hover {
   color: red;
 }
 .products-wrap .topbar .bread-crumbs .bread li + li:before {
@@ -363,6 +364,7 @@ template {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 18px;
 }
 .products-wrap .pagination .pages {
   display: flex;
