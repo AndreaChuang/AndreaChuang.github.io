@@ -66,9 +66,6 @@
 #wrapper .order .order-list .order-items .order-text .order-description {
   line-height: 1.5em;
 }
-#wrapper .order .order-list .order-items .order-text .order-icon i:nth-child(4) {
-  padding-left: 38%;
-}
 #wrapper .order .order-fee {
   width: 32.8%;
   margin-right: 8.2%;
