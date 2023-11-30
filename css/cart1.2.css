@@ -78,21 +78,27 @@
   width: 100%;
 }
 #wrapper .order-shipping .order-fee .order-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#wrapper .order-shipping .order-fee .order-button button {
-  cursor: pointer;
-  background-color: #FFFAED;
-  border: 1px solid #8A6E36;
-  border-radius: 5%;
+  background-color: #DED2B2;
+  border: 1px solid #889397;
   font-size: 18px;
-  margin-top: 20px;
+  padding: 0 15px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
 }
-#wrapper .order-shipping .order-fee .order-button button:hover {
+#wrapper .order-shipping .order-fee .order-button:hover {
   background-color: #8A6E36;
+}
+#wrapper .order-shipping .order-fee .order-button:hover a {
   color: #fff;
+}
+#wrapper .order-shipping .order-fee .order-button a {
+  display: inline-block;
+  padding: 30px 200px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
 }
 #wrapper .order-payment {
   background-color: #fff;

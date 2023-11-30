@@ -53,7 +53,6 @@
 #wrapper .order .order-list {
   display: flex;
   flex-direction: column;
-  margin-right: 2%;
   width: 50%;
 }
 #wrapper .order .order-list .order-items {
@@ -78,12 +77,6 @@
 #wrapper .order .order-list .order-items .order-text .order-icon i:nth-child(4) {
   padding-left: 38%;
 }
-#wrapper .order .order-list .order-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 35px;
-}
 #wrapper .order .order-fee {
   width: 32.8%;
   margin-right: 8.2%;
@@ -97,19 +90,25 @@
   width: 100%;
 }
 #wrapper .order .order-fee .order-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#wrapper .order .order-fee .order-button button {
-  cursor: pointer;
-  background-color: #FFFAED;
-  border: 1px solid #8A6E36;
-  border-radius: 5%;
+  background-color: #DED2B2;
+  border: 1px solid #889397;
   font-size: 18px;
-  margin-top: 20px;
+  padding: 0 15px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
 }
-#wrapper .order .order-fee .order-button button:hover {
+#wrapper .order .order-fee .order-button:hover {
   background-color: #8A6E36;
+}
+#wrapper .order .order-fee .order-button:hover a {
   color: #fff;
+}
+#wrapper .order .order-fee .order-button a {
+  display: inline-block;
+  padding: 30px 200px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
 }/*# sourceMappingURL=cart1.1.css.map */

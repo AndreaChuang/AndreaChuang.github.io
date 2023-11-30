@@ -39,6 +39,7 @@
 }
 #wrapper .product .product-img .bigimg img {
   width: 100%;
+  border-radius: 10px;
 }
 #wrapper .product .product-img .smallimg {
   display: flex;
@@ -50,14 +51,34 @@
   width: 100px;
   height: 100px;
 }
-#wrapper .product .producr-text {
+#wrapper .product .product-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-#wrapper .product .producr-text .top {
   line-height: 1.5em;
+}
+#wrapper .product .product-text .middle .color-block {
+  width: 100%;
+  height: 50px;
+}
+#wrapper .product .product-text .middle .color-block .color {
+  display: flex;
+  width: 80px;
+  height: 50px;
+}
+#wrapper .product .product-text .middle .color-block .color .white {
+  background-color: #fff;
+}
+#wrapper .product .product-text .middle .color-block .color .yellow {
+  background-color: yellow;
+}
+#wrapper .product .product-text .middle .color-block .color .red {
+  background-color: red;
+}
+#wrapper .product .product-text .middle .color-block .color .green {
+  background-color: green;
+}
+#wrapper .product .product-text .middle .color-block .color .blue {
+  background-color: blue;
 }
 #wrapper .shipping,
 #wrapper .description {
@@ -79,7 +100,7 @@
 #wrapper .like .like-title {
   font-size: 35px;
   text-align: center;
-  line-height: 1.5em;
+  margin-bottom: 20px;
 }
 #wrapper .shipping .description-text,
 #wrapper .shipping .shipping-text,
