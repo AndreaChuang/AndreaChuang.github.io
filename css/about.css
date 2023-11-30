@@ -368,6 +368,10 @@ template {
 .about-wrap .about-form div input:not(#agree) {
   width: 100%;
 }
+.about-wrap .about-form div:nth-child(5) textarea {
+  resize: none;
+  border: none;
+}
 .about-wrap .about-form div:nth-child(6) {
   display: flex;
   align-items: center;

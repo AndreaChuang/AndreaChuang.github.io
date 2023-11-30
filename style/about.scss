@@ -79,6 +79,11 @@
             }
         }
 
+        div:nth-child(5)textarea {
+            resize: none;
+            border: none;
+        }
+
         div:nth-child(6) {
             display: flex;
             align-items: center;

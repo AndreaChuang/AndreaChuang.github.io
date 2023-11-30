@@ -40,22 +40,22 @@
     <div id="wrapper" class="container register">
         <form class="new-register">
             <div>
-                <span>立即註冊</span>
+                <span>已經擁有帳號了嗎?立即登入</span>
             </div>
             <div>
-                <span>已經有帳號了嗎?立即登入</span>
-            </div>
-            <div><input type="input" id="user_id" placeholder="請輸入密碼">
-                <label for="user_id">請輸入信箱帳號</label>
-            </div>
-            <div><input type="input" id="user_password" placeholder="請輸入密碼">
-                <label for="user_password">請輸入密碼(6~16位英數混合)</label>
-            </div>
-            <div><input type="input" id="correct_possword" placeholder="請輸入密碼">
-                <label for="correct_possword">確認密碼</label>
+                <input type="email" id="user_id" placeholder="請輸入信箱帳號">
+                <label for="user_id"></label>
             </div>
             <div>
-                <button>Register</button>
+                <input type="password" id="user_password" placeholder="請輸入密碼(6~16位英數混合)">
+                <i class="fa fa-eye-slash" aria-hidden="true"></i>
+            </div>
+            <div>
+                <input type="password" id="correct_possword" placeholder="確認密碼">
+                <i class="fa fa-eye-slash" aria-hidden="true"></i>
+            </div>
+            <div>
+                <input type="submit" value="註冊">
             </div>
         </form>
     </div>

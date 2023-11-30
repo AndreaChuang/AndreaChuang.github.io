@@ -1,15 +1,29 @@
-body {
-  height: 100%;
-}
-
-.container.register {
-  width: 800px;
-  height: 600px;
+.new-register {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin: auto;
 }
-.container.register .new-register {
-  border: 2px solid #9B8170;
+.new-register div:nth-child(3) {
+  position: relative;
+}
+.new-register div:nth-child(3) input[type=password] {
+  position: relative;
+}
+.new-register div:nth-child(3) i {
+  position: absolute;
+  cursor: pointer;
+  top: 17%;
+  right: 2px;
+}
+.new-register div:nth-child(4) {
+  position: relative;
+}
+.new-register div:nth-child(4) input[type=password] {
+  position: relative;
+}
+.new-register div:nth-child(4) i {
+  position: absolute;
+  cursor: pointer;
+  top: 17%;
+  right: 2px;
 }/*# sourceMappingURL=register.css.map */

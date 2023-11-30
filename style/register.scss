@@ -1,21 +1,36 @@
-body {
-    height: 100%;
-
-}
-
-.container.register {
-    width: 800px;
-    height: 600px;
+.new-register {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: auto;
 
-    .new-register {
-        border: 2px solid #9B8170;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // // align-items: center;
+    div:nth-child(3) {
+        position: relative;
+
+        input[type="password"] {
+            position: relative;
+        }
+
+        i {
+            position: absolute;
+            cursor: pointer;
+            top: 17%;
+            right: 2px;
+        }
     }
+
+    div:nth-child(4) {
+        position: relative;
+
+        input[type="password"] {
+            position: relative;
+        }
+
+        i {
+            position: absolute;
+            cursor: pointer;
+            top: 17%;
+            right: 2px;
+        }
+    }
+
 }
