@@ -5,23 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SOUHAIT CRYSTAL</title>
+  <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
     integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/homepage.css">
-  <link rel="stylesheet" href="css/index.css">
+
   <!-- <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script> -->
   <script src="library/gsap.min.js"></script>
   <script src="library/dsvp.js"></script>
   <script src="library/mpp.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="hhttps://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script async src="js/header.js"></script>
   <script async src="index.js"></script>
 </head>
 
 <body>
+
   <div id="animation">
     <svg xmlns="http://www.w3.org/2000/svg" width="6.05556in" height="5.47778in" viewBox="0 0 545 493">
       <path id="匯入的路徑" fill="none" stroke="black" stroke-width="1" d="M 325.25,471.35
@@ -969,28 +971,34 @@
             211.25,444.20 211.25,448.96 211.25,448.96 Z" />
     </svg>
   </div>
+
   <header id="SCheader">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <a href="index.html">
-          <img src="img/LOGO.png" alt="LOGO">
-        </a>
-      </div>
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="img/LOGO.png" alt="LOGO">
+      </a>
+    </div>
+    <div id="menu">
       <ul class="nav-list">
         <li><a href="about.html">ABOUT</a></li>
         <li><a href="product.html">PRODUCTS</a></li>
         <li><a href="guides.html">GUIDES</a></li>
         <li><a href="Q&A.html">Q&A</a></li>
-      </ul>
-      <ul class="nav-icon">
-        <li><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
-        <!-- <li><a href="cart-1.1.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li> -->
-        <li><i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
-        <li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        <li class="only_mobile"><a href="cart-1.1.html">CART</a></li>
+        <li class="only_mobile"><a href="login.html">LOGIN</a></li>
       </ul>
     </div>
+    <ul class="nav-icon">
+      <li><i class="fa fa-search" aria-hidden="true"></i></li>
+      <li><i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
+      <li><i class="fa fa-user" aria-hidden="true"></i></li>
+    </ul>
+    <div id="btnHam"><img src="img/hamburger.png">
+    </div>
   </header>
-  <div id="wrapper" class="wrap">
+
+
+  <!-- <div id="wrapper" class="wrap">
     <div class="banner">
       <div>
         <img src="img/index-banner-2.png" alt="">
@@ -1109,8 +1117,8 @@
         </div>
       </div>
     </div>
-  </div>
-  <footer>
+  </div> -->
+  <!-- <footer>
     <div class="footer-container">
       <div class="footer-logo">
         <img src="img/LOGO.png" alt="頁尾LOGO">
@@ -1133,7 +1141,7 @@
     <div class="copyright">
       <small>本網站為緯育TibaMe前端工程師班第78期學員專題作品，本平台僅供學習、展示之用。</small>
     </div>
-  </footer>
+  </footer> -->
 </body>
 
 </html>
