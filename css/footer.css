@@ -63,7 +63,7 @@ footer .copyright {
 @media screen and (min-width: 768px) {
   footer {
     background-color: rgb(155, 129, 112);
-    max-width: 1920px;
+    max-width: 100vw;
   }
   footer .footer_container {
     display: flex;
