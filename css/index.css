@@ -350,7 +350,7 @@ ul {
 
 body {
   overflow-x: hidden;
-  background: linear-gradient(to top right, #E4D9B8, #FFFAED);
+  color: aliceblue;
 }
 body .cartFly {
   position: fixed;
@@ -424,7 +424,4 @@ body #animation {
 body #animation svg {
   width: 35%;
   height: 35%;
-}
-body #wrapper {
-  margin-top: 58px;
 }/*# sourceMappingURL=index.css.map */

@@ -45,7 +45,8 @@ body {
     }
 
     overflow-x: hidden;
-    background: linear-gradient(to top right, #E4D9B8, #FFFAED);
+    color: aliceblue;
+    // background: linear-gradient(to top right, #E4D9B8, #FFFAED);
 
     #animation {
         display: flex;
@@ -64,10 +65,6 @@ body {
             width: 35%;
             height: 35%;
         }
-    }
-
-    #wrapper {
-        margin-top: 58px; //不與導覽列重疊
     }
 }
 

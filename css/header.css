@@ -13,6 +13,9 @@
   width: 100%;
   transition: top 0.4s ease-in-out;
 }
+#SCheader#SCheader.hideUp {
+  top: -150px;
+}
 #SCheader .nav-logo {
   background-color: rgb(155, 129, 112);
   position: absolute;
@@ -33,9 +36,6 @@
   padding-left: 8%;
   list-style: none;
 }
-#SCheader #menu .nav-list li:hover {
-  box-shadow: 0px 2px 0px 0px rgb(176, 30, 30);
-}
 #SCheader #menu .nav-list li:nth-child(3) {
   margin-left: 15%;
 }
@@ -48,6 +48,7 @@
 }
 #SCheader #menu .nav-list a:hover {
   color: rgb(176, 30, 30);
+  box-shadow: 0px 2px 0px 0px rgb(176, 30, 30);
 }
 #SCheader .nav-icon {
   display: flex;
@@ -102,13 +103,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
   #SCheader #menu .nav-list li:nth-child(3) {
     margin-left: 0;
   }
   #SCheader #menu .nav-list li {
     list-style: none;
-    margin: 2%;
   }
   #SCheader #menu .nav-list li a {
     font-size: 16px;
