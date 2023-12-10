@@ -74,13 +74,15 @@
   list-style: none;
 }
 .wrap .products .products_list ul li {
+  cursor: pointer;
   font-size: 16px;
 }
 .wrap .products .products_img {
   width: 100%;
 }
 .wrap .products .products_img img {
-  width: 100%;
+  max-width: 100%;
+  border-radius: 24px;
 }
 .wrap .products .products_link {
   width: 90%;
@@ -313,11 +315,6 @@
   }
   .wrap .products .products_list ul li {
     font-size: 20px;
-  }
-  .wrap .products .products_img {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
   }
   .wrap .products .products_link {
     margin-top: 3%;

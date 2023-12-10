@@ -86,6 +86,7 @@
                 list-style: none;
 
                 li {
+                    cursor: pointer;
                     font-size: 16px;
                 }
             }
@@ -94,8 +95,13 @@
         .products_img {
             width: 100%;
 
+            .st-carousel-slice {
+                // width: 90%;
+            }
+
             img {
-                width: 100%;
+                max-width: 100%;
+                border-radius: 24px;
             }
         }
 
@@ -397,9 +403,9 @@
             }
 
             .products_img {
-                display: flex;
-                justify-content: space-evenly;
-                width: 100%;
+                // display: flex;
+                // justify-content: space-evenly;
+                // width: 100%;
 
                 img {
                     // padding: 10px;
