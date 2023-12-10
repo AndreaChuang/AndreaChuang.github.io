@@ -1,5 +1,4 @@
 // 動畫
-
 const showLandingLogo = function () {
 
   gsap.registerPlugin(MotionPathPlugin, DrawSVGPlugin);
@@ -97,7 +96,7 @@ showLandingLogo();
 document.getElementById("animation").style.display = "none";
 
 
-// 照片輪播
+// 產品輪播
 const slickRun = function () {
   $(".st-carousel").slick({
     dots: true, //顯示點點
@@ -148,9 +147,6 @@ const slickRun = function () {
 
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
 
@@ -194,7 +190,7 @@ const slickRun = function () {
   $(".st-carousel").on("mouseenter", function () {
     $(this).on("wheel", function (e) {
       e.preventDefault();
-
+      console.log(e.originalEvent.deltaY);
       if (e.originalEvent.deltaY < 0) {
         $(this).slick("slickNext");
       } else {
@@ -209,3 +205,15 @@ const slickRun = function () {
 };
 
 slickRun();
+
+
+// 顧客回饋輪播
+$('.single_item').slick({
+  infinite: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  variableWidth: false, //可變寬度
+  adaptiveHeight: false,
+});
+
+

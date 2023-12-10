@@ -96,7 +96,7 @@
             width: 100%;
 
             .st-carousel-slice {
-                // width: 90%;
+                width: 90%;
             }
 
             img {
@@ -556,48 +556,52 @@
                 }
             }
 
-            .customers_feedback {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                width: 70.4%;
+            .single_slick {
+                max-width: 1920px;
+
+                .customers_feedback {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    width: 70.4%;
 
 
-                .customers_content {
-                    order: 2;
-                    z-index: 0;
-                    width: 40%;
-                    height: 100%;
-                    margin: 0;
-                    box-sizing: border-box;
-                    padding: 80px 20px 60px 80px;
+                    .customers_content {
+                        order: 2;
+                        z-index: 0;
+                        width: 40%;
+                        height: 100%;
+                        margin: 0;
+                        box-sizing: border-box;
+                        padding: 80px 20px 60px 80px;
 
-                    .customers_person {
-                        padding: 0;
+                        .customers_person {
+                            padding: 0;
 
-                        .customers_name {
-                            margin: 0 0 0 20px;
+                            .customers_name {
+                                margin: 0 0 0 20px;
+                            }
+                        }
+
+                        .customers_text {
+                            padding: 0;
+                        }
+
+                        .customers_link {
+                            display: flex;
+                            justify-content: flex-end;
                         }
                     }
 
-                    .customers_text {
-                        padding: 0;
+                    .customers_wear {
+                        order: 1;
+                        position: relative;
+                        z-index: 1;
+                        width: 40%;
+                        height: 100%;
+                        margin-right: -50px;
+                        margin-top: 150px;
                     }
-
-                    .customers_link {
-                        display: flex;
-                        justify-content: flex-end;
-                    }
-                }
-
-                .customers_wear {
-                    order: 1;
-                    position: relative;
-                    z-index: 1;
-                    width: 40%;
-                    height: 100%;
-                    margin-right: -50px;
-                    margin-top: 150px;
                 }
             }
         }
