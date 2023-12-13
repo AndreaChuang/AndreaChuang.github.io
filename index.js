@@ -1,6 +1,5 @@
 // 動畫
 const showLandingLogo = function () {
-
   gsap.registerPlugin(MotionPathPlugin, DrawSVGPlugin);
 
   TweenLite.defaultEase = Linear.easeNone;
@@ -95,7 +94,6 @@ showLandingLogo();
 
 document.getElementById("animation").style.display = "none";
 
-
 // 產品輪播
 const slickRun = function () {
   $(".st-carousel").slick({
@@ -117,14 +115,14 @@ const slickRun = function () {
           slidesToScroll: 4,
           // variableWidth: true, //可變寬度
           adaptiveHeight: true, //自適應高度
-        }
+        },
       },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3
-        }
+          slidesToScroll: 3,
+        },
       },
       {
         breakpoint: 768,
@@ -133,7 +131,7 @@ const slickRun = function () {
           slidesToScroll: 2,
           // variableWidth: false, //可變寬度
           // adaptiveHeight: false, //自適應高度
-        }
+        },
       },
       {
         breakpoint: 430,
@@ -141,13 +139,12 @@ const slickRun = function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: false,
-          autoplay: true
+          autoplay: true,
           // variableWidth: true, //可變寬度
           // adaptiveHeight: true, //自適應高度
-
-        }
-      }
-    ]
+        },
+      },
+    ],
   });
 
   var ringFiltered = "";
@@ -206,14 +203,77 @@ const slickRun = function () {
 
 slickRun();
 
-
 // 顧客回饋輪播
-$('.single_item').slick({
-  infinite: false,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  variableWidth: false, //可變寬度
-  adaptiveHeight: false,
+// $(".single_item").slick({
+//   dots: true,
+//   infinite: false,
+//   slidesToShow: 2,
+//   slidesToScroll: 2,
+//   variableWidth: false, //可變寬度
+//   adaptiveHeight: false,
+//   centerMode: true,
+//   rtl: true
+// });
+
+// 原生Carouse輪播
+// 暫存Index, 紀錄目前第幾塊Slide
+let carouselIndex = 0;
+// 抓取全部的Slide
+let carouselItems = document.getElementsByClassName("carousel-item");
+// 紀錄total數量
+let totalItems = carouselItems.length;
+
+// 輪播開始，除了第一張以外其他全部隱藏
+const navJSCarousel = function () {
+  for (var i = 0; i < carouselItems.length; i++) {
+    carouselItems[i].style.display = "none";
+  }
+  carouselIndex++;
+  if (carouselIndex > carouselItems.length) {
+    carouselIndex = 1;
+  }
+  carouselItems[carouselIndex - 1].style.display = "flex";
+
+  setTimeout(navJSCarousel, 2000); // 自動撥放，每2秒換一張圖片
+};
+
+const showSlide = function (i) {
+  carouselIndex = i;
+  if (carouselIndex >= totalItems) {
+    carouselIndex = 0;
+  }
+  if (carouselIndex < 0) {
+    carouselIndex = totalItems - 1;
+  }
+
+  for (var j = 0; j < totalItems; j++) {
+    carouselItems[j].style.display = "none";
+  }
+  carouselItems[carouselIndex].style.display = "flex";
+};
+
+// 靠按鈕切換
+document.getElementById("CarouselPrev").addEventListener("click", function () {
+  showSlide(carouselIndex - 1);
+});
+document.getElementById("CarouselNext").addEventListener("click", function () {
+  showSlide(carouselIndex + 1);
 });
 
+// 滑鼠滑動事件
+let carouselStartX;
+document.getElementById("carousel").addEventListener("mousedown", function (e) {
+  carouselStartX = e.clientX;
+});
 
+document.getElementById("carousel").addEventListener("mouseup", function (e) {
+  // console.log("e.clientX", e.clientX);
+  // console.log("carouselStartX", carouselStartX);
+  if (e.clientX > carouselStartX) {
+    showSlide(carouselIndex - 1); // 向右滑動，顯示上一張
+  } else if (e.clientX < carouselStartX) {
+    showSlide(carouselIndex + 1); // 向左滑動，顯示下一張
+  }
+});
+
+navJSCarousel();

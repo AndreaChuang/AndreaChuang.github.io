@@ -468,4 +468,17 @@
     margin-right: -50px;
     margin-top: 150px;
   }
+}/*# sourceMappingURL=homepage.css.map */rs_link {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .wrap .customers .single_slick .customers_feedback .customers_wear {
+    order: 1;
+    position: relative;
+    z-index: 1;
+    width: 40%;
+    height: 100%;
+    margin-right: -50px;
+    margin-top: 150px;
+  }
 }/*# sourceMappingURL=homepage.css.map */

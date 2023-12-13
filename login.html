@@ -23,7 +23,7 @@
                 <img src="img/LOGO.png" alt="LOGO">
             </a>
         </div>
-        <div id="menu">
+        <div id="menu" class="hidden">
             <ul class="nav-list">
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="product.html">PRODUCTS</a></li>
@@ -43,42 +43,47 @@
     </header>
     <div id="wrapper" class="wrap">
         <div class="login_img">
-            <div>
-                <img src="img/banner/login.png" alt="login的banner圖片">
-            </div>
+            <img src="img/banner/login.png" alt="login的banner圖片">
         </div>
-        <div class="login">
-            <div>
+        <div class="login_content">
+            <div class="login_title">
                 <span>會員登入</span>
             </div>
-            <div class="input-container">
+            <div class="input_container">
                 <input type="email" id="email" placeholder="請輸入Email">
                 <label for="email">請輸入Email</label>
-                <div class="bottom-line"></div>
+                <div class="bottom_line"></div>
             </div>
-            <div class="input-container">
+            <div class="input_container">
                 <input type="input" id="password" placeholder="請輸入密碼">
                 <label for="password">請輸入密碼</label>
-                <div class="bottom-line"></div>
+                <div class="bottom_line"></div>
             </div>
+            <div class="login_checkbox">
+                <div>
+                    <input type="checkbox" id="remember">
+                    <label for="remember">記住我</label>
+                </div>
+                <div>忘記密碼?</div>
+            </div>
+        </div>
+        <div class="login_button">
             <div>
                 <button>登入</button>
             </div>
             <div>
                 <button>註冊</button>
             </div>
-            <div>
-                <p><small>忘記密碼?</small></p>
-            </div>
-            <div>
-                <span><small>---使用以下帳號快速登入---</small></span>
-            </div>
-            <div class="login logo">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-                <i class="fa fa-google" aria-hidden="true"></i>
-                <i class="fa fa-apple" aria-hidden="true"></i>
-            </div>
         </div>
+        <div>
+            <span><small>---使用以下帳號快速登入---</small></span>
+        </div>
+        <div class="login logo">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-google" aria-hidden="true"></i>
+            <i class="fa fa-apple" aria-hidden="true"></i>
+        </div>
+    </div>
     </div>
     <footer>
         <div class="footer_container">

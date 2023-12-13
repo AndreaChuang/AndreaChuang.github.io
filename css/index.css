@@ -348,10 +348,6 @@ ul {
   padding: 0;
 }
 
-body {
-  overflow-x: hidden;
-  color: aliceblue;
-}
 body .cartFly {
   position: fixed;
   right: 0;
