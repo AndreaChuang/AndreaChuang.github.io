@@ -1,87 +1,87 @@
 // 查看購物車
-// const renderCart = function () {
-//     let $cartHtml = $(`
-//     <div class="cartFly hide">
-//     <div class="order-list">
-// <div class="order-items">
-//     <div class="order-img">
-//         <img src="img/Rectangle 71.png" alt="購物車圖">
-//     </div>
-//     <div class="order-text">
-//         <div class="order-description">
-//             <div> Ring
-//                 <br>
-//                 顏色
-//                 <br>
-//                 商品數量:2
-//                 <br>
-//                 商品編號:21K3110
-//             </div>
-//             <div class="order-icon">
-//                 <i class="fa fa-minus" aria-hidden="true"></i>
-//                 <span>1</span>
-//                 <i class="fa fa-plus" aria-hidden="true"></i>
-//                 <i class="fa fa-trash" aria-hidden="true"></i>
-//             </div>
-//         </div>
-//     </div>
-// </div>
-// <div class="order-items">
-//     <div class="order-img">
-//         <img src="img/Rectangle 73.png" alt="購物車圖">
-//     </div>
-//     <div class="order-text">
-//         <div class="order-description">
-//             <div> Ring
-//                 <br>
-//                 顏色
-//                 <br>
-//                 商品數量:2
-//                 <br>
-//                 商品編號:21K3110
-//             </div>
-//             <div class="order-icon">
-//                 <i class="fa fa-minus" aria-hidden="true"></i>
-//                 <span>1</span>
-//                 <i class="fa fa-plus" aria-hidden="true"></i>
-//                 <i class="fa fa-trash" aria-hidden="true"></i>
-//             </div>
-//         </div>
-//     </div>
-// </div>
-// <div class="order-items">
-//     <div class="order-img">
-//         <img src="img/Rectangle 71.png" alt="購物車圖">
-//     </div>
-//     <div class="order-text">
-//         <div class="order-description">
-//             <div> Ring
-//                 <br>
-//                 顏色
-//                 <br>
-//                 商品數量:2
-//                 <br>
-//                 商品編號:21K3110
-//             </div>
-//             <div class="order-icon">
-//                 <i class="fa fa-minus" aria-hidden="true"></i>
-//                 <span>1</span>
-//                 <i class="fa fa-plus" aria-hidden="true"></i>
-//                 <i class="fa fa-trash" aria-hidden="true"></i>
-//             </div>
-//         </div>
-//     </div>
-//     </div>
-//     <div class="checkout"><a href="cart-1.1.html">Checkout</a></div>
-// </div>
-// </div>`);
-//     $("#SCheader").after($cartHtml);
-//     $('#SCheader .fa-shopping-bag').on('click', function () {
-//         $cartHtml.toggleClass('hide');
-//     });
-// }
+const renderCart = function () {
+    let $cartHtml = $(`
+    <div class="cartFly hide">
+    <div class="order-list">
+<div class="order-items">
+    <div class="order-img">
+        <img src="img/Rectangle 71.png" alt="購物車圖">
+    </div>
+    <div class="order-text">
+        <div class="order-description">
+            <div> Ring
+                <br>
+                顏色
+                <br>
+                商品數量:2
+                <br>
+                商品編號:21K3110
+            </div>
+            <div class="order-icon">
+                <i class="fa fa-minus" aria-hidden="true"></i>
+                <span>1</span>
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="order-items">
+    <div class="order-img">
+        <img src="img/Rectangle 73.png" alt="購物車圖">
+    </div>
+    <div class="order-text">
+        <div class="order-description">
+            <div> Ring
+                <br>
+                顏色
+                <br>
+                商品數量:2
+                <br>
+                商品編號:21K3110
+            </div>
+            <div class="order-icon">
+                <i class="fa fa-minus" aria-hidden="true"></i>
+                <span>1</span>
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="order-items">
+    <div class="order-img">
+        <img src="img/Rectangle 71.png" alt="購物車圖">
+    </div>
+    <div class="order-text">
+        <div class="order-description">
+            <div> Ring
+                <br>
+                顏色
+                <br>
+                商品數量:2
+                <br>
+                商品編號:21K3110
+            </div>
+            <div class="order-icon">
+                <i class="fa fa-minus" aria-hidden="true"></i>
+                <span>1</span>
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="checkout"><a href="cart-1.1.html">Checkout</a></div>
+</div>
+</div>`);
+    $("#SCheader").after($cartHtml);
+    $('#SCheader .fa-shopping-bag').on('click', function () {
+        $cartHtml.toggleClass('hide');
+    });
+}
 
-// renderCart();
+renderCart();
 
 
 // 卷軸滾動消失
@@ -103,7 +103,6 @@ const showNavbarByScroll = function () {
         // console.log('lastScrollY', lastScrollY)
     });
 }
-
 showNavbarByScroll();
 
 // hamburger
@@ -118,7 +117,7 @@ window.addEventListener("load", function () {
 
 }, false);
 
-
+// 下拉式選單
 $(function () {
     // 點擊新增products的html
     $('.menu-products').append(`<ul class="dropdownList products-dropdown">
@@ -130,11 +129,11 @@ $(function () {
     </ul>`)
     //點擊新增guides的html
     $('.menu-guides').append(`<ul class="dropdownList guides-dropdown">
-    <li>全部商品</li>
-    <li>事業</li>
-    <li>桃花</li>
-    <li>健康</li>
-    <li>除晦</li>
+    <li guideCategory="0">全部商品</li>
+    <li guideCategory="1">事業</li>
+    <li guideCategory="2">桃花</li>
+    <li guideCategory="3">健康</li>
+    <li guideCategory="4">除晦</li>
     </ul>`)
 
     // 建立products下拉式選單功能
@@ -175,7 +174,7 @@ $(function () {
 })
 
 
-// 點擊分類顯示商品
+// 點擊商品分類各項目顯示商品
 let redirectToProducts = function () {
     $('.menu-products .products-dropdown li').on("click", function () {
         // console.log(this)
@@ -185,6 +184,20 @@ let redirectToProducts = function () {
             window.location.href = `/product.html?productCategory=${productCategory}`;
         } else {
             window.location.href = "/product.html";
+        }
+    })
+}
+
+// 點擊guides各項目顯示商品
+let redirectToGuides = function () {
+    $('.menu-guides .products-dropdown li').on("click", function () {
+        // console.log(this)
+        // https://api.jquery.com/attr/
+        var guideCategory = $(this).attr('guideCategory');
+        if (guideCategory) {
+            window.location.href = `/guide.html?guidetCategory=${guideCategory}`;
+        } else {
+            window.location.href = "/guide.html";
         }
     })
 }

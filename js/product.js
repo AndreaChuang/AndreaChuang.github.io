@@ -5,25 +5,41 @@ $(function () {
 
     //從URL取得productCategoryID
     let productCategoryID = getURLProductCategoryID() || 0;
+    let guideCategoryID = getURLGuideCategoryID() || 0;
 
     bindSortingClickEvent();
     $('.bread-crumbs .bread').append(`<li>首頁</li>`);
     // 預設進到產品分類第一個分類 顯示全部商品 
     renderBread(1, productCategoryID);
     renderProducts();
+    renderBread(1, guideCategoryID);
+    renderGuides();
+
 })
 
-// 抓取URL的值
+// 抓取Product URL的值
 let getURLProductCategoryID = function () {
     // https://www.sitepoint.com/get-url-parameters-with-javascript/
     const queryString = window.location.search;
-    console.log(queryString);
+    // console.log(queryString);
     const urlParams = new URLSearchParams(queryString);
     let productCategory = urlParams.get('productCategory');
     console.log(productCategory)
     return productCategory;
 }
 
+// 抓取Guide URL的值
+let getURLGuideCategoryID = function () {
+    // https://www.sitepoint.com/get-url-parameters-with-javascript/
+    const queryString = window.location.search;
+    // console.log(queryString);
+    const urlParams = new URLSearchParams(queryString);
+    let guideCategory = urlParams.get('guidetCategory');
+    // console.log(productCategory)
+    return guideCategory;
+}
+
+// 產生麵包屑
 let renderBread = (categoryID, subCategoryID) => {
     let rootCategory = categoryGroup.find(function (category) {
         return category.id == categoryID
@@ -42,7 +58,7 @@ let renderBread = (categoryID, subCategoryID) => {
     }
 }
 
-
+// render商品分類
 const renderProducts = () => {
     let productCategoryID = getURLProductCategoryID() || 0;
 
@@ -73,6 +89,41 @@ const renderProducts = () => {
     }
 }
 
+
+// render guide分類
+const renderGuides = () => {
+    let guideCategoryID = getURLGuideCategoryID() || 0;
+
+    // https://stackoverflow.com/questions/979256/sorting-an-array-of-objects-by-property-values
+    // asc 遞增(由小到大) desc 遞減(由大到小)
+    let sortedguide;
+    if ($(location).prop('hash') === '#asc') {
+        sortedguide = products.sort(function (a, b) {
+            return parseFloat(a.price) - parseFloat(b.price);
+        });
+    } else if ($(location).prop('hash') === '#desc') {
+        sortedProduct = products.sort(function (a, b) {
+            return parseFloat(b.price) - parseFloat(a.price);
+        });
+    }
+
+    let guide = sortedguide || products;
+
+    $('.product-items .row').empty();
+    for (let i = 0; i < guide.length; i++) {
+        if (guideCategoryID == 0 || guide[i].categoryID == guideCategoryID) {
+            $('.product-items .row').append(`<div class="col-6 col-md-4 col-xl-3 ">
+            <div class="card">
+                <img src="img/product-item/${guide[i].imgFileName}" alt="" onclick="javascript:location.href='product-item.html?guideCategory=${guide[i].categoryID}&product=${guide[i].id}'">
+            </div>
+        </div>`)
+        }
+    }
+}
+
+
+
+// sorting排序
 const hashToggle = function () {
     // 更新遞增或遞減，紀錄變數在hashtag，並更新顯示文字
     // 資料排序Order By
@@ -90,9 +141,10 @@ const hashToggle = function () {
 
 let bindSortingClickEvent = function () {
     $('.sorting span').on('click', function () {
-        console.log(this);
+        // console.log(this);
         hashToggle();
         renderProducts();
+        renderGuides();
     })
 }
 
