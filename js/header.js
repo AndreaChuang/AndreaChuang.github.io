@@ -117,3 +117,74 @@ window.addEventListener("load", function () {
     };
 
 }, false);
+
+
+$(function () {
+    // 點擊新增products的html
+    $('.menu-products').append(`<ul class="dropdownList products-dropdown">
+    <li productCategory="0">全部商品</li>
+    <li productCategory="1">水晶手鍊</li>
+    <li productCategory="2">水晶耳環</li>
+    <li productCategory="3">水晶項鍊</li>
+    <li productCategory="4">水晶戒指</li>
+    </ul>`)
+    //點擊新增guides的html
+    $('.menu-guides').append(`<ul class="dropdownList guides-dropdown">
+    <li>全部商品</li>
+    <li>事業</li>
+    <li>桃花</li>
+    <li>健康</li>
+    <li>除晦</li>
+    </ul>`)
+
+    // 建立products下拉式選單功能
+    $('.menu-products').click(function (e) {
+        e.preventDefault();
+        $('.menu-products').toggleClass('active');
+        $('.products-dropdown').slideToggle();
+    });
+
+    // 建立guides下拉式選單功能
+    $('.menu-guides').click(function (e) {
+        e.preventDefault();
+        $('.menu-guides').toggleClass('active');
+        $('.guides-dropdown').slideToggle();
+    });
+
+    // 點擊空白處收合下拉式選單
+    $(document).click(function (event) {
+        // console.log(event.target)
+        let guides = $('.menu-guides');
+        let guidesSpan = $('.menu-guides span');
+        let products = $('.menu-products');
+        let productsSpan = $('.menu-products span');
+        if (!guides.is(event.target) && !products.is(event.target)) {
+            if (!guidesSpan.is(event.target) && !productsSpan.is(event.target)) {
+
+                guides.removeClass('active');
+                products.removeClass('active');
+                $('.guides-dropdown').slideUp();
+                $('.products-dropdown').slideUp();
+                // console.log('收!')
+            }
+        }
+        // console.log('click')
+    });
+
+    redirectToProducts();
+})
+
+
+// 點擊分類顯示商品
+let redirectToProducts = function () {
+    $('.menu-products .products-dropdown li').on("click", function () {
+        // console.log(this)
+        // https://api.jquery.com/attr/
+        var productCategory = $(this).attr('productCategory');
+        if (productCategory) {
+            window.location.href = `/product.html?productCategory=${productCategory}`;
+        } else {
+            window.location.href = "/product.html";
+        }
+    })
+}

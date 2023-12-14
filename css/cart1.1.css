@@ -48,7 +48,9 @@
 #wrapper .order {
   display: flex;
   justify-content: space-between;
+  padding: 5%;
   margin-bottom: 5%;
+  border: 2px solid #8A6E36;
 }
 #wrapper .order .order-list {
   display: flex;
@@ -58,10 +60,8 @@
 #wrapper .order .order-list .order-items {
   background-color: #fff;
   display: flex;
-  justify-content: space-evenly;
-  padding: 20px 0;
-  margin-bottom: 10px;
-  border: 1px solid #889397;
+  margin: 2% 1% 2% 10%;
+  border-bottom: 1px solid #889397;
 }
 #wrapper .order .order-list .order-items .order-text .order-description {
   line-height: 1.5em;

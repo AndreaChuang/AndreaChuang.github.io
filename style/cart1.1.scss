@@ -60,7 +60,9 @@
     .order {
         display: flex;
         justify-content: space-between;
+        padding: 5%;
         margin-bottom: 5%;
+        border: 2px solid #8A6E36;
 
         .order-list {
             display: flex;
@@ -71,10 +73,10 @@
             .order-items {
                 background-color: #fff;
                 display: flex;
-                justify-content: space-evenly;
-                padding: 20px 0;
-                margin-bottom: 10px;
-                border: 1px solid #889397;
+                // justify-content: space-evenly;
+                // padding: 20px 0;
+                margin: 2% 1% 2% 10%;
+                border-bottom: 1px solid #889397;
 
                 .order-text {
                     .order-description {
