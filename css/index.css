@@ -348,6 +348,10 @@ ul {
   padding: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 body .cartFly {
   position: fixed;
   right: 0;

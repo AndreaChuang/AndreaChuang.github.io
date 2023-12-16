@@ -277,3 +277,14 @@ document.getElementById("carousel").addEventListener("mouseup", function (e) {
 });
 
 navJSCarousel();
+
+
+// 下雪花
+$.snowfall.start({
+  size: {
+    min: 10,
+    max: 20
+  },
+  color: '#fff',
+  content: '&#10052;'
+});

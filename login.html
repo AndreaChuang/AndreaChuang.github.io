@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/register.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
@@ -20,7 +19,6 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script async src="js/header.js"></script>
     <script async src="js/login.js"></script>
-
 </head>
 
 <body>
@@ -51,8 +49,9 @@
     <div id="wrapper" class="wrap">
         <div class="login">
             <div class="login_img">
-                <img src="img/banner/login_banner.png" alt="login的banner圖片">
+                <img src="img/banner/login_banner (2).png" alt="login的banner圖片">
             </div>
+            <!-- 會員登錄 -->
             <div class="login_container">
                 <div>
                     <div class="login_title">
@@ -93,11 +92,11 @@
                         <div>
                             <button>登入</button>
                         </div>
-                        <div id="register">
+                        <div id="register_btn">
                             <button>註冊</button>
                         </div>
                     </div>
-                    <div class="login_text">
+                    <div class="login_others">
                         <span><small>---使用以下帳號快速登入---</small></span>
                     </div>
                     <div class="login_device">
@@ -107,28 +106,54 @@
                     </div>
                 </div>
             </div>
+            <!-- 註冊新帳號 -->
+            <div class="register_container">
+                <div>
+                    <div class="register_title">
+                        <span>已經擁有帳號了嗎?立即登入</span>
+                    </div>
+                    <div class="login_content">
+                        <div class="login_icon">
+                            <span class="material-symbols-outlined">
+                                person
+                            </span>
+                        </div>
+                        <div class="login_text">
+                            <input type="input" id="password" placeholder="請輸入密碼">
+                            <label for="password">請輸入密碼</label>
+                            <div class="bottom_line"></div>
+                        </div>
+                    </div>
+                    <div class="login_content">
+                        <div class="login_icon">
+                            <span class="material-symbols-outlined">
+                                lock
+                            </span>
+                        </div>
+                        <div class="login_text">
+                            <input type="input" id="password" placeholder="請輸入密碼">
+                            <label for="password">請輸入密碼(6~16位英數混合)</label>
+                            <div class="bottom_line"></div>
+                        </div>
+                    </div>
+                    <div class="login_content">
+                        <div class="login_icon">
+                            <span class="material-symbols-outlined">
+                                lock
+                            </span>
+                        </div>
+                        <div class="login_text">
+                            <input type="input" id="password" placeholder="請輸入密碼">
+                            <label for="password">再次確認密碼</label>
+                            <div class="bottom_line"></div>
+                        </div>
+                    </div>
+                    <div id="register">
+                        <button>註冊</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- 註冊新帳號 -->
-        <form class="new-register">
-            <div>
-                <span>已經擁有帳號了嗎? <a href="login.html">立即登入</a></span>
-            </div>
-            <div>
-                <input type="email" id="user_id" placeholder="請輸入信箱帳號">
-                <label for="user_id"></label>
-            </div>
-            <div>
-                <input type="password" id="user_password" placeholder="請輸入密碼(6~16位英數混合)">
-                <i class="fa fa-eye-slash" aria-hidden="true"></i>
-            </div>
-            <div>
-                <input type="password" id="correct_possword" placeholder="確認密碼">
-                <i class="fa fa-eye-slash" aria-hidden="true"></i>
-            </div>
-            <div class="new_button">
-                <input type="submit" value="註冊">
-            </div>
-        </form>
     </div>
     <footer>
         <div class="footer_container">

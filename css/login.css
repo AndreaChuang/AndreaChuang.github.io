@@ -6,53 +6,83 @@
 .wrap .login_img {
   display: none;
 }
-.wrap .login_container {
-  min-width: 100%;
+.wrap .login_container,
+.wrap .register_container {
+  max-width: 100%;
   margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.wrap .login_container .login_title {
+.wrap .login_container .login_title,
+.wrap .register_container .login_title {
   color: #8A6E36;
   font-size: 38px;
   text-align: center;
   margin-bottom: 1%;
 }
-.wrap .login_container .login_content {
+.wrap .login_container .register_title,
+.wrap .register_container .register_title {
+  font-size: 20px;
+  color: #8A6E36;
+  cursor: pointer;
+  text-align: center;
+}
+.wrap .login_container .register_title span,
+.wrap .register_container .register_title span {
+  text-decoration: underline;
+}
+.wrap .login_container .register_title a,
+.wrap .register_container .register_title a {
+  color: #8A6E36;
+}
+.wrap .login_container .login_content,
+.wrap .register_container .login_content {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
-.wrap .login_container .login_content .login_icon {
+.wrap .login_container .login_content .login_icon,
+.wrap .register_container .login_content .login_icon {
   color: #8A6E36;
+  margin: 22px 12px 0 0;
 }
-.wrap .login_container .login_content .login_text {
+.wrap .login_container .login_content .login_text,
+.wrap .register_container .login_content .login_text {
   display: flex;
   flex-direction: column;
   flex-flow: column-reverse;
 }
-.wrap .login_container .login_content input {
+.wrap .login_container .login_content input,
+.wrap .register_container .login_content input {
   order: 10;
   outline: none;
   border: none;
-  padding: 10px 10px;
+  padding: 17px 10px;
   font-size: 20px;
   text-indent: 20px;
   background-color: #F8F0E5;
   border-radius: 24px;
 }
-.wrap .login_container .login_content input::-webkit-input-placeholder {
+.wrap .login_container .login_content input::-webkit-input-placeholder,
+.wrap .register_container .login_content input::-webkit-input-placeholder {
   opacity: 0;
 }
 .wrap .login_container .login_content input,
-.wrap .login_container .login_content label {
+.wrap .login_container .login_content label,
+.wrap .register_container .login_content input,
+.wrap .register_container .login_content label {
   transition: all 0.3s;
 }
-.wrap .login_container .login_content label {
+.wrap .login_container .login_content label,
+.wrap .register_container .login_content label {
   order: 100;
   transform-origin: left bottom;
   transform: translate(0px, 40px);
 }
-.wrap .login_container .login_content .bottom_line {
+.wrap .login_container .login_content .bottom_line,
+.wrap .register_container .login_content .bottom_line {
   order: 2;
   width: 0;
   height: 2px;
@@ -60,59 +90,103 @@
   transition: all 0.3s;
   margin-left: 20px;
 }
-.wrap .login_container .login_content input:not(:-moz-placeholder-shown) ~ div {
+.wrap .login_container .login_content input:not(:-moz-placeholder-shown) ~ div, .wrap .register_container .login_content input:not(:-moz-placeholder-shown) ~ div {
   width: 86%;
 }
 .wrap .login_container .login_content input:focus ~ div,
-.wrap .login_container .login_content input:not(:placeholder-shown) ~ div {
+.wrap .login_container .login_content input:not(:placeholder-shown) ~ div,
+.wrap .register_container .login_content input:focus ~ div,
+.wrap .register_container .login_content input:not(:placeholder-shown) ~ div {
   width: 86%;
 }
-.wrap .login_container .login_content input:not(:-moz-placeholder-shown) + label {
+.wrap .login_container .login_content input:not(:-moz-placeholder-shown) + label, .wrap .register_container .login_content input:not(:-moz-placeholder-shown) + label {
   color: #8A6E36;
   transform: translate(1px) scale(0.9);
 }
 .wrap .login_container .login_content input:focus + label,
-.wrap .login_container .login_content input:not(:placeholder-shown) + label {
+.wrap .login_container .login_content input:not(:placeholder-shown) + label,
+.wrap .register_container .login_content input:focus + label,
+.wrap .register_container .login_content input:not(:placeholder-shown) + label {
   color: #8A6E36;
   transform: translate(1px) scale(0.9);
 }
-.wrap .login_container .login_content label[for=password] {
+.wrap .login_container .login_content label[for=password],
+.wrap .register_container .login_content label[for=password] {
   text-indent: 20px;
   color: #8A6E36;
 }
-.wrap .login_container .login_content label[for=email] {
+.wrap .login_container .login_content label[for=email],
+.wrap .register_container .login_content label[for=email] {
   text-indent: 20px;
   color: #8A6E36;
 }
-.wrap .login_container .login_checkbox {
+.wrap .login_container .login_checkbox,
+.wrap .register_container .login_checkbox {
   display: flex;
   justify-content: space-evenly;
+  color: #DAC0A3;
+  margin: 20px;
 }
-.wrap .login_container .login_button {
+.wrap .login_container .login_checkboxdiv:hover,
+.wrap .register_container .login_checkboxdiv:hover {
+  color: #8A6E36;
+}
+.wrap .login_container .login_button,
+.wrap .login_container #register,
+.wrap .register_container .login_button,
+.wrap .register_container #register {
   display: flex;
   justify-content: space-around;
 }
-.wrap .login_container .login_button button {
+.wrap .login_container .login_button button,
+.wrap .login_container #register button,
+.wrap .register_container .login_button button,
+.wrap .register_container #register button {
   color: #FFFAED;
   background-color: #DAC0A3;
   border-radius: 24px;
   border: 1px solid #DAC0A3;
-  width: 100px;
+  width: 124px;
   height: 30px;
 }
-.wrap .login_container .login_button button:hover {
+.wrap .login_container .login_button button:hover,
+.wrap .login_container #register button:hover,
+.wrap .register_container .login_button button:hover,
+.wrap .register_container #register button:hover {
   background-color: #FFFAED;
   color: #8A6E36;
 }
-.wrap .login_container .login_device {
+.wrap .login_container #register,
+.wrap .register_container #register {
+  margin: 20px 0;
+  width: 230px;
   display: flex;
-  justify-content: center;
 }
-.wrap .login_container .login_device i {
+.wrap .login_container #register button,
+.wrap .register_container #register button {
+  width: 100%;
+  height: 30px;
+}
+.wrap .login_container .login_others,
+.wrap .register_container .login_others {
+  text-align: center;
+  margin: 30px 0;
+  color: #DAC0A3;
+}
+.wrap .login_container .login_device,
+.wrap .register_container .login_device {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5%;
+}
+.wrap .login_container .login_device i,
+.wrap .register_container .login_device i {
   font-size: 24px;
-  margin: 3%;
+  color: #DAC0A3;
+  cursor: pointer;
 }
-.wrap .login_container .login_device i:hover {
+.wrap .login_container .login_device i:hover,
+.wrap .register_container .login_device i:hover {
   transform: scale(1.2);
   color: #8A6E36;
 }
@@ -127,58 +201,72 @@
     flex-direction: row;
     background-color: #FFF;
     border: 1px solid #8A6E36;
-    margin: auto;
-    margin-top: 13%;
-    padding: 4% 2% 0%;
+    margin: 13% auto 7%;
+    padding: 4% 2% 4%;
     border-radius: 24px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   .wrap .login .login_img {
     display: block;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    margin: auto;
   }
   .wrap .login .login_img img {
-    height: 80%;
+    width: 100%;
+    height: 100%;
     border-radius: 24px;
   }
-  .wrap .login .login_container {
+  .wrap .login .login_container,
+  .wrap .login .register_container {
     display: flex;
     margin: auto;
     min-width: 0%;
     margin-top: 0%;
   }
-  .wrap .login .login_container .login_title {
+  .wrap .login .login_container .login_title,
+  .wrap .login .register_container .login_title {
     font-size: 40px;
   }
-  .wrap .login .login_container .login_content .login_icon {
+  .wrap .login .login_container .login_content .login_icon,
+  .wrap .login .register_container .login_content .login_icon {
     color: #8A6E36;
   }
-  .wrap .login .login_container .login_content .login_text {
+  .wrap .login .login_container .login_content .login_text,
+  .wrap .login .register_container .login_content .login_text {
     display: flex;
     flex-direction: column;
     flex-flow: column-reverse;
   }
-  .wrap .login .login_container .login_content input {
+  .wrap .login .login_container .login_content input,
+  .wrap .login .register_container .login_content input {
     order: 10;
     outline: none;
     border: none;
-    padding: 10px 10px;
     font-size: 20px;
     text-indent: 20px;
     background-color: #F8F0E5;
     border-radius: 24px;
   }
-  .wrap .login .login_container .login_content input::-webkit-input-placeholder {
+  .wrap .login .login_container .login_content input::-webkit-input-placeholder,
+  .wrap .login .register_container .login_content input::-webkit-input-placeholder {
     opacity: 0;
   }
   .wrap .login .login_container .login_content input,
-  .wrap .login .login_container .login_content label {
+  .wrap .login .login_container .login_content label,
+  .wrap .login .register_container .login_content input,
+  .wrap .login .register_container .login_content label {
     transition: all 0.3s;
   }
-  .wrap .login .login_container .login_content label {
+  .wrap .login .login_container .login_content label,
+  .wrap .login .register_container .login_content label {
     order: 100;
     transform-origin: left bottom;
     transform: translate(0px, 40px);
   }
-  .wrap .login .login_container .login_content .bottom_line {
+  .wrap .login .login_container .login_content .bottom_line,
+  .wrap .login .register_container .login_content .bottom_line {
     order: 2;
     width: 0;
     height: 2px;
@@ -186,31 +274,34 @@
     transition: all 0.3s;
     margin-left: 20px;
   }
-  .wrap .login .login_container .login_content input:not(:-moz-placeholder-shown) ~ div {
+  .wrap .login .login_container .login_content input:not(:-moz-placeholder-shown) ~ div, .wrap .login .register_container .login_content input:not(:-moz-placeholder-shown) ~ div {
     width: 86%;
   }
   .wrap .login .login_container .login_content input:focus ~ div,
-  .wrap .login .login_container .login_content input:not(:placeholder-shown) ~ div {
+  .wrap .login .login_container .login_content input:not(:placeholder-shown) ~ div,
+  .wrap .login .register_container .login_content input:focus ~ div,
+  .wrap .login .register_container .login_content input:not(:placeholder-shown) ~ div {
     width: 86%;
   }
-  .wrap .login .login_container .login_content input:not(:-moz-placeholder-shown) + label {
+  .wrap .login .login_container .login_content input:not(:-moz-placeholder-shown) + label, .wrap .login .register_container .login_content input:not(:-moz-placeholder-shown) + label {
     color: #8A6E36;
     transform: translate(1px) scale(0.9);
   }
   .wrap .login .login_container .login_content input:focus + label,
-  .wrap .login .login_container .login_content input:not(:placeholder-shown) + label {
+  .wrap .login .login_container .login_content input:not(:placeholder-shown) + label,
+  .wrap .login .register_container .login_content input:focus + label,
+  .wrap .login .register_container .login_content input:not(:placeholder-shown) + label {
     color: #8A6E36;
     transform: translate(1px) scale(0.9);
   }
-  .wrap .login .login_container .login_content label[for=password] {
+  .wrap .login .login_container .login_content label[for=password],
+  .wrap .login .register_container .login_content label[for=password] {
     text-indent: 20px;
     color: #8A6E36;
   }
-  .wrap .login .login_container .login_content label[for=email] {
+  .wrap .login .login_container .login_content label[for=email],
+  .wrap .login .register_container .login_content label[for=email] {
     text-indent: 20px;
     color: #8A6E36;
-  }
-  .wrap .login .login_container .login_button button {
-    cursor: pointer;
   }
 }/*# sourceMappingURL=login.css.map */

@@ -1,17 +1,20 @@
-#wrapper .banner {
+body {
+  background-color: #FFFAED;
+}
+body #wrapper .banner {
   display: block;
   margin-top: 10%;
 }
-#wrapper .banner img {
+body #wrapper .banner img {
   width: 100%;
 }
-#wrapper .banner-text {
+body #wrapper .banner-text {
   font-size: 20px;
   color: #0c0c0a;
   text-align: center;
   margin: 5%;
 }
-#wrapper .question-list {
+body #wrapper .question-list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -21,7 +24,7 @@
   margin-top: 10% 0;
   margin-bottom: 10%;
 }
-#wrapper .question-list .question {
+body #wrapper .question-list .question {
   width: 100%;
   border: 1px solid #8A6E36;
   border-radius: 10px;
@@ -29,24 +32,24 @@
   padding: 10px 10px;
   cursor: pointer;
 }
-#wrapper .question-list .question:hover {
+body #wrapper .question-list .question:hover {
   background-color: #9B8170;
   color: rgb(255, 255, 255);
 }
-#wrapper .question-list .question.active {
+body #wrapper .question-list .question.active {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
 }
-#wrapper .question-list .question span {
+body #wrapper .question-list .question span {
   color: black;
   margin-bottom: 10px 10px;
   font-size: 18px;
   line-height: 18px;
 }
-#wrapper .question-list .question .rotate-icon {
+body #wrapper .question-list .question .rotate-icon {
   transition: transform 1s ease;
   transform: rotate(90deg);
 }
-#wrapper .question-list .question p {
+body #wrapper .question-list .question p {
   margin: 0;
   display: none;
   line-height: 1.5em;
@@ -55,19 +58,19 @@
 }
 
 @media screen and (min-width: 768px) {
-  #wrapper .banner {
+  body #wrapper .banner {
     display: block;
     position: relative;
     margin-top: 0%;
   }
-  #wrapper .banner-text {
+  body #wrapper .banner-text {
     position: absolute;
     font-size: 48px;
     top: 50%;
     right: 5%;
     color: #fffaed;
   }
-  #wrapper .question-list {
+  body #wrapper .question-list {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -77,7 +80,7 @@
     margin-top: 5%;
     margin-bottom: 5%;
   }
-  #wrapper .question-list .question {
+  body #wrapper .question-list .question {
     width: 100%;
     border: 1px solid #8A6E36;
     border-radius: 10px;
@@ -88,25 +91,25 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  #wrapper .question-list .question:hover {
+  body #wrapper .question-list .question:hover {
     background-color: #9B8170;
     color: rgb(255, 255, 255);
   }
-  #wrapper .question-list .question.active {
+  body #wrapper .question-list .question.active {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
   }
-  #wrapper .question-list .question span {
+  body #wrapper .question-list .question span {
     color: black;
     margin-bottom: 10px 10px;
     font-size: 18px;
   }
-  #wrapper .question-list .question .fa-chevron-circle-down {
+  body #wrapper .question-list .question .fa-chevron-circle-down {
     transition: transform 1s ease;
   }
-  #wrapper .question-list .question .rotate-icon {
+  body #wrapper .question-list .question .rotate-icon {
     transform: rotate(90deg);
   }
-  #wrapper .question-list .question p {
+  body #wrapper .question-list .question p {
     margin: 5px 0 0;
     display: none;
     line-height: 1.5em;
