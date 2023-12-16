@@ -86,10 +86,10 @@ renderCart();
 
 // 卷軸滾動消失
 const showNavbarByScroll = function () {
-    var bodyClass = document.getElementById("SCheader").classList,
+    let bodyClass = document.getElementById("SCheader").classList,
         lastScrollY = 0;
     window.addEventListener('scroll', function () {
-        var st = this.scrollY;
+        let st = this.scrollY;
         // console.log('st', st)
         if (st <= lastScrollY) {
             bodyClass.remove('hideUp');
@@ -131,8 +131,8 @@ $(function () {
     $('.menu-guides').append(`<ul class="dropdownList guides-dropdown">
     <li guideCategory="0">全部商品</li>
     <li guideCategory="1">事業</li>
-    <li guideCategory="2">桃花</li>
-    <li guideCategory="3">健康</li>
+    <li guideCategory="2">健康</li>
+    <li guideCategory="3">桃花</li>
     <li guideCategory="4">除晦</li>
     </ul>`)
 
@@ -170,16 +170,17 @@ $(function () {
         // console.log('click')
     });
 
-    redirectToProducts();
+    bindRedirectToProductsClickEvent();
+    bindRedirectToGuidesClickEvent();
 })
 
 
 // 點擊商品分類各項目顯示商品
-let redirectToProducts = function () {
+let bindRedirectToProductsClickEvent = function () {
     $('.menu-products .products-dropdown li').on("click", function () {
         // console.log(this)
         // https://api.jquery.com/attr/
-        var productCategory = $(this).attr('productCategory');
+        let productCategory = $(this).attr('productCategory');
         if (productCategory) {
             window.location.href = `/product.html?productCategory=${productCategory}`;
         } else {
@@ -189,15 +190,15 @@ let redirectToProducts = function () {
 }
 
 // 點擊guides各項目顯示商品
-let redirectToGuides = function () {
-    $('.menu-guides .products-dropdown li').on("click", function () {
+let bindRedirectToGuidesClickEvent = function () {
+    $('.menu-guides .guides-dropdown li').on("click", function () {
         // console.log(this)
         // https://api.jquery.com/attr/
-        var guideCategory = $(this).attr('guideCategory');
+        let guideCategory = $(this).attr('guideCategory');
         if (guideCategory) {
-            window.location.href = `/guide.html?guidetCategory=${guideCategory}`;
+            window.location.href = `/product.html?guideCategory=${guideCategory}`;
         } else {
-            window.location.href = "/guide.html";
+            window.location.href = "/product.html";
         }
     })
 }

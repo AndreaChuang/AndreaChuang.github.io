@@ -93,6 +93,9 @@
     position: initial;
     height: 53px;
   }
+  #SCheader #menu.hidden {
+    display: block;
+  }
   #SCheader #menu .nav-list {
     display: flex;
     flex-direction: row;
@@ -100,10 +103,11 @@
   }
   #SCheader #menu .nav-list li {
     font-size: 18px;
-    margin: 3px 0;
+    margin: 0%;
     height: 50px;
     line-height: 53px;
     color: aliceblue;
+    cursor: pointer;
   }
   #SCheader #menu .nav-list .only_mobile {
     display: none;
@@ -122,6 +126,7 @@
     justify-content: center;
     align-items: center;
     background-color: #9B8170;
+    border-top: 1px solid aliceblue;
   }
   #SCheader #menu .nav-list .menu-products.active,
   #SCheader #menu .nav-list .menu-guides.active {

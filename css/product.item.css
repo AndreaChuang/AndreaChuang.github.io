@@ -9,8 +9,8 @@ body #wrapper .topbar {
   justify-content: space-between;
   margin: 15% 0 5% 5%;
 }
-body #wrapper .topbar .bread-crumbs {
-  display: none;
+body #wrapper .topbar .sorting {
+  cursor: pointer;
 }
 body #wrapper .topbar .sorting span {
   font-size: 14px;
@@ -439,8 +439,8 @@ body #wrapper .like .col-12 {
     justify-content: space-between;
     margin: 15% 0 5% 5%;
   }
-  body #wrapper .topbar .bread-crumbs {
-    display: none;
+  body #wrapper .topbar .sorting {
+    cursor: pointer;
   }
   body #wrapper .topbar .sorting span {
     font-size: 14px;

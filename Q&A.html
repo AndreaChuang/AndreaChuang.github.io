@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script async src="js/Q&A.js"></script>
     <script async src="js/header.js"></script>
@@ -19,28 +22,31 @@
 
 <body>
     <header id="SCheader">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <img src="img/LOGO.png" alt="LOGO">
-                </a>
-            </div>
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="img/LOGO.png" alt="LOGO">
+            </a>
+        </div>
+        <div id="menu">
             <ul class="nav-list">
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="product.html">PRODUCTS</a></li>
-                <li><a href="guides.html">GUIDES</a></li>
+                <li class="menu-products"><span>PRODUCTS</span></li>
+                <li class="menu-guides"><span>GUIDES</span></li>
                 <li><a href="Q&A.html">Q&A</a></li>
+                <li class="only_mobile"><a href="login.html">LOGIN</a></li>
             </ul>
-            <ul class="nav-icon">
-                <li><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                <li><i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
-                <li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-            </ul>
+        </div>
+        <ul class="nav-icon">
+            <li><i class="fa fa-search" aria-hidden="true"></i></li>
+            <li><i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
+            <li><i class="fa fa-user" aria-hidden="true"></i></li>
+        </ul>
+        <div id="btnHam"><img src="img/hamburger.png">
         </div>
     </header>
     <div id="wrapper">
         <div class="banner">
-            <div><img src="img/notices-banner.png" alt="挑選指南Banner">
+            <div><img src="img/banner/notices-banner.png" alt="挑選指南Banner">
             </div>
             <div class="banner-text">
                 <span>Q&A</span>
@@ -49,49 +55,53 @@
         <div class="question-list">
             <div class="question">
                 <span>Q1.串珠手鍊可以帶著洗澡嗎？</span>
+                <i class="fa fa-chevron-circle-down fa-lg" aria-hidden="true"></i>
                 <p><b>不行</b>，串珠手鍊請在洗澡時務必取下，平時盡量保持乾燥。</p>
             </div>
             <div class="question">
                 <span>Q2.串珠手鍊如何保養？</span>
+                <i class="fa fa-chevron-circle-down fa-lg" aria-hidden="true"></i>
                 <p>串珠手鍊在配戴時請勿大力拉扯，做劇烈運動時建議取下。可定期用拭銀布擦拭，保持金屬光澤。</p>
             </div>
             <div class="question">
                 <span>Q3.串珠手鍊金屬部份顏色變黑或顏色變深，怎麼回事？</span>
+                <i class="fa fa-chevron-circle-down fa-lg" aria-hidden="true"></i>
                 <p>手鍊金屬部分會因為跟空氣接觸而氧化，而且在跟皮膚接觸後會加速氧化速度。每個人體質不同氧化程度也會有很大的差異！金屬氧化後可用拭銀布擦拭讓金屬回復光澤。</p>
             </div>
             <div class="question">
                 <span>Q4.我下單以後多久可以收到商品？</span>
+                <i class="fa fa-chevron-circle-down fa-lg" aria-hidden="true"></i>
                 <p>下單後約 3-5 天後可以收到商品。（海外約3-10日）</p>
             </div>
             <div class="question">
                 <span>Q5.我的串珠手鍊有脫線的狀況或是斷掉了該怎麼辦？</span>
+                <i class="fa fa-chevron-circle-down fa-lg" aria-hidden="true"></i>
                 <p>不用擔心，在三個月內都有免費維修的服務，請直接發facebook訊息跟我們聯絡。</p>
             </div>
         </div>
     </div>
     <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
+        <div class="footer_container">
+            <div class="footer_logo">
                 <img src="img/LOGO.png" alt="頁尾LOGO">
             </div>
-            <div class="footer-contact">
-                <div class="footer-icon">
+            <div class="footer_contact">
+                <div class="footer_icon">
                     <i class="fa fa-weixin" aria-hidden="true"></i>
                     <i class="fa fa-instagram" aria-hidden="true"></i>
                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
                 </div>
-                <div class="footer-content">
+                <div class="footer_text">
                     <span> 連絡電話 : 0933248691</span>
                     <br>
                     <span> 營業時間 : 星期一到星期五 09:00-12:00 / 13:00-18:00</span>
                 </div>
             </div>
-            <div class="footer-space"></div>
+            <div class="footer_space"></div>
         </div>
-        <div class="footer-line"></div>
+        <div class="footer_line"></div>
         <div class="copyright">
-            <small>Copyright&copy;2023 SOUHAIT CRYSTAL 水晶 Made by Andrea | 此網站僅做為前端side
-                project作品練習，不做商業用途，請勿用於商業用途，謝謝!</small>
+            <small>本網站為緯育TibaMe前端工程師班第78期學員專題作品，本平台僅供學習、展示之用。</small>
         </div>
     </footer>
 </body>

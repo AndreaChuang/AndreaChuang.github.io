@@ -5,16 +5,26 @@ $(function () {
 
     //從URL取得productCategoryID
     let productCategoryID = getURLProductCategoryID() || 0;
+    //從URL取得guideID
     let guideCategoryID = getURLGuideCategoryID() || 0;
+    console.log('guideCategoryID', guideCategoryID)
 
     bindSortingClickEvent();
     $('.bread-crumbs .bread').append(`<li>首頁</li>`);
-    // 預設進到產品分類第一個分類 顯示全部商品 
-    renderBread(1, productCategoryID);
-    renderProducts();
-    renderBread(1, guideCategoryID);
-    renderGuides();
 
+    if(productCategoryID!= 0){
+        // categoryGroup id = 1, Products
+        renderBread(1, productCategoryID);
+    } else if(guideCategoryID!= 0){
+        // categoryGroup id = 2, Guides
+        renderBread(2, guideCategoryID);
+    } else {
+        // 預設進到產品分類第一個分類 顯示全部商品 
+        renderBread(1, productCategoryID);
+    }
+
+    renderProducts();
+    // renderGuides();
 })
 
 // 抓取Product URL的值
@@ -34,8 +44,8 @@ let getURLGuideCategoryID = function () {
     const queryString = window.location.search;
     // console.log(queryString);
     const urlParams = new URLSearchParams(queryString);
-    let guideCategory = urlParams.get('guidetCategory');
-    // console.log(productCategory)
+    let guideCategory = urlParams.get('guideCategory');
+    // console.log(guideCategory)
     return guideCategory;
 }
 
@@ -43,8 +53,7 @@ let getURLGuideCategoryID = function () {
 let renderBread = (categoryID, subCategoryID) => {
     let rootCategory = categoryGroup.find(function (category) {
         return category.id == categoryID
-    }
-    );
+    });
     let subCategorItem = rootCategory && rootCategory.categoryItem.find(item => item.id == subCategoryID)
 
     // console.log(rootCategory)
@@ -58,9 +67,14 @@ let renderBread = (categoryID, subCategoryID) => {
     }
 }
 
-// render商品分類
+// render商品
 const renderProducts = () => {
     let productCategoryID = getURLProductCategoryID() || 0;
+    let guideCategoryID = getURLGuideCategoryID() || 0;
+
+    // productCategoryID 與 guideCategoryID同時間只會有一種
+    console.log(productCategoryID, productCategoryID);
+    console.log(guideCategoryID, guideCategoryID);
 
     // https://stackoverflow.com/questions/979256/sorting-an-array-of-objects-by-property-values
     // asc 遞增(由小到大) desc 遞減(由大到小)
@@ -77,50 +91,68 @@ const renderProducts = () => {
 
     let product = sortedProduct || products;
 
+    console.log(product)
+
     $('.product-items .row').empty();
     for (let i = 0; i < product.length; i++) {
-        if (productCategoryID == 0 || product[i].categoryID == productCategoryID) {
+        //無分類
+        if (productCategoryID == 0 && guideCategoryID ==0) {
+            $('.product-items .row').append(`<div class="col-6 col-md-4 col-xl-3 ">
+            <div class="card">
+                <img src="img/product-item/${product[i].imgFileName}" alt="" onclick="javascript:location.href='product-item.html?product=${product[i].id}'">
+            </div>
+        </div>`)
+            // 商品分類
+        } else if (guideCategoryID == 0 && product[i].categoryID == productCategoryID) {
             $('.product-items .row').append(`<div class="col-6 col-md-4 col-xl-3 ">
             <div class="card">
                 <img src="img/product-item/${product[i].imgFileName}" alt="" onclick="javascript:location.href='product-item.html?productCategory=${product[i].categoryID}&product=${product[i].id}'">
             </div>
         </div>`)
+            // 指南分類
+        } else if (productCategoryID == 0 && product[i].guideID.includes(guideCategoryID)) {
+            console.log(product[i].guideID);
+            $('.product-items .row').append(`<div class="col-6 col-md-4 col-xl-3 ">
+            <div class="card">
+                <img src="img/product-item/${product[i].imgFileName}" alt="" onclick="javascript:location.href='product-item.html?guideCategory=${guideCategoryID}&product=${product[i].id}'">
+            </div>
+        </div>`)
         }
+
     }
 }
 
 
 // render guide分類
-const renderGuides = () => {
-    let guideCategoryID = getURLGuideCategoryID() || 0;
+// const renderGuides = () => {
+//     let guideCategoryID = getURLGuideCategoryID() || 0;
 
-    // https://stackoverflow.com/questions/979256/sorting-an-array-of-objects-by-property-values
-    // asc 遞增(由小到大) desc 遞減(由大到小)
-    let sortedguide;
-    if ($(location).prop('hash') === '#asc') {
-        sortedguide = products.sort(function (a, b) {
-            return parseFloat(a.price) - parseFloat(b.price);
-        });
-    } else if ($(location).prop('hash') === '#desc') {
-        sortedProduct = products.sort(function (a, b) {
-            return parseFloat(b.price) - parseFloat(a.price);
-        });
-    }
+//     // https://stackoverflow.com/questions/979256/sorting-an-array-of-objects-by-property-values
+//     // asc 遞增(由小到大) desc 遞減(由大到小)
+//     let sortedguide;
+//     if ($(location).prop('hash') === '#asc') {
+//         sortedguide = products.sort(function (a, b) {
+//             return parseFloat(a.price) - parseFloat(b.price);
+//         });
+//     } else if ($(location).prop('hash') === '#desc') {
+//         sortedProduct = products.sort(function (a, b) {
+//             return parseFloat(b.price) - parseFloat(a.price);
+//         });
+//     }
 
-    let guide = sortedguide || products;
+//     let guide = sortedguide || products;
 
-    $('.product-items .row').empty();
-    for (let i = 0; i < guide.length; i++) {
-        if (guideCategoryID == 0 || guide[i].categoryID == guideCategoryID) {
-            $('.product-items .row').append(`<div class="col-6 col-md-4 col-xl-3 ">
-            <div class="card">
-                <img src="img/product-item/${guide[i].imgFileName}" alt="" onclick="javascript:location.href='product-item.html?guideCategory=${guide[i].categoryID}&product=${guide[i].id}'">
-            </div>
-        </div>`)
-        }
-    }
-}
-
+//     $('.product-items .row').empty();
+//     for (let i = 0; i < guide.length; i++) {
+//         if (guideCategoryID == 0 || guide[i].categoryID == guideCategoryID) {
+//             $('.product-items .row').append(`<div class="col-6 col-md-4 col-xl-3 ">
+//             <div class="card">
+//                 <img src="img/product-item/${guide[i].imgFileName}" alt="" onclick="javascript:location.href='product-item.html?guideCategory=${guide[i].categoryID}&product=${guide[i].id}'">
+//             </div>
+//         </div>`)
+//         }
+//     }
+// }
 
 
 // sorting排序
@@ -144,7 +176,6 @@ let bindSortingClickEvent = function () {
         // console.log(this);
         hashToggle();
         renderProducts();
-        renderGuides();
     })
 }
 

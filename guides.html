@@ -14,27 +14,32 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script async src="js/header.js"></script>
+    <script src="./js/product-data.js"></script>
+    <script src="./js/product.js"></script>
 </head>
 
 <body>
     <header id="SCheader">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <img src="img/LOGO.png" alt="LOGO">
-                </a>
-            </div>
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="img/LOGO.png" alt="LOGO">
+            </a>
+        </div>
+        <div id="menu">
             <ul class="nav-list">
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="product.html">PRODUCTS</a></li>
-                <li><a href="guides.html">GUIDES</a></li>
+                <li class="menu-products"><span>PRODUCTS</span></li>
+                <li class="menu-guides"><span>GUIDES</span></li>
                 <li><a href="Q&A.html">Q&A</a></li>
+                <li class="only_mobile"><a href="login.html">LOGIN</a></li>
             </ul>
-            <ul class="nav-icon">
-                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                <li><i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
-                <li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-            </ul>
+        </div>
+        <ul class="nav-icon">
+            <li><i class="fa fa-search" aria-hidden="true"></i></li>
+            <li><i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
+            <li><i class="fa fa-user" aria-hidden="true"></i></li>
+        </ul>
+        <div id="btnHam"><img src="img/hamburger.png">
         </div>
     </header>
     <dvi id="wrapper" class="guides-wrap">
@@ -47,11 +52,11 @@
         </div>
         <div class="topbar">
             <dvi class="bread-crumbs">
-                <ol class="bread">
+                <ul class="bread">
                     <li><a href="index.html">CRYSTAL</a></li>
                     <li><a href="guides.html">GUIDES</a></li>
                     <li><a href="">CAREER</a></li>
-                </ol>
+                </ul>
             </dvi>
             <div class="sorting">
                 <span>Relative:Price</span>

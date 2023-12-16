@@ -1,6 +1,7 @@
 $(function () {
+    // 收合
     $(".question").click(function (e) {
-        console.log('click', e)
+        console.log('click', e);
         e.preventDefault();
 
         $(this).toggleClass("active");
@@ -11,4 +12,11 @@ $(function () {
 
         $(this).siblings().removeClass("active");
     });
+
+    // 按鈕旋轉
+    $(".question").on('click', function () {
+        $(this).find(".fa-chevron-circle-down").toggleClass('rotate-icon');
+    });
 });
+
+

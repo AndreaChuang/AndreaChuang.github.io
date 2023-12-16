@@ -6,102 +6,211 @@
 .wrap .login_img {
   display: none;
 }
-.wrap .login_content {
-  min-width: 50%;
+.wrap .login_container {
+  min-width: 100%;
   margin-top: 15%;
 }
-.wrap .login_content .login_title {
+.wrap .login_container .login_title {
   color: #8A6E36;
   font-size: 38px;
   text-align: center;
   margin-bottom: 1%;
 }
-.wrap .login_content .input_container {
-  width: 500px;
-  position: relative;
+.wrap .login_container .login_content {
   display: flex;
-  flex-flow: column-reverse;
-  align-items: flex-start;
-  margin: 1% auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
-.wrap .login_content .input_container input {
+.wrap .login_container .login_content .login_icon {
+  color: #8A6E36;
+}
+.wrap .login_container .login_content .login_text {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-reverse;
+}
+.wrap .login_container .login_content input {
   order: 10;
-  -ms-flex-order: 10;
   outline: none;
   border: none;
-  width: 100%;
-  padding: 10px 0;
+  padding: 10px 10px;
   font-size: 20px;
-  border-bottom: 1px solid #DED2B2;
-  text-indent: 10px;
+  text-indent: 20px;
+  background-color: #F8F0E5;
+  border-radius: 24px;
 }
-.wrap .login_content .input_container input::-moz-placeholder {
+.wrap .login_container .login_content input::-webkit-input-placeholder {
   opacity: 0;
 }
-.wrap .login_content .input_container input::-webkit-input-placeholder {
-  opacity: 0;
-}
-.wrap .login_content .input_container input:-ms-input-placeholder {
-  opacity: 0;
-}
-.wrap .login_content .input_container input,
-.wrap .login_content .input_container label {
+.wrap .login_container .login_content input,
+.wrap .login_container .login_content label {
   transition: all 0.3s;
 }
-.wrap .login_content .input_container label {
+.wrap .login_container .login_content label {
   order: 100;
   transform-origin: left bottom;
   transform: translate(0px, 40px);
 }
-.wrap .login_content .input_container .bottom_line {
+.wrap .login_container .login_content .bottom_line {
   order: 2;
   width: 0;
   height: 2px;
   background: #8A6E36;
   transition: all 0.3s;
+  margin-left: 20px;
 }
-.wrap .login_content .input_container input:not(:-moz-placeholder-shown) ~ div {
-  width: 100%;
+.wrap .login_container .login_content input:not(:-moz-placeholder-shown) ~ div {
+  width: 86%;
 }
-.wrap .login_content .input_container input:focus ~ div,
-.wrap .login_content .input_container input:not(:placeholder-shown) ~ div {
-  width: 100%;
+.wrap .login_container .login_content input:focus ~ div,
+.wrap .login_container .login_content input:not(:placeholder-shown) ~ div {
+  width: 86%;
 }
-.wrap .login_content .input_container input:not(:-moz-placeholder-shown) + label {
+.wrap .login_container .login_content input:not(:-moz-placeholder-shown) + label {
   color: #8A6E36;
   transform: translate(1px) scale(0.9);
 }
-.wrap .login_content .input_container input:focus + label,
-.wrap .login_content .input_container input:not(:placeholder-shown) + label {
+.wrap .login_container .login_content input:focus + label,
+.wrap .login_container .login_content input:not(:placeholder-shown) + label {
   color: #8A6E36;
   transform: translate(1px) scale(0.9);
 }
-.wrap .login_content .input_container label[for=password] {
-  text-indent: 10px;
-  margin-bottom: 5px;
+.wrap .login_container .login_content label[for=password] {
+  text-indent: 20px;
   color: #8A6E36;
 }
-.wrap .login_content .input_container label[for=email] {
-  text-indent: 10px;
-  margin-bottom: 5px;
+.wrap .login_container .login_content label[for=email] {
+  text-indent: 20px;
   color: #8A6E36;
 }
-.wrap .login_content .login_checkbox {
+.wrap .login_container .login_checkbox {
   display: flex;
-  margin: auto;
+  justify-content: space-evenly;
 }
-.wrap .login_content p:hover {
-  transform: scale(1.2);
+.wrap .login_container .login_button {
+  display: flex;
+  justify-content: space-around;
+}
+.wrap .login_container .login_button button {
+  color: #FFFAED;
+  background-color: #DAC0A3;
+  border-radius: 24px;
+  border: 1px solid #DAC0A3;
+  width: 100px;
+  height: 30px;
+}
+.wrap .login_container .login_button button:hover {
+  background-color: #FFFAED;
   color: #8A6E36;
 }
-.wrap .login_content .logo {
-  border-left: 0;
+.wrap .login_container .login_device {
+  display: flex;
+  justify-content: center;
 }
-.wrap .login_content .logo i {
+.wrap .login_container .login_device i {
   font-size: 24px;
   margin: 3%;
 }
-.wrap .login_content .logo i:hover {
+.wrap .login_container .login_device i:hover {
   transform: scale(1.2);
   color: #8A6E36;
+}
+
+@media screen and (min-width: 768px) {
+  .wrap {
+    background-color: #FFFAED;
+  }
+  .wrap .login {
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    background-color: #FFF;
+    border: 1px solid #8A6E36;
+    margin: auto;
+    margin-top: 13%;
+    padding: 4% 2% 0%;
+    border-radius: 24px;
+  }
+  .wrap .login .login_img {
+    display: block;
+  }
+  .wrap .login .login_img img {
+    height: 80%;
+    border-radius: 24px;
+  }
+  .wrap .login .login_container {
+    display: flex;
+    margin: auto;
+    min-width: 0%;
+    margin-top: 0%;
+  }
+  .wrap .login .login_container .login_title {
+    font-size: 40px;
+  }
+  .wrap .login .login_container .login_content .login_icon {
+    color: #8A6E36;
+  }
+  .wrap .login .login_container .login_content .login_text {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+  .wrap .login .login_container .login_content input {
+    order: 10;
+    outline: none;
+    border: none;
+    padding: 10px 10px;
+    font-size: 20px;
+    text-indent: 20px;
+    background-color: #F8F0E5;
+    border-radius: 24px;
+  }
+  .wrap .login .login_container .login_content input::-webkit-input-placeholder {
+    opacity: 0;
+  }
+  .wrap .login .login_container .login_content input,
+  .wrap .login .login_container .login_content label {
+    transition: all 0.3s;
+  }
+  .wrap .login .login_container .login_content label {
+    order: 100;
+    transform-origin: left bottom;
+    transform: translate(0px, 40px);
+  }
+  .wrap .login .login_container .login_content .bottom_line {
+    order: 2;
+    width: 0;
+    height: 2px;
+    background: #8A6E36;
+    transition: all 0.3s;
+    margin-left: 20px;
+  }
+  .wrap .login .login_container .login_content input:not(:-moz-placeholder-shown) ~ div {
+    width: 86%;
+  }
+  .wrap .login .login_container .login_content input:focus ~ div,
+  .wrap .login .login_container .login_content input:not(:placeholder-shown) ~ div {
+    width: 86%;
+  }
+  .wrap .login .login_container .login_content input:not(:-moz-placeholder-shown) + label {
+    color: #8A6E36;
+    transform: translate(1px) scale(0.9);
+  }
+  .wrap .login .login_container .login_content input:focus + label,
+  .wrap .login .login_container .login_content input:not(:placeholder-shown) + label {
+    color: #8A6E36;
+    transform: translate(1px) scale(0.9);
+  }
+  .wrap .login .login_container .login_content label[for=password] {
+    text-indent: 20px;
+    color: #8A6E36;
+  }
+  .wrap .login .login_container .login_content label[for=email] {
+    text-indent: 20px;
+    color: #8A6E36;
+  }
+  .wrap .login .login_container .login_button button {
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=login.css.map */

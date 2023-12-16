@@ -488,7 +488,7 @@ const products = [
         "category": "水晶耳環",
         "name": "紫龍晶 女士耳環",
         "currency": "NTD",
-        "price": "780",
+        "price": "3580",
         "hardness": "7",
         "chakra": "眉心輪",
         "constellation": "雙魚座、巨蠍座、天蠍座",
@@ -522,7 +522,7 @@ const products = [
         "category": "水晶耳環",
         "name": "紫龍晶 女士耳環",
         "currency": "NTD",
-        "price": "780",
+        "price": "2580",
         "hardness": "7",
         "chakra": "眉心輪",
         "constellation": "雙魚座、巨蠍座、天蠍座",
@@ -539,7 +539,7 @@ const products = [
         "category": "水晶耳環",
         "name": "紫龍晶 女士耳環",
         "currency": "NTD",
-        "price": "780",
+        "price": "3580",
         "hardness": "7",
         "chakra": "海底輪",
         "constellation": "雙魚座、巨蠍座、天蠍座",
@@ -556,7 +556,7 @@ const products = [
         "category": "水晶耳環",
         "name": "紫水晶 女士耳環",
         "currency": "NTD",
-        "price": "780",
+        "price": "2580",
         "hardness": "7",
         "chakra": "海底輪",
         "constellation": "雙魚座、巨蠍座、天蠍座",
@@ -607,7 +607,7 @@ const products = [
         "category": "水晶耳環",
         "name": "紫龍晶 女士耳環",
         "currency": "NTD",
-        "price": "780",
+        "price": "3580",
         "hardness": "7",
         "chakra": "眉心輪",
         "constellation": "雙魚座、巨蠍座、天蠍座",
@@ -641,7 +641,7 @@ const products = [
         "category": "水晶耳環",
         "name": "紫水晶 女士耳環",
         "currency": "NTD",
-        "price": "780",
+        "price": "3580",
         "hardness": "7",
         "chakra": "眉心輪",
         "constellation": "雙魚座、巨蠍座、天蠍座",
@@ -1076,5 +1076,3 @@ const products = [
         "inventory": "999"
     }
 ]
-
-

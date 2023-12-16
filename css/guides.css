@@ -361,8 +361,8 @@ ul {
   justify-content: space-between;
   margin: 15% 0 5% 5%;
 }
-.guides-wrap .topbar .bread-crumbs {
-  display: none;
+.guides-wrap .topbar .sorting {
+  cursor: pointer;
 }
 .guides-wrap .topbar .sorting span {
   font-size: 14px;

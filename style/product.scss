@@ -3,22 +3,20 @@ body {
 
     .wrap {
         @import "common/bar";
+        @import "common/productList";
+        @import "common/pagination";
 
         .banner {
             display: none;
         }
 
+        .topbar {
+            .bread-crumbs {
+                display: none
+            }
+        }
 
 
-        // .topbar {
-        //     .bread-crumbs {
-        //         display: none
-        //     }
-        // }
-
-        @import "common/productList";
-
-        @import "common/pagination";
     }
 }
 
@@ -26,6 +24,7 @@ body {
     .wrap {
         .banner {
             position: relative;
+            display: block;
 
             img {
                 width: 100%;
