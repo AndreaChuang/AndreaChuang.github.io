@@ -1,3 +1,47 @@
+$(function () {
+  showLandingLogo();
+  // document.getElementById("animation").style.display = "none";
+  slickRun();
+
+
+  // 靠按鈕切換
+  document.getElementById("CarouselPrev").addEventListener("click", function () {
+    showSlide(carouselIndex - 1);
+  });
+  document.getElementById("CarouselNext").addEventListener("click", function () {
+    showSlide(carouselIndex + 1);
+  });
+
+  // 滑鼠滑動事件
+  let carouselStartX;
+  document.getElementById("carousel").addEventListener("mousedown", function (e) {
+    carouselStartX = e.clientX;
+  });
+
+  document.getElementById("carousel").addEventListener("mouseup", function (e) {
+    // console.log("e.clientX", e.clientX);
+    // console.log("carouselStartX", carouselStartX);
+    if (e.clientX > carouselStartX) {
+      showSlide(carouselIndex - 1); // 向右滑動，顯示上一張
+    } else if (e.clientX < carouselStartX) {
+      showSlide(carouselIndex + 1); // 向左滑動，顯示下一張
+    }
+  });
+
+  navJSCarousel();
+
+  // 下雪花
+  $.snowfall.start({
+    size: {
+      min: 10,
+      max: 20
+    },
+    color: '#fff',
+    content: '&#10052;'
+  });
+
+});
+
 // 動畫
 const showLandingLogo = function () {
   gsap.registerPlugin(MotionPathPlugin, DrawSVGPlugin);
@@ -36,7 +80,7 @@ const showLandingLogo = function () {
       {
         drawSVG: outVal,
         stroke: function () {
-          // return colors[Math.floor(Math.random() * colors.length)];
+          return colors[Math.floor(Math.random() * colors.length)];
           return colors[colors.length - 1];
         },
       },
@@ -89,10 +133,6 @@ const showLandingLogo = function () {
   masterT.add(drawInOut("in"));
   masterT.play();
 };
-
-showLandingLogo();
-
-document.getElementById("animation").style.display = "none";
 
 // 產品輪播
 const slickRun = function () {
@@ -201,8 +241,6 @@ const slickRun = function () {
   });
 };
 
-slickRun();
-
 // 顧客回饋輪播
 // $(".single_item").slick({
 //   dots: true,
@@ -251,40 +289,3 @@ const showSlide = function (i) {
   }
   carouselItems[carouselIndex].style.display = "flex";
 };
-
-// 靠按鈕切換
-document.getElementById("CarouselPrev").addEventListener("click", function () {
-  showSlide(carouselIndex - 1);
-});
-document.getElementById("CarouselNext").addEventListener("click", function () {
-  showSlide(carouselIndex + 1);
-});
-
-// 滑鼠滑動事件
-let carouselStartX;
-document.getElementById("carousel").addEventListener("mousedown", function (e) {
-  carouselStartX = e.clientX;
-});
-
-document.getElementById("carousel").addEventListener("mouseup", function (e) {
-  // console.log("e.clientX", e.clientX);
-  // console.log("carouselStartX", carouselStartX);
-  if (e.clientX > carouselStartX) {
-    showSlide(carouselIndex - 1); // 向右滑動，顯示上一張
-  } else if (e.clientX < carouselStartX) {
-    showSlide(carouselIndex + 1); // 向左滑動，顯示下一張
-  }
-});
-
-navJSCarousel();
-
-
-// 下雪花
-$.snowfall.start({
-  size: {
-    min: 10,
-    max: 20
-  },
-  color: '#fff',
-  content: '&#10052;'
-});

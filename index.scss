@@ -4,7 +4,7 @@
 }
 
 @import "style/reset";
-// @import "style/header";
+@import "style/common/header.scss";
 
 body {
 
@@ -68,6 +68,6 @@ body {
     }
 }
 
-// @import "style/homepage";
+@import "style/homepage.scss";
 
-// @import 'style/footer';
+@import 'style/common/footer.scss';

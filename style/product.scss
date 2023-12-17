@@ -10,49 +10,44 @@ body {
             display: none;
         }
 
-        .topbar {
-            .bread-crumbs {
-                display: none
-            }
-        }
-
-
     }
 }
 
 @media screen and (min-width:768px) {
-    .wrap {
-        .banner {
-            position: relative;
-            display: block;
+    body {
+        .wrap {
+            .banner {
+                position: relative;
+                display: block;
 
-            img {
-                width: 100%;
-            }
+                img {
+                    width: 100%;
+                }
 
-            .banner-text {
+                .banner-text {
 
-                span {
-                    font-size: 48px;
-                    position: absolute;
-                    top: 70%;
-                    right: 5%;
-                    color: #FFFAED;
+                    span {
+                        font-size: 48px;
+                        position: absolute;
+                        top: 70%;
+                        right: 5%;
+                        color: #FFFAED;
 
+                    }
                 }
             }
-        }
 
-        .topbar {
-            .bread-crumbs {
-                display: block;
+            .topbar {
+                .bread-crumbs {
+                    display: block;
+                }
             }
+
+            @import "common/bar";
+
+            @import "common/productList";
+
+            @import "common/pagination";
         }
-
-        @import "common/bar";
-
-        @import "common/productList";
-
-        @import "common/pagination";
     }
 }

@@ -12,10 +12,10 @@ $(function () {
     bindSortingClickEvent();
     $('.bread-crumbs .bread').append(`<li>首頁</li>`);
 
-    if(productCategoryID!= 0){
+    if (productCategoryID != 0) {
         // categoryGroup id = 1, Products
         renderBread(1, productCategoryID);
-    } else if(guideCategoryID!= 0){
+    } else if (guideCategoryID != 0) {
         // categoryGroup id = 2, Guides
         renderBread(2, guideCategoryID);
     } else {
@@ -24,7 +24,6 @@ $(function () {
     }
 
     renderProducts();
-    // renderGuides();
 })
 
 // 抓取Product URL的值
@@ -96,7 +95,7 @@ const renderProducts = () => {
     $('.product-items .row').empty();
     for (let i = 0; i < product.length; i++) {
         //無分類
-        if (productCategoryID == 0 && guideCategoryID ==0) {
+        if (productCategoryID == 0 && guideCategoryID == 0) {
             $('.product-items .row').append(`<div class="col-6 col-md-4 col-xl-3 ">
             <div class="card">
                 <img src="img/product-item/${product[i].imgFileName}" alt="" onclick="javascript:location.href='product-item.html?product=${product[i].id}'">
@@ -111,7 +110,7 @@ const renderProducts = () => {
         </div>`)
             // 指南分類
         } else if (productCategoryID == 0 && product[i].guideID.includes(guideCategoryID)) {
-            console.log(product[i].guideID);
+            // console.log(product[i].guideID);
             $('.product-items .row').append(`<div class="col-6 col-md-4 col-xl-3 ">
             <div class="card">
                 <img src="img/product-item/${product[i].imgFileName}" alt="" onclick="javascript:location.href='product-item.html?guideCategory=${guideCategoryID}&product=${product[i].id}'">
@@ -121,39 +120,6 @@ const renderProducts = () => {
 
     }
 }
-
-
-// render guide分類
-// const renderGuides = () => {
-//     let guideCategoryID = getURLGuideCategoryID() || 0;
-
-//     // https://stackoverflow.com/questions/979256/sorting-an-array-of-objects-by-property-values
-//     // asc 遞增(由小到大) desc 遞減(由大到小)
-//     let sortedguide;
-//     if ($(location).prop('hash') === '#asc') {
-//         sortedguide = products.sort(function (a, b) {
-//             return parseFloat(a.price) - parseFloat(b.price);
-//         });
-//     } else if ($(location).prop('hash') === '#desc') {
-//         sortedProduct = products.sort(function (a, b) {
-//             return parseFloat(b.price) - parseFloat(a.price);
-//         });
-//     }
-
-//     let guide = sortedguide || products;
-
-//     $('.product-items .row').empty();
-//     for (let i = 0; i < guide.length; i++) {
-//         if (guideCategoryID == 0 || guide[i].categoryID == guideCategoryID) {
-//             $('.product-items .row').append(`<div class="col-6 col-md-4 col-xl-3 ">
-//             <div class="card">
-//                 <img src="img/product-item/${guide[i].imgFileName}" alt="" onclick="javascript:location.href='product-item.html?guideCategory=${guide[i].categoryID}&product=${guide[i].id}'">
-//             </div>
-//         </div>`)
-//         }
-//     }
-// }
-
 
 // sorting排序
 const hashToggle = function () {

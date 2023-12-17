@@ -3,9 +3,8 @@
     justify-content: space-between;
     margin: 15% 0 5% 5%;
 
-
     .bread-crumbs {
-        // display: none;
+        display: none;
     }
 
     .sorting {
@@ -27,7 +26,7 @@
     .topbar {
         display: flex;
         justify-content: space-between;
-        margin: 10% 4% 3% 4%;
+        margin: 3% 4% 3% 4%;
 
         .bread-crumbs {
             display: block;

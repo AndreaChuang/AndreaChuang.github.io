@@ -81,13 +81,12 @@ const renderCart = function () {
     });
 }
 
-renderCart();
 
 
 // 卷軸滾動消失
 const showNavbarByScroll = function () {
-    let bodyClass = document.getElementById("SCheader").classList,
-        lastScrollY = 0;
+    let bodyClass = document.getElementById("SCheader").classList;
+    let lastScrollY = 0;
     window.addEventListener('scroll', function () {
         let st = this.scrollY;
         // console.log('st', st)
@@ -96,29 +95,65 @@ const showNavbarByScroll = function () {
         } else {
             bodyClass.add('hideUp');
             // todo
-            // $('.cartFly').addClass('hide');
+            $('.cartFly').addClass('hide');
         }
         // 取基準點與下一次滾動比對
         lastScrollY = st;
         // console.log('lastScrollY', lastScrollY)
     });
 }
-showNavbarByScroll();
 
-// hamburger
-window.addEventListener("load", function () {
-    //------btnHam漢堡按鈕被點按時
-    document.getElementById("btnHam").onclick = function () {
-        //取得選單的參考
-        let menu = document.getElementById("menu");
-        // 有就移除，没有就加入
-        menu.classList.toggle("hidden");
-    };
+const renderHeader = function () {
+    $('body').append(` <header id="SCheader">
+    <div class="nav-logo">
+        <a href="index.html">
+            <img src="img/LOGO.png" alt="LOGO">
+        </a>
+    </div>
+    <div id="menu">
+        <ul class="nav-list">
+            <li><a href="about.html">ABOUT</a></li>
+            <li class="menu-products"><span>PRODUCTS</span></li>
+            <li class="menu-guides"><span>GUIDES</span></li>
+            <li><a href="Q&A.html">Q&A</a></li>
+            <li class="only_mobile"><a href="login.html">LOGIN</a></li>
+        </ul>
+    </div>
+    <ul class="nav-icon">
+        <li><i class="fa fa-search" aria-hidden="true"></i></li>
+        <li><i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
+        <li><i class="fa fa-user" aria-hidden="true"></i></li>
+    </ul>
+    <div id="btnHam"><img src="img/hamburger.png">
+    </div>
+</header>`
+    )
+}
 
-}, false);
 
-// 下拉式選單
+
+
 $(function () {
+    renderHeader();
+    goToLogin();
+    renderCart();
+
+    showNavbarByScroll();
+
+    // hamburger
+    window.addEventListener("load", function () {
+        //------btnHam漢堡按鈕被點按時
+        document.getElementById("btnHam").onclick = function () {
+            //取得選單的參考
+            let menu = document.getElementById("menu");
+            // 有就移除，没有就加入
+            menu.classList.toggle("hidden");
+        };
+
+    }, false);
+
+    // 下拉式選單
+
     // 點擊新增products的html
     $('.menu-products').append(`<ul class="dropdownList products-dropdown">
     <li productCategory="0">全部商品</li>
@@ -200,5 +235,13 @@ let bindRedirectToGuidesClickEvent = function () {
         } else {
             window.location.href = "/product.html";
         }
+    })
+}
+
+
+// 點擊按鈕到登入頁面
+const goToLogin = function () {
+    $('.fa-user').on('click', function () {
+        location.href = '/login.html'
     })
 }
