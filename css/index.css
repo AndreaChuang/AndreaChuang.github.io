@@ -508,21 +508,39 @@ body .cartFly {
   right: 0;
   z-index: 5;
   max-width: 550px;
-  width: 50%;
+  width: 100%;
+}
+body .cartFly .noProductInCart {
+  line-height: 1.5em;
+  padding: 0 5%;
+  color: #8A6E36;
+  margin: auto;
 }
 body .cartFly .order-list {
   display: flex;
   flex-direction: column;
   margin-right: 2%;
-  width: 50%;
+  width: 100%;
 }
 body .cartFly .order-list .order-items {
-  background-color: #fff;
+  background-color: #EFE7CE;
   display: flex;
   justify-content: space-evenly;
   padding: 20px 0;
   margin-bottom: 10px;
-  border: 1px solid #889397;
+  border-bottom: 1px solid #8A6E36;
+  margin: 0 2px 0 0;
+}
+body .cartFly .order-list .order-items .order-img img {
+  max-width: 300px;
+  border-radius: 24px;
+}
+body .cartFly .order-list .order-items .order-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #8A6E36;
 }
 body .cartFly .order-list .order-items .order-text .order-description {
   line-height: 1.5em;
@@ -538,6 +556,8 @@ body .cartFly .order-list .order-items .order-text .order-icon i:nth-child(4) {
   padding-left: 80px;
 }
 body .cartFly .order-list {
+  height: 90vh;
+  overflow: scroll;
   width: 100%;
 }
 body .cartFly .order-list .order-items {
@@ -547,17 +567,23 @@ body .cartFly.hide {
   display: none;
 }
 body .cartFly .checkout {
-  width: 100%;
-  background-color: #fff;
+  background-color: #EFE7CE;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 30px;
+  height: 50px;
+}
+body .cartFly .checkout :hover {
+  background-color: #8A6E36;
+  color: #EFE7CE;
 }
 body .cartFly .checkout a {
   height: 30px;
   line-height: 30px;
-  width: auto;
+  text-align: center;
+  width: 100%;
+  color: #8A6E36;
+  text-decoration: none;
 }
 body #animation {
   display: flex;

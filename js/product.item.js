@@ -1,3 +1,10 @@
+//存取product的ID
+// 寫入數據到localStorage
+// localStorage.setItem('currentProduct', {});
+//存取product的ID的詳細資料
+// localStorage.setItem('productInCart', []);
+
+
 // 顯示產品資訊function
 const renderProductItemText = function () {
     let product = getProductItem();
@@ -31,9 +38,9 @@ const renderProductItemText = function () {
 </span>
 <br>
 <div class="price">
-    <span>${product.currency} ${product.price}</span>
-    <br>
     <span>$${Math.round(product.price * 0.35)}</span>
+    <br>
+    <span>${product.currency} ${product.price}</span>
     <br>
     <span>35%off</span>
 </div>
@@ -50,28 +57,103 @@ const getURLProductID = function () {
     // console.log(queryString);
     const urlParams = new URLSearchParams(queryString);
     let product = urlParams.get('product');
-    console.log(product)
+    // console.log(product)
     return product;
 }
 
 
 // 抓取產品資訊function
-const getProductItem = function () {
-    let productID = getURLProductID();
+const getProductItem = function (pID) {
+    let productID = pID || getURLProductID();
     let product = products.find(function (p) {
         return p.id == productID
     })
+    window.currentProduct = product;
     // console.log(product);
     return product;
 }
 
+// 點擊「加入購物車」按鈕事件
+const attToCart = function () {
+    $('.product-button button').on('click', function () {
+        let productID = currentProduct.id;
+        // console.log(productID);
+        // 添加新資料
+        let product = getProductItem(productID);
+        setProductItemInLocalStorage(product);
+        // console.log('getProductItemInLocalStorage', getProductItemInLocalStorage());
+    })
+}
+
+// 產生麵包屑
+let renderBread = (categoryID, subCategoryID) => {
+    let rootCategory = categoryGroup.find(function (category) {
+        return category.id == categoryID
+    });
+    let subCategorItem = rootCategory && rootCategory.categoryItem.find(item => item.id == subCategoryID)
+
+    // console.log(rootCategory)
+    // console.log(subCategorItem)
+
+    if (rootCategory && rootCategory.name) {
+        $('.bread-crumbs .bread').append(`<li>${rootCategory.name}</li>`)
+    }
+    if (subCategorItem && subCategorItem.name) {
+        $('.bread-crumbs .bread').append(`<li>${subCategorItem.name}</li>`)
+    }
+}
+
+// 抓取Product URL的值
+let getURLProductCategoryID = function () {
+    // https://www.sitepoint.com/get-url-parameters-with-javascript/
+    const queryString = window.location.search;
+    // console.log(queryString);
+    const urlParams = new URLSearchParams(queryString);
+    let productCategory = urlParams.get('productCategory');
+    console.log(productCategory)
+    return productCategory;
+}
+
+// 抓取Guide URL的值
+let getURLGuideCategoryID = function () {
+    // https://www.sitepoint.com/get-url-parameters-with-javascript/
+    const queryString = window.location.search;
+    // console.log(queryString);
+    const urlParams = new URLSearchParams(queryString);
+    let guideCategory = urlParams.get('guideCategory');
+    // console.log(guideCategory)
+    return guideCategory;
+}
 
 
 //render product page
 $(function () {
 
+    // 麵包屑功能
+    //從URL取得productCategoryID
+    let productCategoryID = getURLProductCategoryID() || 0;
+    //從URL取得guideID
+    let guideCategoryID = getURLGuideCategoryID() || 0;
+    console.log('guideCategoryID', guideCategoryID)
+
+    $('.bread-crumbs .bread').append(`<li>首頁</li>`);
+
+    if (productCategoryID != 0) {
+        // categoryGroup id = 1, Products
+        renderBread(1, productCategoryID);
+    } else if (guideCategoryID != 0) {
+        // categoryGroup id = 2, Guides
+        renderBread(2, guideCategoryID);
+    } else {
+        // 預設進到產品分類第一個分類 顯示全部商品 
+        renderBread(1, productCategoryID);
+    }
+
+    // TODO 麵包屑第四階層(商品名稱)
+
     // render 產品資訊
     renderProductItemText();
+    attToCart();
 
     // 單一產品輪播
     $('.slider-for').slick({

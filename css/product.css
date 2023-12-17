@@ -35,12 +35,12 @@ body .wrap .topbar .sorting .fa {
     margin: auto;
     display: flex;
   }
-  body .wrap .topbar .bread-crumbs .bread li a {
+  body .wrap .topbar .bread-crumbs .bread li {
     text-decoration: none;
     color: #8A6E36;
     font-size: 20px;
   }
-  body .wrap .topbar .bread-crumbs .bread li a:hover {
+  body .wrap .topbar .bread-crumbs .bread li:hover {
     color: red;
   }
   body .wrap .topbar .bread-crumbs .bread li + li:before {
@@ -79,6 +79,7 @@ body .wrap [class*=col-] .card {
 body .wrap [class*=col-] .card img {
   width: 100%;
   border-radius: 24px;
+  cursor: pointer;
 }
 body .wrap [class*=col-] .card img:hover {
   transform: scale(1.2);
@@ -370,12 +371,12 @@ body .wrap .banner {
     margin: auto;
     display: flex;
   }
-  body .wrap .topbar .bread-crumbs .bread li a {
+  body .wrap .topbar .bread-crumbs .bread li {
     text-decoration: none;
     color: #8A6E36;
     font-size: 20px;
   }
-  body .wrap .topbar .bread-crumbs .bread li a:hover {
+  body .wrap .topbar .bread-crumbs .bread li:hover {
     color: red;
   }
   body .wrap .topbar .bread-crumbs .bread li + li:before {
@@ -415,6 +416,7 @@ body .wrap .banner {
   body .wrap [class*=col-] .card img {
     width: 100%;
     border-radius: 24px;
+    cursor: pointer;
   }
   body .wrap [class*=col-] .card img:hover {
     transform: scale(1.2);

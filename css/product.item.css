@@ -37,12 +37,12 @@ body #wrapper .topbar .sorting .fa {
     margin: auto;
     display: flex;
   }
-  body #wrapper .topbar .bread-crumbs .bread li a {
+  body #wrapper .topbar .bread-crumbs .bread li {
     text-decoration: none;
     color: #8A6E36;
     font-size: 20px;
   }
-  body #wrapper .topbar .bread-crumbs .bread li a:hover {
+  body #wrapper .topbar .bread-crumbs .bread li:hover {
     color: red;
   }
   body #wrapper .topbar .bread-crumbs .bread li + li:before {
@@ -314,12 +314,12 @@ body #wrapper .like .slick-next:before {
     margin: auto;
     display: flex;
   }
-  body #wrapper .topbar .bread-crumbs .bread li a {
+  body #wrapper .topbar .bread-crumbs .bread li {
     text-decoration: none;
     color: #8A6E36;
     font-size: 20px;
   }
-  body #wrapper .topbar .bread-crumbs .bread li a:hover {
+  body #wrapper .topbar .bread-crumbs .bread li:hover {
     color: red;
   }
   body #wrapper .topbar .bread-crumbs .bread li + li:before {

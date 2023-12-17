@@ -32,12 +32,12 @@
     margin: auto;
     display: flex;
   }
-  .topbar .bread-crumbs .bread li a {
+  .topbar .bread-crumbs .bread li {
     text-decoration: none;
     color: #8A6E36;
     font-size: 20px;
   }
-  .topbar .bread-crumbs .bread li a:hover {
+  .topbar .bread-crumbs .bread li:hover {
     color: red;
   }
   .topbar .bread-crumbs .bread li + li:before {

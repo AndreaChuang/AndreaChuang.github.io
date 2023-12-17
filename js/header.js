@@ -1,86 +1,105 @@
-// 查看購物車
+// 把資料暫存到locol Storage的功能
+const setProductItemInLocalStorage = function (product) {
+    // 讀取既有的product資料
+    let productInCart = getProductItemInLocalStorage();
+    // 把舊和新資料合併(物件)
+    const mergedAry = productInCart.concat(product || {});
+    // 把資料存到localStorage，把合併後的資料物件轉成字串
+    localStorage.setItem('productInCart', JSON.stringify(mergedAry));
+}
+
+// 抓取暫存在locol Storage的資料的功能
+const getProductItemInLocalStorage = function () {
+    // 把資料字串轉回物件
+    let productInCart = JSON.parse(localStorage.getItem('productInCart') || '[]');
+    return productInCart;
+}
+
+// 查看購物車功能
 const renderCart = function () {
+
     let $cartHtml = $(`
     <div class="cartFly hide">
-    <div class="order-list">
-<div class="order-items">
-    <div class="order-img">
-        <img src="img/Rectangle 71.png" alt="購物車圖">
-    </div>
-    <div class="order-text">
-        <div class="order-description">
-            <div> Ring
-                <br>
-                顏色
-                <br>
-                商品數量:2
-                <br>
-                商品編號:21K3110
-            </div>
-            <div class="order-icon">
-                <i class="fa fa-minus" aria-hidden="true"></i>
-                <span>1</span>
-                <i class="fa fa-plus" aria-hidden="true"></i>
-                <i class="fa fa-trash" aria-hidden="true"></i>
-            </div>
+        <div class="order-list">
+            <div class="checkout"><a href="cart-1.1.html">Checkout</a></div>
         </div>
-    </div>
-</div>
-<div class="order-items">
-    <div class="order-img">
-        <img src="img/Rectangle 73.png" alt="購物車圖">
-    </div>
-    <div class="order-text">
-        <div class="order-description">
-            <div> Ring
-                <br>
-                顏色
-                <br>
-                商品數量:2
-                <br>
-                商品編號:21K3110
-            </div>
-            <div class="order-icon">
-                <i class="fa fa-minus" aria-hidden="true"></i>
-                <span>1</span>
-                <i class="fa fa-plus" aria-hidden="true"></i>
-                <i class="fa fa-trash" aria-hidden="true"></i>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="order-items">
-    <div class="order-img">
-        <img src="img/Rectangle 71.png" alt="購物車圖">
-    </div>
-    <div class="order-text">
-        <div class="order-description">
-            <div> Ring
-                <br>
-                顏色
-                <br>
-                商品數量:2
-                <br>
-                商品編號:21K3110
-            </div>
-            <div class="order-icon">
-                <i class="fa fa-minus" aria-hidden="true"></i>
-                <span>1</span>
-                <i class="fa fa-plus" aria-hidden="true"></i>
-                <i class="fa fa-trash" aria-hidden="true"></i>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="checkout"><a href="cart-1.1.html">Checkout</a></div>
-</div>
-</div>`);
+    </div>`);
+
     $("#SCheader").after($cartHtml);
+
+    // $(".cartFly .order-list").prepend($cartItemHtml);
     $('#SCheader .fa-shopping-bag').on('click', function () {
+        syncCartItem();
         $cartHtml.toggleClass('hide');
     });
 }
 
+// by ChatGPT
+// 合併相同商品
+const mergeArray = function (originalArray) {
+    // 使用reduce進行合併和計數
+    const mergedArray = originalArray.reduce((acc, currentItem) => {
+        // 檢查是否已經存在於合併後的陣列中
+        const existingItem = acc.find(item => (
+            item.categoryID === currentItem.categoryID &&
+            item.guideID === currentItem.guideID &&
+            item.id === currentItem.id &&
+            item.color === currentItem.color &&
+            item.size === currentItem.size
+        ));
+
+        if (existingItem) {
+            // 如果存在，將count增加1
+            existingItem.count = (existingItem.count || 1) + 1;
+        } else {
+            // 如果不存在，將當前項目添加到合併後的陣列中
+            acc.push({ ...currentItem, count: 1 });
+        }
+        return acc;
+    }, []);
+
+    return mergedArray;
+}
+// 每次點擊同步local storage的資料
+const syncCartItem = function () {
+    let productList = mergeArray(getProductItemInLocalStorage());
+
+    if (productList.length == 0) {
+        $(".cartFly .order-list").html('<span class="noProductInCart">購物車內沒有商品</span>');
+        return 0;
+    }
+    $(".cartFly .order-list").html('<div class="checkout"><a href="cart-1.1.html">Checkout</a></div>');
+
+    // 把暫存在local storage的資料物件用foreach append出來
+    productList.forEach(function (product) {
+        let productItemHTML = $(`
+        <div class="order-items">
+        <div class="order-img">
+            <img src="img/product-item/${product.imgFileName}" alt="購物車圖">
+        </div>
+        <div class="order-text">
+            <div class="order-description">
+                <div>
+                    ${product.name}
+                    <br>
+                    顏色: 白色
+                    <br>
+                    商品數量: ${product.count || 1}
+                    <br>
+                    價格: $${Math.round(product.price * 0.35 * (product.count || 1))}
+                </div>
+                <div class="order-icon">
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                    <span>${product.count || 1}</span>
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        </div>`)
+        $(".cartFly .order-list").prepend(productItemHTML);
+    });
+}
 
 
 // 卷軸滾動消失
@@ -103,6 +122,7 @@ const showNavbarByScroll = function () {
     });
 }
 
+// 用JS render header
 const renderHeader = function () {
     $('body').append(` <header id="SCheader">
     <div class="nav-logo">
@@ -130,14 +150,50 @@ const renderHeader = function () {
     )
 }
 
+// 點擊商品分類各項目顯示商品
+let bindRedirectToProductsClickEvent = function () {
+    $('.menu-products .products-dropdown li').on("click", function () {
+        // console.log(this)
+        // https://api.jquery.com/attr/
+        let productCategory = $(this).attr('productCategory');
+        if (productCategory) {
+            window.location.href = `/product.html?productCategory=${productCategory}`;
+        } else {
+            window.location.href = "/product.html";
+        }
+    })
+}
+
+// 點擊guides各項目顯示商品
+let bindRedirectToGuidesClickEvent = function () {
+    $('.menu-guides .guides-dropdown li').on("click", function () {
+        // console.log(this)
+        // https://api.jquery.com/attr/
+        let guideCategory = $(this).attr('guideCategory');
+        if (guideCategory) {
+            window.location.href = `/product.html?guideCategory=${guideCategory}`;
+        } else {
+            window.location.href = "/product.html";
+        }
+    })
+}
+
+
+// 點擊按鈕到登入頁面事件
+const goToLogin = function () {
+    $('.fa-user').on('click', function () {
+        location.href = '/login.html'
+    })
+}
 
 
 
+
+// render to header
 $(function () {
     renderHeader();
     goToLogin();
     renderCart();
-
     showNavbarByScroll();
 
     // hamburger
@@ -151,8 +207,6 @@ $(function () {
         };
 
     }, false);
-
-    // 下拉式選單
 
     // 點擊新增products的html
     $('.menu-products').append(`<ul class="dropdownList products-dropdown">
@@ -208,40 +262,3 @@ $(function () {
     bindRedirectToProductsClickEvent();
     bindRedirectToGuidesClickEvent();
 })
-
-
-// 點擊商品分類各項目顯示商品
-let bindRedirectToProductsClickEvent = function () {
-    $('.menu-products .products-dropdown li').on("click", function () {
-        // console.log(this)
-        // https://api.jquery.com/attr/
-        let productCategory = $(this).attr('productCategory');
-        if (productCategory) {
-            window.location.href = `/product.html?productCategory=${productCategory}`;
-        } else {
-            window.location.href = "/product.html";
-        }
-    })
-}
-
-// 點擊guides各項目顯示商品
-let bindRedirectToGuidesClickEvent = function () {
-    $('.menu-guides .guides-dropdown li').on("click", function () {
-        // console.log(this)
-        // https://api.jquery.com/attr/
-        let guideCategory = $(this).attr('guideCategory');
-        if (guideCategory) {
-            window.location.href = `/product.html?guideCategory=${guideCategory}`;
-        } else {
-            window.location.href = "/product.html";
-        }
-    })
-}
-
-
-// 點擊按鈕到登入頁面
-const goToLogin = function () {
-    $('.fa-user').on('click', function () {
-        location.href = '/login.html'
-    })
-}

@@ -1,7 +1,5 @@
 $(function () {
     // console.log(products)
-    // $('.bread li:nth-child()').onclick(function 
-    // })
 
     //從URL取得productCategoryID
     let productCategoryID = getURLProductCategoryID() || 0;
