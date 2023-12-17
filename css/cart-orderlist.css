@@ -1,1 +1,27 @@
-.order-list{display:flex;flex-direction:column;margin-right:2%;width:50%}.order-list .order-items{background-color:#fff;display:flex;justify-content:space-evenly;padding:20px 0;margin-bottom:10px;border:1px solid #889397}.order-list .order-items .order-text .order-description{line-height:1.5em}.order-list .order-items .order-text .order-icon{display:flex;align-items:center}.order-list .order-items .order-text .order-icon i{margin-left:2px}.order-list .order-items .order-text .order-icon i:nth-child(4){padding-left:80px}/*# sourceMappingURL=cart-orderlist.css.map */
+.order-list {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2%;
+  width: 50%;
+}
+.order-list .order-items {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  margin-bottom: 10px;
+  border: 1px solid #889397;
+}
+.order-list .order-items .order-text .order-description {
+  line-height: 1.5em;
+}
+.order-list .order-items .order-text .order-icon {
+  display: flex;
+  align-items: center;
+}
+.order-list .order-items .order-text .order-icon i {
+  margin-left: 2px;
+}
+.order-list .order-items .order-text .order-icon i:nth-child(4) {
+  padding-left: 80px;
+}/*# sourceMappingURL=cart-orderlist.css.map */

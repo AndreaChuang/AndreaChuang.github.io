@@ -14,7 +14,7 @@ body {
 
         .banner-text {
             font-size: 20px;
-            color: #0c0c0a;
+            color: #8A6E36;
             text-align: center;
             margin: 5%;
         }
@@ -36,12 +36,11 @@ body {
                 margin: 1% 0;
                 padding: 10px 10px;
                 cursor: pointer;
-
+                color: #8A6E36;
 
                 &:hover {
-                    background-color: #9B8170;
-                    color: rgb(255, 255, 255);
-
+                    color: rgb(240, 236, 236);
+                    background-color: #8A6E36;
                 }
 
                 &.active {
@@ -49,11 +48,9 @@ body {
                 }
 
                 span {
-                    color: black;
                     margin-bottom: 10px 10px;
                     font-size: 18px;
                     line-height: 18px;
-
                 }
 
                 .rotate-icon {
@@ -66,7 +63,6 @@ body {
                     display: none;
                     line-height: 1.5em;
                     font-size: 18px;
-                    color: black;
                 }
             }
         }
@@ -124,7 +120,6 @@ body {
                     }
 
                     span {
-                        color: black;
                         margin-bottom: 10px 10px;
                         font-size: 18px;
                     }
@@ -142,7 +137,6 @@ body {
                         display: none;
                         line-height: 1.5em;
                         font-size: 18px;
-                        color: black;
                         width: 100%;
                     }
                 }

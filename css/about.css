@@ -1,8 +1,6 @@
 body {
   background-color: #DED2B2;
-}
-body .about-wrap {
-  max-width: 1680px;
+  max-width: 1920px;
 }
 body .about-wrap .banner {
   position: relative;
@@ -35,10 +33,10 @@ body .about-wrap .about-container .about-text p {
   text-align: center;
 }
 body .about-wrap .about-form form {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   color: rgb(138, 110, 54);
   margin: 3% 0;
 }

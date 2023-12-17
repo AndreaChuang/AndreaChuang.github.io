@@ -1,1 +1,77 @@
-.pagination{text-align:center;margin:40px 20px;display:flex;align-items:center;justify-content:center;font-size:14px}.pagination .pages{display:flex;align-items:center;justify-content:space-between;max-width:100%}.pagination .page-number{cursor:pointer;color:#8a6e36;height:30px;width:30px;display:flex;align-items:center;justify-content:center;padding-left:1px;border-radius:50%}.pagination button{cursor:pointer;display:flex;align-items:center;justify-content:space-between;width:120px;padding:3px 27px;color:#8a6e36;border:none;background-color:#fffaed}.pagination button:hover,.pagination .page-number:hover{background-color:#8a6e36;color:#fff}.pagination .arrow{font-size:14px;border-radius:24px}@media screen and (min-width: 768px){.pagination{font-size:20px}.pagination .pages{width:200px}.pagination button{padding:3px 18px}.pagination button:hover,.pagination .page-number:hover{background-color:#8a6e36;color:#fff}.pagination #prevPage{margin-right:20px}.pagination #nextPage{margin-left:20px}.pagination .arrow{font-size:20px}.pagination .arrow .fa-long-arrow-left{padding-right:10px}.pagination .arrow .fa-long-arrow-right{padding-left:10px}}/*# sourceMappingURL=pagination.css.map */
+.pagination {
+  text-align: center;
+  margin: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.pagination .pages {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+}
+.pagination .page-number {
+  cursor: pointer;
+  color: #8A6E36;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1px;
+  border-radius: 50%;
+}
+.pagination button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  padding: 3px 27px;
+  color: #8A6E36;
+  border: none;
+  background-color: #FFFAED;
+}
+.pagination button:hover,
+.pagination .page-number:hover {
+  background-color: #8A6E36;
+  color: white;
+}
+.pagination .arrow {
+  font-size: 14px;
+  border-radius: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .pagination {
+    font-size: 20px;
+  }
+  .pagination .pages {
+    width: 200px;
+  }
+  .pagination button {
+    padding: 3px 18px;
+  }
+  .pagination button:hover,
+  .pagination .page-number:hover {
+    background-color: #8A6E36;
+    color: white;
+  }
+  .pagination #prevPage {
+    margin-right: 20px;
+  }
+  .pagination #nextPage {
+    margin-left: 20px;
+  }
+  .pagination .arrow {
+    font-size: 20px;
+  }
+  .pagination .arrow .fa-long-arrow-left {
+    padding-right: 10px;
+  }
+  .pagination .arrow .fa-long-arrow-right {
+    padding-left: 10px;
+  }
+}/*# sourceMappingURL=pagination.css.map */
