@@ -75,18 +75,24 @@ body #wrapper .product .product-img {
   margin: auto;
 }
 body #wrapper .product .product-img .bigimg {
-  width: 500px;
+  width: 400px;
   margin: 0 auto 20px;
 }
 body #wrapper .product .product-img .bigimg img {
-  width: 100px;
-}
-body #wrapper .product .product-img .smallimg {
-  width: 500px;
-  margin: 0 auto 20px;
+  width: 100%;
   border-radius: 24px;
 }
-body #wrapper .product .product-img .smallimg .slick-next {
+body #wrapper .product .product-img .smallimg {
+  width: 370px;
+  margin: 0 auto 20px;
+}
+body #wrapper .product .product-img .smallimg img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+}
+body #wrapper .product .product-img .smallimg .slick-prev:before,
+body #wrapper .product .product-img .smallimg .slick-next:before {
   color: #8A6E36;
 }
 body #wrapper .product .product-text {
@@ -240,7 +246,7 @@ body #wrapper .like .description-title,
 body #wrapper .like .like-title {
   font-size: 20px;
   text-align: center;
-  margin: 5% 0;
+  margin: 20px 0;
 }
 body #wrapper .shipping .description-text,
 body #wrapper .shipping .shipping-text,
@@ -255,10 +261,16 @@ body #wrapper .like {
   max-width: 768px;
   margin: auto;
 }
-body #wrapper .like .row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 5%;
+body #wrapper .like .autoplay {
+  width: 100%;
+}
+body #wrapper .like .autoplay img {
+  border-radius: 24px;
+  margin-left: 40px;
+}
+body #wrapper .like .slick-prev:before,
+body #wrapper .like .slick-next:before {
+  color: #8A6E36;
 }
 
 @media screen and (min-width: 768px) {
@@ -328,15 +340,6 @@ body #wrapper .like .row {
     padding-left: 2%;
     margin-top: 10%;
   }
-  body #wrapper .topbar .bread-crumbs .bread {
-    padding-left: 0px;
-  }
-  body #wrapper .topbar .bread-crumbs .bread li a {
-    font-size: 20px;
-  }
-  body #wrapper .topbar .bread-crumbs .bread li + li:before {
-    font-size: 14px;
-  }
   body #wrapper .product {
     display: flex;
     flex-direction: row;
@@ -350,24 +353,11 @@ body #wrapper .like .row {
     margin-bottom: 3%;
   }
   body #wrapper .product .product-img .bigimg {
-    max-width: 100%;
-    height: auto;
-  }
-  body #wrapper .product .product-img .bigimg img {
-    width: 100%;
-    border-radius: 24px;
+    width: 500px;
+    margin: 0 auto 20px;
   }
   body #wrapper .product .product-img .smallimg {
-    display: block;
-    max-width: 100%;
-  }
-  body #wrapper .product .product-img .smallimg .slick-prev:before,
-  body #wrapper .product .product-img .smallimg .slick-next:before {
-    color: #8A6E36;
-  }
-  body #wrapper .product .product-img .smallimg img {
-    width: 50%;
-    height: 50%;
+    width: 500px;
   }
   body #wrapper .product .product-text {
     box-sizing: border-box;
@@ -495,54 +485,8 @@ body #wrapper .like .row {
     cursor: pointer;
   }
   body #wrapper .shipping,
-  body #wrapper .description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid #8A6E36;
-    padding: 10px 0;
-  }
-  body #wrapper .shipping,
   body #wrapper .description,
   body #wrapper .like {
-    color: #8A6E36;
-    padding: 0 5% 5%;
-  }
-  body #wrapper .shipping .shipping-title,
-  body #wrapper .shipping .description-title,
-  body #wrapper .shipping .like-title,
-  body #wrapper .description .shipping-title,
-  body #wrapper .description .description-title,
-  body #wrapper .description .like-title,
-  body #wrapper .like .shipping-title,
-  body #wrapper .like .description-title,
-  body #wrapper .like .like-title {
-    font-size: 20px;
-    text-align: center;
-    margin: 5% 0;
-  }
-  body #wrapper .shipping .description-text,
-  body #wrapper .shipping .shipping-text,
-  body #wrapper .description .description-text,
-  body #wrapper .description .shipping-text,
-  body #wrapper .like .description-text,
-  body #wrapper .like .shipping-text {
-    font-size: 16px;
-    line-height: 1.5em;
-  }
-  body #wrapper .like {
-    max-width: 765px;
-  }
-  body #wrapper .like .autoplay {
-    width: 100%;
-  }
-  body #wrapper .like .autoplay img {
-    border-radius: 24px;
-    margin-left: 40px;
-  }
-  body #wrapper .like .slick-prev:before,
-  body #wrapper .like .slick-next:before {
-    color: #8A6E36;
+    padding: 0 2% 2%;
   }
 }/*# sourceMappingURL=product.item.css.map */

@@ -158,8 +158,8 @@
 }
 .wrap .login_container #register,
 .wrap .register_container #register {
-  margin: 20px 0;
-  width: 230px;
+  margin: 20px auto;
+  width: 290px;
   display: flex;
 }
 .wrap .login_container #register button,

@@ -79,11 +79,14 @@ body .about-wrap .about-form form div:nth-child(6) {
 }
 body .about-wrap .about-form form input[type=submit] {
   cursor: pointer;
+  color: #FFFAED;
   background-color: #DAC0A3;
+  border-radius: 24px;
+  border: 1px solid #DAC0A3;
 }
 body .about-wrap .about-form form input[type=submit]:hover {
-  background-color: #8A6E36;
-  color: #fff;
+  background-color: #FFFAED;
+  color: #8A6E36;
 }
 
 @media screen and (min-width: 768px) {
