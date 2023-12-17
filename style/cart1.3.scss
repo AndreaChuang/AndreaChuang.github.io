@@ -8,24 +8,31 @@
         height: 300px;
         align-items: center;
         padding: 0;
+        margin-top: 30px;
+
 
 
         li {
             border-radius: 50%;
             position: relative;
             white-space: nowrap;
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
 
             span {
-                margin-top: 70px;
+                margin-top: 44px;
                 position: absolute;
-                margin-left: -30px;
+                margin-left: -11px;
             }
         }
 
         li+li {
             margin-left: 100px;
+
+            span {
+                position: absolute;
+                margin-left: -18px;
+            }
         }
 
         li+li::before {
@@ -51,7 +58,7 @@
         }
 
         li:nth-child(3) {
-            background-color: black;
+            background-color: #8A6E36;
 
         }
     }
@@ -68,16 +75,45 @@
             width: 50%;
 
             .order-items {
-                background-color: #fff;
                 display: flex;
                 justify-content: space-evenly;
                 padding: 20px 0;
                 margin-bottom: 10px;
-                border: 1px solid #889397;
+                margin: 0 10% 0 0;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid #8A6E36;
+                }
+
+                .order-img {
+                    img {
+                        max-width: 300px;
+                        border-radius: 24px;
+                    }
+                }
 
                 .order-text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    color: #8A6E36;
+
                     .order-description {
                         line-height: 1.5em;
+                    }
+
+                    .order-icon {
+                        display: flex;
+                        align-items: center;
+
+                        i {
+                            margin-left: 2px;
+                        }
+                    }
+
+                    .order-icon i:nth-child(4) {
+                        padding-left: 80px;
                     }
                 }
             }
@@ -87,6 +123,7 @@
         .order-fee {
             width: 32.8%;
             margin-right: 8.2%;
+
 
 
             .order-text {
@@ -131,5 +168,29 @@
 
 
 
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        #wrapper {
+            .order {
+                display: flex;
+                flex-direction: column;
+
+                .order-list {
+                    width: initial;
+                    margin-right: 0%;
+
+                    img {
+                        width: 150px;
+                    }
+                }
+
+                .order-fee {
+                    width: initial;
+                }
+            }
+        }
     }
 }

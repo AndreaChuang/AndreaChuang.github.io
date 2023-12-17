@@ -1,65 +1,145 @@
-#wrapper {
-    .banner {
-        position: relative;
-        margin: auto;
+body {
+    background-color: #FFFAED;
 
-        img {
-            width: 100%;
+    #wrapper {
+
+        .banner {
+            display: block;
+            margin-top: 10%;
+
+            img {
+                width: 100%;
+            }
         }
 
         .banner-text {
-            span {
-                font-size: 48px;
-                position: absolute;
-                top: 70%;
-                right: 5%;
-                color: #FFFAED;
+            font-size: 20px;
+            color: #8A6E36;
+            text-align: center;
+            margin: 5%;
+        }
+
+        .question-list {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: space-around;
+            max-width: 80%;
+            margin: auto;
+            margin-top: 10% 0;
+            margin-bottom: 10%;
+
+            .question {
+                width: 100%;
+                border: 1px solid #8A6E36;
+                border-radius: 10px;
+                margin: 1% 0;
+                padding: 10px 10px;
+                cursor: pointer;
+                color: #8A6E36;
+
+                &:hover {
+                    color: rgb(240, 236, 236);
+                    background-color: #8A6E36;
+                }
+
+                &.active {
+                    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+                }
+
+                span {
+                    margin-bottom: 10px 10px;
+                    font-size: 18px;
+                    line-height: 18px;
+                }
+
+                .rotate-icon {
+                    transition: transform 1s ease;
+                    transform: rotate(90deg);
+                }
+
+                p {
+                    margin: 0;
+                    display: none;
+                    line-height: 1.5em;
+                    font-size: 18px;
+                }
             }
         }
     }
+}
 
-    .question-list {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: space-around;
-        max-width: 80%;
-        margin: auto;
-        margin-top: 1%;
-        margin-bottom: 1%;
-
-        .question {
-            width: 100%;
-            border: 1px solid #8A6E36;
-            border-radius: 10px;
-            margin: 1% 0;
-            padding: 10px 10px;
-
-            &:hover {
-                background-color: #9B8170;
-                color: rgb(255, 255, 255);
-
+@media screen and (min-width:768px) {
+    body {
+        #wrapper {
+            .banner {
+                display: block;
+                position: relative;
+                margin-top: 0%;
             }
 
-            &.active {
-                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+            .banner-text {
+                position: absolute;
+                font-size: 48px;
+                top: 50%;
+                right: 5%;
+                color: #fffaed;
             }
 
-            span {
-                color: black;
-                cursor: pointer;
-                margin-bottom: 10px;
-                margin-top: 10px;
-                font-size: 18px;
-                line-height: 2em;
 
-            }
+            .question-list {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: space-around;
+                max-width: 80%;
+                margin: auto;
+                margin-top: 5%;
+                margin-bottom: 5%;
 
-            p {
-                margin: 0;
-                display: none;
-                line-height: 1.5em;
-                font-size: 18px;
+                .question {
+                    width: 100%;
+                    border: 1px solid #8A6E36;
+                    border-radius: 10px;
+                    margin: 1% 0;
+                    padding: 10px 10px;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+
+
+                    &:hover {
+                        background-color: #9B8170;
+                        color: rgb(255, 255, 255);
+
+                    }
+
+                    &.active {
+                        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+                    }
+
+                    span {
+                        margin-bottom: 10px 10px;
+                        font-size: 18px;
+                    }
+
+                    .fa-chevron-circle-down {
+                        transition: transform 1s ease;
+                    }
+
+                    .rotate-icon {
+                        transform: rotate(90deg);
+                    }
+
+                    p {
+                        margin: 5px 0 0;
+                        display: none;
+                        line-height: 1.5em;
+                        font-size: 18px;
+                        width: 100%;
+                    }
+                }
             }
         }
     }

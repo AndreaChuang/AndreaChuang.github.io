@@ -5,20 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SOUHAIT CRYSTAL</title>
+  <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/homepage.css">
+  <!-- font-awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
     integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/homepage.css">
-  <link rel="stylesheet" href="css/index.css">
-  <!-- <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script> -->
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="library/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="library/slick/slick-theme.css" />
+  <!-- snowfall -->
+  <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- GSAP -->
   <script src="library/gsap.min.js"></script>
   <script src="library/dsvp.js"></script>
   <script src="library/mpp.js"></script>
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script type="text/javascript" src="library/slick/slick.min.js"></script>
   <script async src="js/header.js"></script>
   <script async src="index.js"></script>
+  <script src="./js/product-data.js"></script>
+  <script src="./js/product.js"></script>
+  <script type="text/javascript" src="./library/snowfall/jquery.snowfall.js"></script>
+
 </head>
 
 <body>
@@ -969,171 +983,292 @@
             211.25,444.20 211.25,448.96 211.25,448.96 Z" />
     </svg>
   </div>
-  <header id="SCheader">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <a href="index.html">
-          <img src="img/LOGO.png" alt="LOGO">
-        </a>
-      </div>
-      <ul class="nav-list">
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="product.html">PRODUCTS</a></li>
-        <li><a href="guides.html">GUIDES</a></li>
-        <li><a href="Q&A.html">Q&A</a></li>
-      </ul>
-      <ul class="nav-icon">
-        <li><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
-        <!-- <li><a href="cart-1.1.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li> -->
-        <li><i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
-        <li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-      </ul>
-    </div>
-  </header>
   <div id="wrapper" class="wrap">
     <div class="banner">
-      <div>
-        <img src="img/index-banner-2.png" alt="">
-      </div>
-      <div class="banner text">
-        <div>
-          <img src="img/ring.png" alt="首頁banner小圖">
+      <div class="banner_content">
+        <div class="banner_illustration">
+          <img src="img/ring.png" alt="首頁banner戒指插圖">
         </div>
-        <div>
+        <div class="banner_title">
           <span>
             SOUHAIT
             <br>
             CRYSTAL
           </span>
         </div>
-        <div class="banner link">
-          <a href="#">Shop Now →</a>
+        <div class="banner_link">
+          <a href="product.html">Shop Now →</a>
+        </div>
+        <div class="banner_img">
+          <img src="img/index-banner-2.png" alt="banner圖">
         </div>
       </div>
     </div>
     <div class="products">
-      <div class="products-title">
-        <span>Our Products</span>
+      <div class="products_title">
+        <span>商品介紹</span>
       </div>
-      <div class="productsList">
+      <div class="products_list filter">
         <ul>
-          <li>Top Seller</li>
-          <li>Sale</li>
-          <li>Top Rated</li>
-          <li>Featured</li>
+          <li class="button carousel-filter new">最新商品</li>
+          <li class="button carousel-filter sale">優惠商品</li>
+          <li class="button carousel-filter topRated">熱銷銷商</li>
+          <li class="button carousel-filter featured">精選商品</li>
         </ul>
       </div>
-      <div class="productsImg">
-        <img src="img/index-product.png" alt="">
-
+      <div class="products_img">
+        <div class="st-carousel">
+          <div class="st-carousel-slice new">
+            <img src="img/product-item/1.1.png" alt="">
+          </div>
+          <div class="st-carousel-slice new featured">
+            <img src="img/product-item/1.2.png" alt="">
+          </div>
+          <div class="st-carousel-slice new">
+            <img src="img/product-item/1.3.png" alt="">
+          </div>
+          <div class="st-carousel-slice new featured">
+            <img src="img/product-item/1.4.png" alt="">
+          </div>
+          <div class="st-carousel-slice new">
+            <img src="img/product-item/1.5.png" alt="">
+          </div>
+          <div class="st-carousel-slice new ">
+            <img src="img/product-item/1.4.png" alt="">
+          </div>
+          <div class="st-carousel-slice sale featured">
+            <img src="img/product-item/2.1.png" alt="">
+          </div>
+          <div class="st-carousel-slice sale ">
+            <img src="img/product-item/2.2.png" alt="">
+          </div>
+          <div class="st-carousel-slice sale featured">
+            <img src="img/product-item/2.3.png" alt="">
+          </div>
+          <div class="st-carousel-slice sale ">
+            <img src="img/product-item/2.4.png" alt="">
+          </div>
+          <div class="st-carousel-slice sale ">
+            <img src="img/product-item/2.5.png" alt="">
+          </div>
+          <div class="st-carousel-slice sale ">
+            <img src="img/product-item/2.6.png" alt="">
+          </div>
+          <div class="st-carousel-slice sale ">
+            <img src="img/product-item/2.7.png" alt="">
+          </div>
+          <div class="st-carousel-slice sale ">
+            <img src="img/product-item/2.1.png" alt="">
+          </div>
+          <div class="st-carousel-slice sale ">
+            <img src="img/product-item/2.2.png" alt="">
+          </div>
+          <div class="st-carousel-slice sale ">
+            <img src="img/product-item/2.3.png" alt="">
+          </div>
+          <div class="st-carousel-slice topRated featured">
+            <img src="img/product-item/3.1.png" alt="">
+          </div>
+          <div class="st-carousel-slice topRated ">
+            <img src="img/product-item/3.2.png" alt="">
+          </div>
+          <div class="st-carousel-slice topRated featured">
+            <img src="img/product-item/3.3.png" alt="">
+          </div>
+          <div class="st-carousel-slice topRated ">
+            <img src="img/product-item/3.4.png" alt="">
+          </div>
+          <div class="st-carousel-slice topRated ">
+            <img src="img/product-item/3.5.png" alt="">
+          </div>
+          <div class="st-carousel-slice topRated ">
+            <img src="img/product-item/3.4.png" alt="">
+          </div>
+        </div>
       </div>
-      <div class="productsLink">
+      <div class="products_link">
         <a href="#">Shop Now →</a>
       </div>
     </div>
     <div class="guides">
-      <div class="guidesImg">
-        <div class="line"></div>
-        <div class="guidesphoto">
-          <img src="img/guide-2.png" alt="">
-        </div>
+      <div class="guides_img">
+        <img src="img/guides_img.png" alt="">
       </div>
-      <div class="guidestext">
-        <div>
-          <span>Guides</span>
+      <div class="guides_content">
+        <div class="guides_illustration">
+          <img src="img/ring.png" alt="首頁guides戒指插圖">
         </div>
-        <div>
-          <p>在事業上，選擇具有穩定能量的水晶，如瑪瑙；在戀愛中，優先考慮玫瑰石英或紫水晶，有助於愛情和感情深化。挑選時注重個人需求與水晶特性的匹配。</p>
+        <div class="guides_title">
+          <span>挑選指南</span>
         </div>
-        <div class="guidestextLink">
+        <div class="guides_text">
+          <p>在事業上，選擇具有穩定能量的水晶，如瑪瑙；在戀愛中，優先考慮玫瑰石英或紫水晶，有助於愛情和感情深化。挑選時注重個人需求與水晶特性的匹配。
+          </p>
+        </div>
+        <div class="guides_link">
           <a href="#">Shop Now →</a>
         </div>
       </div>
     </div>
     <div class="features">
-      <div class="features-title">
-        <span>Our features</span>
+      <div class="features_title">
+        <span>品牌特色</span>
       </div>
-      <div class="featuresImg">
-        <div>
-          <img src="img/feature-img.png" alt="特色圖">
-        </div>
-        <div class="features-text">
+      <div class="features_img">
+        <img src="img/feature-img.png" alt="特色圖">
+        <div class="features_text">
           <div>
-            <span>折射<br>晶體乾淨，內含彩虹效應大，折射力強。</span>
+            <span>折射力強</span>
+            <!-- <br>晶體乾淨，內含彩虹效應大，折射力強。-->
           </div>
           <div>
-            <span>整體一致<br>每一粒水晶珠都是由頂級料去完成<br>不會有好有不好的水晶珠湊在一起
-            </span>
+            <span>整體一致</span>
+            <!-- <br>每一粒水晶珠都是由頂級料去完成<br>不會有好有不好的水晶珠湊在一起 -->
           </div>
           <div>
-            <span> 能量磁場強<br> 配戴上手會感覺到水晶的能量衝擊，如配戴位置麻痺或頭暈。
-            </span>
+            <span> 能量磁場強</span>
+            <!-- <br> 配戴上手會感覺到水晶的能量衝擊，如配戴位置麻痺或頭暈。 -->
           </div>
           <div>
-            <span>稀有<br>一條需收集多年才能完成，獨一無二。</span>
+            <span>稀有</span>
+            <!-- <br>一條需收集多年才能完成，獨一無二。 -->
           </div>
           <div>
-            <span>晶體<br>晶體接近完全或完全無暇、通透乾淨<br>少許或不會有冰紋冰霧出現。</span>
+            <span>顏色濃郁<span>
+                <!-- <br>晶體接近完全或完全無暇、通透乾淨<br>少許或不會有冰紋冰霧出現。</-->
           </div>
           <div>
-            <span>顏色<br>顏色濃郁濃豔，有些還具有星光、貓眼、光暈、玉化等特色。</span>
+            <span>晶體通透乾淨</span>
+            <!-- <br>顏色濃郁濃豔，有些還具有星光、貓眼、光暈、玉化等特色。 -->
           </div>
         </div>
       </div>
     </div>
-
     <div class="customers">
-      <div class="customers-title">
-        <span>Customers</span>
+      <div class="customers_title">
+        <span>顧客回饋</span>
       </div>
-      <div class="customersContent">
-        <div class="customers wear">
-          <img src="img/feedback-img.jpg" alt="顧客實戴產品圖">
+      <div id="carousel" class="single_item">
+        <div class="customers_feedback carousel-item" style="display: none;">
+          <div class="customers_content">
+            <div class="customers_person">
+              <div>
+                <img src="img/customers/feedback_person.png" alt="">
+              </div>
+              <div class="customers_name">
+                Amy 1
+                <br>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="customers_text">
+              <p>水晶手鍊的高品質及精緻設計令我驚艷。佩戴後感到平靜和愉悅，每顆水晶都獨特美麗。是我最愛的飾品，絕對值得推薦給注重品質和風格的您。
+              </p>
+            </div>
+            <div class="customers_link">
+              <a href="#">Shop Now →</a>
+            </div>
+          </div>
+          <div class="customers_wear">
+            <img src="img/customers/1.1.png" alt="顧客實戴產品圖">
+          </div>
         </div>
-        <div class="customers feedback">
-          <div>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
+        <div class="customers_feedback carousel-item" style="display: none;">
+          <div class="customers_content">
+            <div class="customers_person">
+              <div>
+                <img src="img/customers/feedback_person.png" alt="">
+              </div>
+              <div class="customers_name">
+                Amy 2
+                <br>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="customers_text">
+              <p>水晶手鍊的高品質及精緻設計令我驚艷。佩戴後感到平靜和愉悅，每顆水晶都獨特美麗。是我最愛的飾品，絕對值得推薦給注重品質和風格的您。
+              </p>
+            </div>
+            <div class="customers_link">
+              <a href="#">Shop Now →</a>
+            </div>
           </div>
-          <div>
-            <p>水晶手鍊的高品質及精緻設計令我驚艷。佩戴後感到平靜和愉悅，每顆水晶都獨特美麗。是我最愛的飾品，絕對值得推薦給注重品質和風格的您。
-            </p>
+          <div class="customers_wear">
+            <img src="img/customers/1.2.png" alt="顧客實戴產品圖">
           </div>
-          <div class="customers link">
-            <a href="#">Shop Now →</a>
+        </div>
+        <div class="customers_feedback carousel-item" style="display: none;">
+          <div class="customers_content">
+            <div class="customers_person">
+              <div>
+                <img src="img/customers/feedback_person.png" alt="">
+              </div>
+              <div class="customers_name">
+                Amy 3
+                <br>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="customers_text">
+              <p>水晶手鍊的高品質及精緻設計令我驚艷。佩戴後感到平靜和愉悅，每顆水晶都獨特美麗。是我最愛的飾品，絕對值得推薦給注重品質和風格的您。
+              </p>
+            </div>
+            <div class="customers_link">
+              <a href="#">Shop Now →</a>
+            </div>
           </div>
+          <div class="customers_wear">
+            <img src="img/customers/1.3.png" alt="顧客實戴產品圖">
+          </div>
+        </div>
+
+        <button id="CarouselPrev" style="display: none;">上一張</button>
+        <button id="CarouselNext" style="display: none;">下一張</button>
+        <div id="CarouselProgressBar">
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
         </div>
       </div>
     </div>
   </div>
   <footer>
-    <div class="footer-container">
-      <div class="footer-logo">
+    <div class="footer_container">
+      <div class="footer_logo">
         <img src="img/LOGO.png" alt="頁尾LOGO">
       </div>
-      <div class="footer-contact">
-        <div class="footer-icon">
+      <div class="footer_contact">
+        <div class="footer_icon">
           <i class="fa fa-weixin" aria-hidden="true"></i>
           <i class="fa fa-instagram" aria-hidden="true"></i>
           <i class="fa fa-envelope-o" aria-hidden="true"></i>
         </div>
-        <div class="footer-content">
+        <div class="footer_text">
           <span> 連絡電話 : 0933248691</span>
           <br>
           <span> 營業時間 : 星期一到星期五 09:00-12:00 / 13:00-18:00</span>
         </div>
       </div>
-      <div class="footer-space"></div>
+      <div class="footer_space"></div>
     </div>
-    <div class="footer-line"></div>
+    <div class="footer_line"></div>
     <div class="copyright">
       <small>本網站為緯育TibaMe前端工程師班第78期學員專題作品，本平台僅供學習、展示之用。</small>
     </div>
   </footer>
+
 </body>
 
 </html>

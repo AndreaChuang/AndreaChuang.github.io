@@ -4,101 +4,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOUHAIT CRYSTAL</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/login.css">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script async src="js/header.js"></script>
+    <script async src="js/login.js"></script>
 </head>
 
 <body>
-    <header id="SCheader">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <img src="img/LOGO.png" alt="LOGO">
-                </a>
-            </div>
-            <ul class="nav-list">
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="product.html">PRODUCTS</a></li>
-                <li><a href="guides.html">GUIDES</a></li>
-                <li><a href="Q&A.html">Q&A</a></li>
-            </ul>
-            <ul class="nav-icon">
-                <li><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                <li><i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
-                <li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-            </ul>
-        </div>
-    </header>
-    <div id="wrapper" class="container login">
-        <div class="new-members">
-            <div>
-                <span>新會員</span>
-            </div>
-            <div class="register">
-                <a href="#"><button>註冊</button></a>
-            </div>
-        </div>
+    <div id="wrapper" class="wrap">
         <div class="login">
-            <div>
-                <span>會員登入</span>
+            <div class="login_img">
+                <img src="img/banner/login_banner (2).png" alt="login的banner圖片">
             </div>
-            <div class="input-container">
-                <input type="input" id="email" placeholder="請輸入Email">
-                <label for="email">請輸入Email</label>
-                <div class="bottom-line"></div>
+            <!-- 會員登錄 -->
+            <div class="login_container">
+                <div>
+                    <div class="login_title">
+                        <span>會員登入</span>
+                    </div>
+                    <div class="login_content">
+                        <div class="login_icon">
+                            <span class="material-symbols-outlined">
+                                person
+                            </span>
+                        </div>
+                        <div class="login_text">
+                            <input type="email" id="email" placeholder="請輸入Email">
+                            <label for="email">請輸入Email</label>
+                            <div class="bottom_line"></div>
+                        </div>
+                    </div>
+                    <div class="login_content">
+                        <div class="login_icon">
+                            <span class="material-symbols-outlined">
+                                lock
+                            </span>
+                        </div>
+                        <div class="login_text">
+                            <input type="input" id="password" placeholder="請輸入密碼">
+                            <label for="password">請輸入密碼</label>
+                            <div class="bottom_line"></div>
+                        </div>
+                    </div>
+                    <div class="login_checkbox">
+                        <div>
+                            <input type="checkbox" id="remember">
+                            <label for="remember">記住我</label>
+                        </div>
+                        <div>忘記密碼?</div>
+                    </div>
+                    <div class="login_button">
+                        <div>
+                            <button>登入</button>
+                        </div>
+                        <div id="register_btn">
+                            <button>註冊</button>
+                        </div>
+                    </div>
+                    <div class="login_others">
+                        <span><small>---使用以下帳號快速登入---</small></span>
+                    </div>
+                    <div class="login_device">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-google" aria-hidden="true"></i>
+                        <i class="fa fa-apple" aria-hidden="true"></i>
+                    </div>
+                </div>
             </div>
-            <div class="input-container">
-                <input type="input" id="password" placeholder="請輸入密碼">
-                <label for="password">請輸入密碼</label>
-                <div class="bottom-line"></div>
-            </div>
-            <div>
-                <button>登入</button>
-            </div>
-            <div>
-                <p><small>忘記密碼?</small></p>
-            </div>
-            <div>
-                <span><small>---使用以下帳號快速登入---</small></span>
-            </div>
-            <div class="login logo">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-                <i class="fa fa-google" aria-hidden="true"></i>
-                <i class="fa fa-apple" aria-hidden="true"></i>
+            <!-- 註冊新帳號 -->
+            <div class="register_container">
+                <div>
+                    <div class="register_title">
+                        <span>已經擁有帳號了嗎?立即登入</span>
+                    </div>
+                    <div class="login_content">
+                        <div class="login_icon">
+                            <span class="material-symbols-outlined">
+                                person
+                            </span>
+                        </div>
+                        <div class="login_text">
+                            <input type="input" id="password" placeholder="請輸入密碼">
+                            <label for="password">請輸入密碼</label>
+                            <div class="bottom_line"></div>
+                        </div>
+                    </div>
+                    <div class="login_content">
+                        <div class="login_icon">
+                            <span class="material-symbols-outlined">
+                                lock
+                            </span>
+                        </div>
+                        <div class="login_text">
+                            <input type="input" id="password" placeholder="請輸入密碼">
+                            <label for="password">請輸入密碼(6~16位英數混合)</label>
+                            <div class="bottom_line"></div>
+                        </div>
+                    </div>
+                    <div class="login_content">
+                        <div class="login_icon">
+                            <span class="material-symbols-outlined">
+                                lock
+                            </span>
+                        </div>
+                        <div class="login_text">
+                            <input type="input" id="password" placeholder="請輸入密碼">
+                            <label for="password">再次確認密碼</label>
+                            <div class="bottom_line"></div>
+                        </div>
+                    </div>
+                    <div id="register">
+                        <button>註冊</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
+        <div class="footer_container">
+            <div class="footer_logo">
                 <img src="img/LOGO.png" alt="頁尾LOGO">
             </div>
-            <div class="footer-contact">
-                <div class="footer-icon">
+            <div class="footer_contact">
+                <div class="footer_icon">
                     <i class="fa fa-weixin" aria-hidden="true"></i>
                     <i class="fa fa-instagram" aria-hidden="true"></i>
                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
                 </div>
-                <div class="footer-content">
+                <div class="footer_text">
                     <span> 連絡電話 : 0933248691</span>
                     <br>
                     <span> 營業時間 : 星期一到星期五 09:00-12:00 / 13:00-18:00</span>
                 </div>
             </div>
-            <div class="footer-space"></div>
+            <div class="footer_space"></div>
         </div>
-        <div class="footer-line"></div>
+        <div class="footer_line"></div>
         <div class="copyright">
-            <small>Copyright&copy;2023 SOUHAIT CRYSTAL 水晶 Made by Andrea | 此網站僅做為前端side
-                project作品練習，不做商業用途，請勿用於商業用途，謝謝!</small>
+            <small>本網站為緯育TibaMe前端工程師班第78期學員專題作品，本平台僅供學習、展示之用。</small>
         </div>
     </footer>
 </body>

@@ -12,79 +12,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="library/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="library/slick/slick-theme.css" />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script async src="js/header.js"></script>
+    <script src="js/product-data.js"></script>
     <script async src="js/product.item.js"></script>
+    <script type="text/javascript" src="library/slick/slick.min.js"></script>
 </head>
 
 <body>
-    <header id="SCheader">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <img src="img/LOGO.png" alt="LOGO">
-                </a>
-            </div>
-            <ul class="nav-list">
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="product.html">PRODUCTS</a></li>
-                <li><a href="guides.html">GUIDES</a></li>
-                <li><a href="Q&A.html">Q&A</a></li>
-            </ul>
-            <ul class="nav-icon">
-                <li><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                <li><i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
-                <li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-            </ul>
-        </div>
-    </header>
     <div id="wrapper">
         <div class="topbar">
             <div class="bread-crumbs">
-                <ol class="bread">
-                    <li><a href="index.html">CRYSTAL</a></li>
-                    <li><a href="product.html">PRODUCTS</a></li>
-                    <li><a href="">BRACELET</a></li>
-                </ol>
+                <ul class="bread">
+                </ul>
             </div>
         </div>
         <div class="product">
             <div class="product-img">
-                <div class="bigimg">
-                    <img src="img/product-item/item1.png" alt="" id="large">
-                </div>
-                <div class="smallimg">
-                    <img src="img/product-item/item1.png" alt="" class="small">
-                    <img src="img/product-item/item2.png" alt="" class="small">
-                    <img src="img/product-item/item1.png" alt="" class="small">
-                    <img src="img/product-item/item2.png" alt="" class="small">
-                </div>
             </div>
             <div class="product-text">
                 <div class="top">
-                    <span class="product-name">Amethyst</span>
-                    <br>
-                    <span>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        (255 reviews)
-                    </span>
-                    <br>
-                    <div class="price">
-                        <span>$399</span>
-                        <br>
-                        <span>$599</span>
-                        <br>
-                        <span>35%off</span>
-                    </div>
-                    <span>硬度 : 7</span>
-                    <br>
-                    <span>脈輪 : 海底輪</span>
-                    <br>
-                    <span>星座 : 雙魚座、巨蠍座、天蠍座</span>
                 </div>
                 <div class="middle">
                     尺寸:
@@ -97,7 +46,7 @@
                         <option value="">20cm</option>
                     </select>
                     <br>
-                    數量: 2
+                    數量: 1
                     <div class="color-block">
                         <div class="color white"></div>
                         <div class="color yellow"></div>
@@ -126,29 +75,29 @@
         <div class="description">
             <div class="description-title">商品描述</div>
             <div class="description-text">
-                <div>💎材質：月亮石圓珠(約3.5-4mm)、青金石圓珠(約3-3.5mm)、14K包金裝飾、彈力線。
+                <span>💎材質：月亮石圓珠(約3.5-4mm)、青金石圓珠(約3-3.5mm)、14K包金裝飾、彈力線。
                     <br>
                     💎手鍊以彈力線穿成，設計師製作時會在你選擇的手腕尺寸上加上約0.5-1cm以方便穿脫。
                     <br>
                     📦標準包裝：夾鏈儲存袋、吊飾絨布袋。
-                </div>
+                </span>
             </div>
         </div>
         <div class="shipping">
             <div class="shipping-title">配送說明</div>
             <div class="shipping-text">
-                <div>
+                <span>
                     物流選擇：
                     <br>
                     香港：
                     <br>
-                    1. 基本運送免運費（⚠️平郵，無法提供追縱，客人需承擔寄失風險，請慎選。)
+                    1. 基本運送免運費 (⚠️平郵，無法提供追縱，客人需承擔寄失風險，請慎選。)
                     <br>
                     2. 順豐貨到付運費
                     <br>
                     台灣：
                     <br>
-                    1. 基本運送免運費（⚠️空運平郵，無法提供追縱，客人需承擔寄失風險，請慎選。)
+                    1. 基本運送免運費 (⚠️空運平郵，無法提供追縱，客人需承擔寄失風險，請慎選。)
                     <br>
                     2. 快捷運送（空郵掛號）
                     <br>
@@ -161,45 +110,58 @@
                     2. 快捷運送（平郵掛號）
                     <br>
                     3. 順豐貨到付運費
-                </div>
+                </span>
             </div>
         </div>
         <div class="like">
             <div class="like-title">你可能也會喜歡</div>
-            <div class="like-img">
-                <img src="img/maybe u like.png" alt="maybe u like">
-                <img src="img/maybe u like.png" alt="maybe u like">
-                <img src="img/maybe u like.png" alt="maybe u like">
-                <img src="img/maybe u like.png" alt="maybe u like">
-                <img src="img/maybe u like.png" alt="maybe u like">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+            <div class="autoplay">
+                <img src="img/product-item/original/2.1.jpg" alt="">
+                <img src="img/product-item/original/2.2.jpg" alt="">
+                <img src="img/product-item/original/2.3.jpg" alt="">
+                <img src="img/product-item/original/2.4.jpg" alt="">
+                <img src="img/product-item/original/2.5.jpg" alt="">
+                <img src="img/product-item/original/2.6.jpg" alt="">
+                <img src="img/product-item/original/2.7.jpg" alt="">
+                <img src="img/product-item/original/2.1.jpg" alt="">
+                <img src="img/product-item/original/2.2.jpg" alt="">
+                <img src="img/product-item/original/2.3.jpg" alt="">
+                <img src="img/product-item/original/2.4.jpg" alt="">
+                <img src="img/product-item/original/2.5.jpg" alt="">
+                <img src="img/product-item/original/2.6.jpg" alt="">
+                <img src="img/product-item/original/2.7.jpg" alt="">
+                <img src="img/product-item/original/2.1.jpg" alt="">
+                <img src="img/product-item/original/2.2.jpg" alt="">
+                <img src="img/product-item/original/2.3.jpg" alt="">
+                <img src="img/product-item/original/2.4.jpg" alt="">
+                <img src="img/product-item/original/2.5.jpg" alt="">
+                <img src="img/product-item/original/2.6.jpg" alt="">
+                <img src="img/product-item/original/2.7.jpg" alt="">
             </div>
-
         </div>
     </div>
     <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
+        <div class="footer_container">
+            <div class="footer_logo">
                 <img src="img/LOGO.png" alt="頁尾LOGO">
             </div>
-            <div class="footer-contact">
-                <div class="footer-icon">
+            <div class="footer_contact">
+                <div class="footer_icon">
                     <i class="fa fa-weixin" aria-hidden="true"></i>
                     <i class="fa fa-instagram" aria-hidden="true"></i>
                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
                 </div>
-                <div class="footer-content">
+                <div class="footer_text">
                     <span> 連絡電話 : 0933248691</span>
                     <br>
                     <span> 營業時間 : 星期一到星期五 09:00-12:00 / 13:00-18:00</span>
                 </div>
             </div>
-            <div class="footer-space"></div>
+            <div class="footer_space"></div>
         </div>
-        <div class="footer-line"></div>
+        <div class="footer_line"></div>
         <div class="copyright">
-            <small>Copyright&copy;2023 SOUHAIT CRYSTAL 水晶 Made by Andrea | 此網站僅做為前端side
-                project作品練習，不做商業用途，請勿用於商業用途，謝謝!</small>
+            <small>本網站為緯育TibaMe前端工程師班第78期學員專題作品，本平台僅供學習、展示之用。</small>
         </div>
     </footer>
 </body>
