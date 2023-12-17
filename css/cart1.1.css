@@ -1,31 +1,38 @@
-#wrapper {
+body {
+  background-color: #FFFAED;
+}
+body #wrapper {
   max-width: 1680px;
   padding: 0 8%;
 }
-#wrapper .progressbar ul {
+body #wrapper .progressbar ul {
   display: flex;
   justify-content: center;
   list-style: none;
   height: 300px;
   align-items: center;
-  padding: 0;
+  margin-top: 30px;
 }
-#wrapper .progressbar ul li {
+body #wrapper .progressbar ul li {
   border-radius: 50%;
   position: relative;
   white-space: nowrap;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
-#wrapper .progressbar ul li span {
-  margin-top: 70px;
+body #wrapper .progressbar ul li span {
+  margin-top: 44px;
   position: absolute;
-  margin-left: -30px;
+  margin-left: -11px;
 }
-#wrapper .progressbar ul li + li {
+body #wrapper .progressbar ul li + li {
   margin-left: 100px;
 }
-#wrapper .progressbar ul li + li::before {
+body #wrapper .progressbar ul li + li span {
+  position: absolute;
+  margin-left: -18px;
+}
+body #wrapper .progressbar ul li + li::before {
   content: "";
   position: absolute;
   width: 100px;
@@ -36,81 +43,156 @@
   left: -100px;
   margin: auto;
 }
-#wrapper .progressbar ul li:nth-child(1) {
-  background-color: black;
+body #wrapper .progressbar ul li:nth-child(1) {
+  background-color: #8A6E36;
 }
-#wrapper .progressbar ul li:nth-child(2) {
+body #wrapper .progressbar ul li:nth-child(2) {
   background-color: #D9D9D9;
 }
-#wrapper .progressbar ul li:nth-child(3) {
+body #wrapper .progressbar ul li:nth-child(3) {
   background-color: #D9D9D9;
 }
-#wrapper .order {
+body #wrapper .order {
   display: flex;
   justify-content: space-between;
-  padding: 5%;
+  padding: 3%;
   margin-bottom: 5%;
   border: 1px solid #8A6E36;
   border-radius: 24px;
   box-shadow: #8A6E36 1.95px 1.95px 2.6px;
 }
-#wrapper .order .order-list {
+body #wrapper .order .order-list {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  margin-right: 2%;
+  width: 100%;
 }
-#wrapper .order .order-list .order-items {
-  background-color: #fff;
+body #wrapper .order .order-list .order-items {
   display: flex;
-  margin: 2% 1% 2% 10%;
-  border-bottom: 1px solid #889397;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  margin-bottom: 10px;
+  margin: 0 10% 0 0;
 }
-#wrapper .order .order-list .order-items .order-text .order-description {
+body #wrapper .order .order-list .order-items:not(:last-child) {
+  border-bottom: 1px solid #8A6E36;
+}
+body #wrapper .order .order-list .order-items .order-img img {
+  max-width: 300px;
+  border-radius: 24px;
+}
+body #wrapper .order .order-list .order-items .order-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #8A6E36;
+}
+body #wrapper .order .order-list .order-items .order-text .order-description {
   line-height: 1.5em;
 }
-#wrapper .order .order-list .order-items .order-text .order-icon {
+body #wrapper .order .order-list .order-items .order-text .order-icon {
   display: flex;
   align-items: center;
 }
-#wrapper .order .order-list .order-items .order-text .order-icon i,
-#wrapper .order .order-list .order-items .order-text .order-icon span {
-  margin-left: 10px;
+body #wrapper .order .order-list .order-items .order-text .order-icon i {
+  margin-left: 2px;
 }
-#wrapper .order .order-list .order-items .order-text .order-icon i:nth-child(4) {
-  padding-left: 38%;
+body #wrapper .order .order-list .order-items .order-text .order-icon i:nth-child(4) {
+  padding-left: 80px;
 }
-#wrapper .order .order-fee {
+body #wrapper .order .order-fee {
   width: 32.8%;
   margin-right: 8.2%;
+  padding: 20px 0 0 0;
+  border-radius: 24px;
+  border: 1px solid #8A6E36;
+  height: auto;
+  height: 250px;
 }
-#wrapper .order .order-fee .order-text {
-  background-color: #fff;
-  border: 1px solid #889397;
+body #wrapper .order .order-fee .order-text {
+  border-bottom: 1px solid #889397;
   font-size: 18px;
-  padding: 15px;
+  padding: 15px 0;
   line-height: 1.8em;
   width: 100%;
 }
-#wrapper .order .order-fee .order-button {
+body #wrapper .order .order-fee .order-button {
+  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: 24px;
   background-color: #DED2B2;
-  border: 1px solid #889397;
   font-size: 18px;
-  padding: 0 15px;
   width: 100%;
   text-align: center;
   cursor: pointer;
 }
-#wrapper .order .order-fee .order-button:hover {
+body #wrapper .order .order-fee .order-button:hover {
   background-color: #8A6E36;
 }
-#wrapper .order .order-fee .order-button:hover a {
+body #wrapper .order .order-fee .order-button:hover a {
   color: #fff;
 }
-#wrapper .order .order-fee .order-button a {
+body #wrapper .order .order-fee .order-button a {
+  width: 100%;
   display: inline-block;
   padding: 20px 0;
   font-size: 18px;
   text-align: center;
   text-decoration: none;
   color: black;
+}
+
+@media screen and (max-width: 768px) {
+  body #wrapper .order {
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    margin-bottom: 3%;
+    border: none;
+    border-radius: none;
+    box-shadow: initial;
+  }
+  body #wrapper .order .order-list img {
+    width: 150px;
+  }
+  body #wrapper .order .order-fee {
+    width: initial;
+    margin: 0 5%;
+    padding: 0;
+    border-radius: 24px;
+    border: 1px solid #8A6E36;
+    height: auto;
+    height: 250px;
+  }
+  body #wrapper .order .order-fee .order-text {
+    border-bottom: 1px solid #889397;
+    font-size: 18px;
+    padding: 15px 0;
+    line-height: 1.8em;
+    width: 100%;
+  }
+  body #wrapper .order .order-fee .order-button {
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    background-color: #DED2B2;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+  }
+  body #wrapper .order .order-fee .order-button:hover {
+    background-color: #8A6E36;
+  }
+  body #wrapper .order .order-fee .order-button:hover a {
+    color: #fff;
+  }
+  body #wrapper .order .order-fee .order-button a {
+    width: 100%;
+    display: inline-block;
+    padding: 20px 0;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+  }
 }/*# sourceMappingURL=cart1.1.css.map */

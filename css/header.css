@@ -27,8 +27,6 @@
   top: 100%;
   width: 100%;
   background-color: #9B8170;
-}
-#SCheader #menu.hidden {
   display: none;
 }
 #SCheader #menu .nav-list {
@@ -42,6 +40,14 @@
 #SCheader #menu .nav-list li {
   list-style: none;
   margin: 2%;
+  color: aliceblue;
+}
+#SCheader #menu .nav-list li .dropdownList li {
+  text-align: center;
+}
+#SCheader #menu .nav-list li.menu-guides {
+  min-width: 100px;
+  text-align: center;
 }
 #SCheader #menu .nav-list li a {
   font-size: 16px;
@@ -92,8 +98,6 @@
   #SCheader #menu {
     position: initial;
     height: 53px;
-  }
-  #SCheader #menu.hidden {
     display: block;
   }
   #SCheader #menu .nav-list {
@@ -108,6 +112,17 @@
     line-height: 53px;
     color: aliceblue;
     cursor: pointer;
+  }
+  #SCheader #menu .nav-list li.menu-about {
+    margin-left: 5%;
+  }
+  #SCheader #menu .nav-list li.menu-products {
+    margin-left: 5%;
+  }
+  #SCheader #menu .nav-list li.menu-guides {
+    margin-left: 15%;
+    min-width: 100px;
+    text-align: center;
   }
   #SCheader #menu .nav-list .only_mobile {
     display: none;

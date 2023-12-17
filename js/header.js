@@ -1,9 +1,36 @@
+// by ChatGPT
+// 合併相同商品
+const mergeArray = function (originalArray) {
+    // 使用reduce進行合併和計數
+    const mergedArray = originalArray.reduce((acc, currentItem) => {
+        // 檢查是否已經存在於合併後的陣列中
+        const existingItem = acc.find(item => (
+            item.categoryID === currentItem.categoryID &&
+            item.guideID === currentItem.guideID &&
+            item.id === currentItem.id &&
+            item.color === currentItem.color &&
+            item.size === currentItem.size
+        ));
+
+        if (existingItem) {
+            // 如果存在，將count增加1
+            existingItem.count = (existingItem.count || 1) + 1;
+        } else {
+            // 如果不存在，將當前項目添加到合併後的陣列中
+            acc.push({ ...currentItem, count: 1 });
+        }
+        return acc;
+    }, []);
+
+    return mergedArray;
+}
+
 // 把資料暫存到locol Storage的功能
 const setProductItemInLocalStorage = function (product) {
     // 讀取既有的product資料
     let productInCart = getProductItemInLocalStorage();
-    // 把舊和新資料合併(物件)
-    const mergedAry = productInCart.concat(product || {});
+    // 把舊和新資料合併(物件), 並且計算當前數量
+    const mergedAry = mergeArray(productInCart.concat(product || {}));
     // 把資料存到localStorage，把合併後的資料物件轉成字串
     localStorage.setItem('productInCart', JSON.stringify(mergedAry));
 }
@@ -34,32 +61,6 @@ const renderCart = function () {
     });
 }
 
-// by ChatGPT
-// 合併相同商品
-const mergeArray = function (originalArray) {
-    // 使用reduce進行合併和計數
-    const mergedArray = originalArray.reduce((acc, currentItem) => {
-        // 檢查是否已經存在於合併後的陣列中
-        const existingItem = acc.find(item => (
-            item.categoryID === currentItem.categoryID &&
-            item.guideID === currentItem.guideID &&
-            item.id === currentItem.id &&
-            item.color === currentItem.color &&
-            item.size === currentItem.size
-        ));
-
-        if (existingItem) {
-            // 如果存在，將count增加1
-            existingItem.count = (existingItem.count || 1) + 1;
-        } else {
-            // 如果不存在，將當前項目添加到合併後的陣列中
-            acc.push({ ...currentItem, count: 1 });
-        }
-        return acc;
-    }, []);
-
-    return mergedArray;
-}
 // 每次點擊同步local storage的資料
 const syncCartItem = function () {
     let productList = mergeArray(getProductItemInLocalStorage());
@@ -74,10 +75,10 @@ const syncCartItem = function () {
     productList.forEach(function (product) {
         let productItemHTML = $(`
         <div class="order-items">
-        <div class="order-img">
+          <div class="order-img">
             <img src="img/product-item/${product.imgFileName}" alt="購物車圖">
-        </div>
-        <div class="order-text">
+          </div>
+          <div class="order-text">
             <div class="order-description">
                 <div>
                     ${product.name}
@@ -95,7 +96,7 @@ const syncCartItem = function () {
                     <i class="fa fa-trash" aria-hidden="true"></i>
                 </div>
             </div>
-        </div>
+          </div>
         </div>`)
         $(".cartFly .order-list").prepend(productItemHTML);
     });
@@ -132,10 +133,11 @@ const renderHeader = function () {
     </div>
     <div id="menu">
         <ul class="nav-list">
-            <li><a href="about.html">ABOUT</a></li>
+            <li class="menu-about"><a href="about.html">ABOUT</a></li>
             <li class="menu-products"><span>PRODUCTS</span></li>
             <li class="menu-guides"><span>GUIDES</span></li>
             <li><a href="Q&A.html">Q&A</a></li>
+            <li class="only_mobile"><a href="cart-1.1.html">CART</a></li>
             <li class="only_mobile"><a href="login.html">LOGIN</a></li>
         </ul>
     </div>
@@ -203,7 +205,12 @@ $(function () {
             //取得選單的參考
             let menu = document.getElementById("menu");
             // 有就移除，没有就加入
-            menu.classList.toggle("hidden");
+            // menu.classList.toggle("show");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
         };
 
     }, false);

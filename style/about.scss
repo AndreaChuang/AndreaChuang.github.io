@@ -1,5 +1,5 @@
 body {
-    background-color: #DED2B2;
+    background-color: #FFFAED;
     max-width: 1920px;
 
     .about-wrap {
@@ -17,6 +17,7 @@ body {
                     position: absolute;
                     top: 58%;
                     left: 5%;
+                    color: #8A6E36;
                 }
             }
         }
@@ -68,6 +69,7 @@ body {
                     resize: none;
                     padding: 0;
                     line-height: 30px;
+                    background-color: #EFE7CE;
                 }
 
                 input[type="text"],
@@ -87,7 +89,7 @@ body {
                         padding: 0;
                         margin: 0;
                         border: 0;
-                        background-color: #fff;
+                        background-color: #EFE7CE;
                         color: rgb(138, 110, 54);
 
                     }
