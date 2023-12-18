@@ -32,7 +32,6 @@ const renderProduct = function () {
             <br>
             價格: $${Math.round(product.price * 0.35 * (product.count || 1))}
             </div>
-            <span>${product.count || 1}</span>
             </div>
             </div>
             </div>`
