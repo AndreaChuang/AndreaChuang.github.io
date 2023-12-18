@@ -1,8 +1,8 @@
 //存取product的ID
 // 寫入數據到localStorage
-// localStorage.setItem('currentProduct', {});
+localStorage.setItem('currentProduct', {});
 //存取product的ID的詳細資料
-// localStorage.setItem('productInCart', []);
+localStorage.setItem('productInCart', []);
 
 
 // 顯示產品資訊function

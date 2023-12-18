@@ -52,12 +52,19 @@ body #wrapper .progressbar ul li:nth-child(2) {
 body #wrapper .progressbar ul li:nth-child(3) {
   background-color: #D9D9D9;
 }
-body #wrapper .order-shipping {
+body #wrapper .order {
+  padding: 3%;
+  margin-bottom: 5%;
+  border: 1px solid #8A6E36;
+  border-radius: 24px;
+  box-shadow: #8A6E36 1.95px 1.95px 2.6px;
+}
+body #wrapper .order .order-shipping {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5%;
 }
-body #wrapper .order-shipping .order-information {
+body #wrapper .order .order-shipping .order-information {
   background-color: #fff;
   border: 1px solid #889397;
   width: 49.2%;
@@ -67,27 +74,29 @@ body #wrapper .order-shipping .order-information {
   font-size: 18px;
   line-height: 2em;
 }
-body #wrapper .order-shipping .order-information div:nth-child(n+4):nth-child(-n+7) {
+body #wrapper .order .order-shipping .order-information div:nth-child(n+4):nth-child(-n+7) {
   line-height: 2.5em;
 }
-body #wrapper .order-shipping .order-information div input[type=text] {
+body #wrapper .order .order-shipping .order-information div input[type=text] {
   width: 99%;
 }
-body #wrapper .order-shipping .order-fee {
-  width: 32.8%;
+body #wrapper .order .order-shipping .order-fee {
+  width: 25%;
+  margin-right: 8.2%;
   border-radius: 24px;
   border: 1px solid #8A6E36;
   height: auto;
   height: 250px;
+  color: #8A6E36;
 }
-body #wrapper .order-shipping .order-fee .order-text {
+body #wrapper .order .order-shipping .order-fee .order-text {
   border-bottom: 1px solid #889397;
   font-size: 18px;
   padding: 15px 0;
   line-height: 1.8em;
   width: 100%;
 }
-body #wrapper .order-shipping .order-fee .order-button {
+body #wrapper .order .order-shipping .order-fee .order-button {
   border-bottom-right-radius: 24px;
   border-bottom-left-radius: 24px;
   background-color: #DED2B2;
@@ -96,13 +105,13 @@ body #wrapper .order-shipping .order-fee .order-button {
   text-align: center;
   cursor: pointer;
 }
-body #wrapper .order-shipping .order-fee .order-button:hover {
+body #wrapper .order .order-shipping .order-fee .order-button:hover {
   background-color: #8A6E36;
 }
-body #wrapper .order-shipping .order-fee .order-button:hover a {
+body #wrapper .order .order-shipping .order-fee .order-button:hover a {
   color: #fff;
 }
-body #wrapper .order-shipping .order-fee .order-button a {
+body #wrapper .order .order-shipping .order-fee .order-button a {
   width: 100%;
   display: inline-block;
   padding: 20px 0;
@@ -111,32 +120,54 @@ body #wrapper .order-shipping .order-fee .order-button a {
   text-decoration: none;
   color: black;
 }
-body #wrapper .order-payment {
+body #wrapper .order .order-payment {
   background-color: #fff;
   width: 87%;
   margin-left: 8%;
   border: 1px solid #889397;
   margin-bottom: 5%;
+  color: #8A6E36;
 }
-body #wrapper .order-payment .order-method span {
+body #wrapper .order .order-payment .order-method span {
   font-size: 18px;
   padding: 15px;
   line-height: 1.8em;
   font-size: 18px;
 }
-body #wrapper .order-payment span:nth-child(1) {
+body #wrapper .order .order-payment span:nth-child(1) {
   font-size: 20px;
 }
 
 @media screen and (max-width: 768px) {
-  body #wrapper .order-shipping {
+  body #wrapper .order {
+    padding: 0;
+    margin-bottom: 0%;
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+  }
+  body #wrapper .order .order-shipping {
     display: flex;
     flex-direction: column;
   }
-  body #wrapper .order-shipping .order-information {
+  body #wrapper .order .order-shipping .order-information {
     width: initial;
   }
-  body #wrapper .order-shipping .order-fee {
+  body #wrapper .order .order-shipping .order-fee {
+    color: #8A6E36;
     width: initial;
+    margin: 5%;
+    padding: 0;
+    border-radius: 24px;
+    border: 1px solid #8A6E36;
+    height: 250px;
+  }
+  body #wrapper .order .order-payment {
+    border: 1px solid #8A6E36;
+    border-radius: 24px;
+    color: #8A6E36;
+  }
+  body #wrapper .order .order-payment .order-method span {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=cart1.2.css.map */

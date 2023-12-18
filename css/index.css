@@ -664,6 +664,7 @@ body #animation svg {
   width: 100%;
   margin: 200% 0 20%;
   text-align: center;
+  cursor: pointer;
 }
 .wrap .banner .banner_content .banner_link a {
   text-decoration: none;
@@ -701,7 +702,7 @@ body #animation svg {
   font-size: 16px;
 }
 .wrap .products .products_img {
-  width: 94%;
+  width: 83%;
   max-width: 95%;
 }
 .wrap .products .products_img .st-carousel-slice {
@@ -918,7 +919,7 @@ body #animation svg {
     box-sizing: border-box;
     border-radius: 24px;
     align-items: start;
-    height: 450px;
+    height: 303px;
     margin: 10% 0 0;
     padding: 3% 3% 3% 26%;
   }
@@ -945,7 +946,7 @@ body #animation svg {
     font-size: 20px;
   }
   .wrap .products .products_img {
-    width: 80%;
+    width: 94%;
   }
   .wrap .products .products_link {
     margin-top: 3%;
@@ -959,7 +960,7 @@ body #animation svg {
     flex-direction: row;
     justify-content: flex-end;
     max-width: 80%;
-    height: 450px;
+    height: 320px;
     margin: auto;
     border-radius: 24px;
   }
