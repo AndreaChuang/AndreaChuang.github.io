@@ -574,6 +574,7 @@ body .cartFly .order-list .order-items .order-text .order-icon i:nth-child(4) {
   padding-left: 80px;
 }
 body .cartFly .order-list {
+  background-color: #EFE7CE;
   height: 90vh;
   overflow: scroll;
   width: 100%;
@@ -664,7 +665,6 @@ body #animation svg {
   width: 100%;
   margin: 200% 0 20%;
   text-align: center;
-  cursor: pointer;
 }
 .wrap .banner .banner_content .banner_link a {
   text-decoration: none;
