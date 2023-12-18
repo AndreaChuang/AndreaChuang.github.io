@@ -481,10 +481,6 @@ button {
   #SCheader #menu .nav-list .only_mobile {
     display: none;
   }
-  #SCheader #menu .nav-list .menu-products span:hover,
-  #SCheader #menu .nav-list .menu-guides span:hover {
-    box-shadow: 0px 2px 0px 0px rgb(176, 30, 30);
-  }
   #SCheader #menu .nav-list .menu-products .dropdownList,
   #SCheader #menu .nav-list .menu-guides .dropdownList {
     display: none;
@@ -574,6 +570,7 @@ body .cartFly .order-list .order-items .order-text .order-icon i:nth-child(4) {
   padding-left: 80px;
 }
 body .cartFly .order-list {
+  background-color: #EFE7CE;
   height: 90vh;
   overflow: scroll;
   width: 100%;
@@ -701,7 +698,7 @@ body #animation svg {
   font-size: 16px;
 }
 .wrap .products .products_img {
-  width: 94%;
+  width: 83%;
   max-width: 95%;
 }
 .wrap .products .products_img .st-carousel-slice {
@@ -918,7 +915,7 @@ body #animation svg {
     box-sizing: border-box;
     border-radius: 24px;
     align-items: start;
-    height: 450px;
+    height: 303px;
     margin: 10% 0 0;
     padding: 3% 3% 3% 26%;
   }
@@ -945,7 +942,7 @@ body #animation svg {
     font-size: 20px;
   }
   .wrap .products .products_img {
-    width: 80%;
+    width: 94%;
   }
   .wrap .products .products_link {
     margin-top: 3%;
@@ -959,7 +956,7 @@ body #animation svg {
     flex-direction: row;
     justify-content: flex-end;
     max-width: 80%;
-    height: 450px;
+    height: 320px;
     margin: auto;
     border-radius: 24px;
   }

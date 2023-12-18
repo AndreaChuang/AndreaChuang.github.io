@@ -175,7 +175,7 @@ $(function () {
 
     // 「你可能也會喜歡」輪播
     $('.like .autoplay').slick({
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 5000,

@@ -109,6 +109,7 @@ body #wrapper .order .order-fee {
   border: 1px solid #8A6E36;
   height: auto;
   height: 250px;
+  color: #8A6E36;
 }
 body #wrapper .order .order-fee .order-text {
   border-bottom: 1px solid #889397;

@@ -97,20 +97,22 @@
 #wrapper .order .order-fee {
   width: 32.8%;
   margin-right: 8.2%;
+  border-radius: 24px;
+  border: 1px solid #8A6E36;
+  height: 479px;
 }
 #wrapper .order .order-fee .order-text {
-  background-color: #fff;
-  border: 1px solid #889397;
+  border-bottom: 1px solid #889397;
   font-size: 18px;
-  padding: 15px;
+  padding: 15px 0;
   line-height: 1.8em;
   width: 100%;
 }
 #wrapper .order .order-fee .order-button {
+  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: 24px;
   background-color: #DED2B2;
-  border: 1px solid #889397;
   font-size: 18px;
-  padding: 0 15px;
   width: 100%;
   text-align: center;
   cursor: pointer;
@@ -122,6 +124,7 @@
   color: #fff;
 }
 #wrapper .order .order-fee .order-button a {
+  width: 100%;
   display: inline-block;
   padding: 20px 0;
   font-size: 18px;
@@ -131,6 +134,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  body #wrapper {
+    margin-bottom: 3%;
+  }
   body #wrapper .order {
     display: flex;
     flex-direction: column;
@@ -144,5 +150,43 @@
   }
   body #wrapper .order .order-fee {
     width: initial;
+  }
+  body #wrapper .order .order-fee {
+    width: initial;
+    margin: 0 5%;
+    padding: 0;
+    border-radius: 24px;
+    border: 1px solid #8A6E36;
+  }
+  body #wrapper .order .order-fee .order-text {
+    border-bottom: 1px solid #889397;
+    font-size: 14px;
+    padding: 15px 0;
+    line-height: 1.8em;
+    width: 100%;
+  }
+  body #wrapper .order .order-fee .order-button {
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    background-color: #DED2B2;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+  }
+  body #wrapper .order .order-fee .order-button:hover {
+    background-color: #8A6E36;
+  }
+  body #wrapper .order .order-fee .order-button:hover a {
+    color: #fff;
+  }
+  body #wrapper .order .order-fee .order-button a {
+    width: 100%;
+    display: inline-block;
+    padding: 20px 0;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
   }
 }/*# sourceMappingURL=cart1.3.css.map */
