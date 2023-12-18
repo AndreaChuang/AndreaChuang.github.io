@@ -65,8 +65,8 @@ body #wrapper .order .order-shipping {
   margin-bottom: 5%;
 }
 body #wrapper .order .order-shipping .order-information {
-  background-color: #fff;
-  border: 1px solid #889397;
+  border: 1px solid #8A6E36;
+  border-radius: 24px;
   width: 49.2%;
   margin-left: 8.2%;
   margin-right: 20px;
@@ -121,12 +121,12 @@ body #wrapper .order .order-shipping .order-fee .order-button a {
   color: black;
 }
 body #wrapper .order .order-payment {
-  background-color: #fff;
   width: 87%;
   margin-left: 8%;
-  border: 1px solid #889397;
+  border: 1px solid #8A6E36;
   margin-bottom: 5%;
   color: #8A6E36;
+  border-radius: 24px;
 }
 body #wrapper .order .order-payment .order-method span {
   font-size: 18px;
